@@ -2,6 +2,7 @@
 import React from 'react';
 import { ThemeProvider } from 'next-themes';
 import { Inter } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
