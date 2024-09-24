@@ -65,17 +65,22 @@ export default function Header() {
                         <nav>
                             <ul className="flex flex-col space-y-4 p-4">
                                 <li>
-                                    <Link href="/about" className="text-[#697565] hover:text-[#ECDFCC] transition-colors duration-300">
+                                    <Link href="#about" className="text-[#697565] hover:text-[#ECDFCC] transition-colors duration-300">
                                         About
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/projects" className="text-[#697565] hover:text-[#ECDFCC] transition-colors duration-300">
+                                    <Link href="#projects" className="text-[#697565] hover:text-[#ECDFCC] transition-colors duration-300">
                                         Projects
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/contact" className="text-[#697565] hover:text-[#ECDFCC] transition-colors duration-300">
+                                    <Link href="#experience" className="text-[#697565] hover:text-[#ECDFCC] transition-colors duration-300">
+                                        Experience
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#contact" className="text-[#697565] hover:text-[#ECDFCC] transition-colors duration-300">
                                         Contact
                                     </Link>
                                 </li>
