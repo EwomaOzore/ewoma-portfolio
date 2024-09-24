@@ -1,9 +1,8 @@
 export const myProjects = [
     {
         title: 'Ahrelia - The luxurious fit-out company',
-        desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
-        subdesc:
-            'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, and TypeScript, Ahrelia is designed for optimal performance and scalability.',
+        desc: 'Ahrelia specializes in delivering high-end, luxury fit-outs, combining aesthetics and functionality to create bespoke interiors for residential and commercial spaces.',
+        subdesc: 'Built with Next.js 14, Tailwind CSS, and TypeScript, Ahrelia offers a powerful and scalable platform for designing custom luxury interiors with an emphasis on quality and detail.',
         href: 'https://ahrelia.netlify.app/',
         texture: '/videos/ahrelia.mp4',
         logoStyle: {
@@ -47,9 +46,8 @@ export const myProjects = [
     },
     {
         title: 'Hoobank - The Next Generation Payment Method',
-        desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
-        subdesc:
-            'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
+        desc: 'Hoobank is a modern landing page designed to showcase a next-gen digital payment platform, offering sleek design and clear communication of its features and benefits.',
+        subdesc: 'Built using React.js, TailwindCSS and Vite, Hoobank serves as a responsive and visually appealing landing page, optimized for fintech solutions.',
         href: 'https://hoobank-brown-nine.vercel.app/',
         texture: '/videos/hoobank.mp4',
         logoStyle: {
@@ -78,9 +76,8 @@ export const myProjects = [
     },
     {
         title: 'Gamebuddy - Your one-stop shop for games!',
-        desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-        subdesc:
-            'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
+        desc: 'Gamebuddy is a simple e-commerce platform where users can purchase video games, gaming accessories, and consoles, creating a convenient shopping experience for gamers.',
+        subdesc: 'Built using Next.js, TailwindCSS, and TypeScript, Gamebuddy offers a streamlined shopping experience with a focus on user-friendly navigation and product discovery.',
         href: 'https://gamebuddy.vercel.app/',
         texture: '/videos/gamebuddy.mp4',
         logoStyle: {
@@ -109,39 +106,6 @@ export const myProjects = [
             },
         ],
     },
-    // {
-    //     title: 'CP Dashboard - Your one-stop shop for games!',
-    //     desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-    //     subdesc:
-    //         'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    //     href: 'https://cp-dashboard.vercel.app/',
-    //     texture: '/videos/gamebuddy.mp4',
-    //     logoStyle: {
-    //         backgroundColor: '#60f5a1',
-    //         background:
-    //             'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-    //         border: '0.2px solid rgba(208, 213, 221, 1)',
-    //         boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
-    //     },
-    //     spotlight: '/assets/spotlight3.png',
-    //     tags: [
-    //         {
-    //             id: 1,
-    //             name: 'NextJs',
-    //             path: '/assets/nextjs.svg',
-    //         },
-    //         {
-    //             id: 2,
-    //             name: 'TailwindCSS',
-    //             path: 'assets/tailwind.svg',
-    //         },
-    //         {
-    //             id: 3,
-    //             name: 'TypeScript',
-    //             path: '/assets/typescript.svg',
-    //         },
-    //     ],
-    // },
 ];
 
 export const workExperiences = [
