@@ -52,7 +52,7 @@ const Projects = () => {
                     className={`flex flex-col gap-5 relative w-full lg:w-3/5 p-10 ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} border border-gray-300 rounded-lg`}
                 >
                     <div className="absolute top-0 right-0">
-                        <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-lg" />
+                        <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-lg z-0" />
                     </div>
 
                     <div className="p-3 backdrop-blur-lg w-fit rounded-md" style={currentProject.logoStyle}></div>
@@ -82,7 +82,7 @@ const Projects = () => {
 
                         <Link
                             href={currentProject.href}
-                            className={`flex items-center gap-2 cursor-pointer ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}
+                            className={`flex items-center gap-2 cursor-pointer z-10 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}
                             target="_blank"
                             rel="noreferrer"
                         >
