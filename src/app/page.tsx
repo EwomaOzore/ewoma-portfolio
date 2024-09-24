@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import WelcomeScreen from '@/components/WelcomeScreen';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from 'next-themes';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
@@ -17,7 +16,6 @@ const Home: React.FC = () => {
   const [showMain, setShowMain] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -37,15 +35,12 @@ const Home: React.FC = () => {
 
   return (
     <>
-      {/* Welcome screen */}
       {!showMain && !loading && <WelcomeScreen onContinue={handleContinue} />}
 
-      {/* AnimatePresence allows the loading screen to animate on exit */}
       <AnimatePresence>
         {loading && <LoadingScreen />}
       </AnimatePresence>
 
-      {/* Main content */}
       {showMain && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}

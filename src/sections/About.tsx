@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
-import Globe from 'react-globe.gl';
 import Button from '@/components/Button';
 import { useTheme } from 'next-themes';
 import animationData from '../../public/assets/passion.json';
+import dynamic from 'next/dynamic';
+
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false);
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+    const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });
 
     useEffect(() => {
         setMounted(true);
