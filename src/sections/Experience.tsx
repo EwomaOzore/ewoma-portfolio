@@ -34,7 +34,7 @@ const Experience = () => {
                                         <p className={`text-sm mb-5 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
                                             {item.pos} -- <span>{item.duration}</span>
                                         </p>
-                                        <p className={`transition-all duration-500 ease-in-out ${theme === 'dark' ? 'text-white' : 'text-black'}`}>{item.title}</p>
+                                        {/* <p className={`transition-all duration-500 ease-in-out ${theme === 'dark' ? 'text-white' : 'text-black'}`}>{item.title}</p> */}
                                     </div>
                                 </div>
                             ))}
