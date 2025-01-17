@@ -32,9 +32,12 @@ const Experience = () => {
                                     <div className="p-5">
                                         <p className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>{item.name}</p>
                                         <p className={`text-sm mb-5 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
-                                            {item.pos} -- <span>{item.duration}</span>
+                                            {item.pos}: <span>{item.duration}</span>
                                         </p>
-                                        {/* <p className={`transition-all duration-500 ease-in-out ${theme === 'dark' ? 'text-white' : 'text-black'}`}>{item.title}</p> */}
+                                        <div
+                                            className={`transition-all duration-500 ease-in-out ${theme === 'dark' ? 'text-white' : 'text-black'}`}
+                                            dangerouslySetInnerHTML={{ __html: item.title.split('\n').join('<br/>') }}
+                                        />
                                     </div>
                                 </div>
                             ))}
