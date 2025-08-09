@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@/lib/fontawesome";
+import "use-toast-message/dist/toast.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

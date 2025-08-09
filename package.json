@@ -33,7 +33,8 @@
     "react-intersection-observer": "^9.13.1",
     "react-lottie": "^1.2.4",
     "react-type-animation": "^3.2.0",
-    "three": "^0.168.0"
+    "three": "^0.168.0",
+    "use-toast-message": "^1.0.5"
   },
   "devDependencies": {
     "@types/node": "^20",

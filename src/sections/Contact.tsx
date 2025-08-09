@@ -2,10 +2,12 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useTheme } from "next-themes";
 import Button from "@/components/Button";
+import { useToast, ToastContainer } from "use-toast-message";
 
 const Contact = () => {
   const { theme } = useTheme();
   const form = useRef<HTMLFormElement>(null);
+  const { toasts, showSuccess, showError, removeToast } = useToast();
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,7 +18,7 @@ const Contact = () => {
 
     if (!serviceId || !templateId || !publicKey) {
       console.error("EmailJS config missing. Ensure NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID and NEXT_PUBLIC_EMAILJS_PUBLIC_KEY are set.");
-      alert("Email service not configured. Please try again later.");
+      showError("Email service not configured. Please try again later.");
       return;
     }
 
@@ -25,13 +27,13 @@ const Contact = () => {
         .sendForm(serviceId, templateId, form.current, publicKey)
         .then(
           () => {
-            alert("Message sent successfully!");
+            showSuccess("Message sent successfully!");
             // @ts-ignore
             form.current.reset();
           },
           (error) => {
             console.error("EmailJS send error:", error);
-            alert("Failed to send message. Please try again later.");
+            showError("Failed to send message. Please try again later.");
           }
         );
     }
@@ -81,6 +83,7 @@ const Contact = () => {
         />
         <Button name="Send" isBeam containerClass="w-full" />
       </form>
+      <ToastContainer toasts={toasts} removeToast={removeToast} />
     </section>
   );
 };
