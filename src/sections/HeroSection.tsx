@@ -5,11 +5,11 @@ import Developer from '@/components/Developer';
 import CanvasLoader from '@/components/Loading';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import { Tooltip } from '@mui/material';
-import { Download } from 'lucide-react';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import animationData from '../../public/herobackground.json';
 import Button from '@/components/Button';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const HeroSection = () => {
     const [animationName, setAnimationName] = useState('salute');
@@ -50,13 +50,15 @@ const HeroSection = () => {
                     </h1>
                     <br />
                     <div className='flex flex-col'>
-                        <span className="text-2xl font-extrabold mb-3">A Frontend</span>
+                        <span className="text-2xl font-extrabold mb-3">Senior Frontend</span>
                         <div>
                             <TypeAnimation
                                 sequence={[
-                                    "Web Developer",
+                                    'Engineer',
                                     1000,
-                                    "Mobile Developer",
+                                    'React Native Developer',
+                                    1000,
+                                    'Next.js Engineer',
                                     1000,
                                 ]}
                                 wrapper="span"

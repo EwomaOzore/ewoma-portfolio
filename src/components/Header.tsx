@@ -16,7 +16,7 @@ export default function Header() {
         <header className="fixed top-0 left-0 right-0 flex justify-between items-center py-4 px-6 bg-white dark:bg-[#1E201E] shadow-md z-50">
             <div className="text-[#697565] hover:text-[#ECDFCC] transition-colors duration-300">
                 <Link href="/">
-                    <span className="text-xl font-bold">Ewoma</span>
+                    <span className="text-xl font-bold">Ewoma Ozore</span>
                 </Link>
             </div>
             <div className="flex items-center">

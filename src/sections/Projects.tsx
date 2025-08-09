@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { myProjects } from '../constants/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +11,7 @@ const projectCount = myProjects.length;
 
 const Projects = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-    const { theme, setTheme } = useTheme();
+    const { theme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const controls = useAnimation();
     const { ref, inView } = useInView({ triggerOnce: true });

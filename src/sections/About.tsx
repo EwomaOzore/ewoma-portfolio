@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import Button from '@/components/Button';
 import { useTheme } from 'next-themes';
 import animationData from '../../public/assets/passion.json';
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false);
-    const { theme, setTheme } = useTheme();
+    const { theme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });
+    const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
     useEffect(() => {
         setMounted(true);
@@ -34,13 +35,14 @@ const About = () => {
             <div className="about-grid grid grid-cols-3 gap-5 h-full">
                 <div className="col-span-1 row-span-2">
                     <div className={`w-full h-full border border-gray-300 ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col items-center justify-between gap-5`}>
-                        <img src="assets/profile2.jpg" alt="User Picture" className="w-3/5 h-auto object-contain mt-8" />
+                        <Image src="/assets/profile2.jpg" alt="User Picture" className="w-3/5 h-auto object-contain mt-8" width={500} height={500} />
 
                         <div className="text-center">
                             <p className={`text-xl font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-black'} font-sans`}>Hi, I’m Ewoma Ozore</p>
                             <p className={`text-base ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'} font-sans`}>
-                                With 5 years of experience, I have honed my skills in both frontend development for both web and mobile applications, creating dynamic
-                                and responsive websites, web apps and mobile apps.
+                                Senior Frontend Developer with 5+ years building high-performance web and mobile apps
+                                using React, React Native, Next.js, and TypeScript. I focus on clean architecture,
+                                performance optimization, and delightful, responsive user experiences.
                             </p>
                         </div>
                     </div>
@@ -123,10 +125,15 @@ const About = () => {
 
                         <div className="flex flex-col gap-2 items-center">
                             <p className={`text-base ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'} font-sans text-center`}>Contact me</p>
-                            <div onClick={handleCopy} className="flex items-center cursor-pointer">
+                            <button
+                                type="button"
+                                onClick={handleCopy}
+                                className="flex items-center cursor-pointer bg-transparent"
+                                aria-label="Copy email address"
+                            >
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" className="mr-1" />
                                 <p className="md:text-xl text-lg font-medium bg-gradient-to-r from-gray-600 to-gray-300 bg-clip-text text-transparent">ewomaozore@gmail.com</p>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
