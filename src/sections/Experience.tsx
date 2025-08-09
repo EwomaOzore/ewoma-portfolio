@@ -34,7 +34,7 @@ const Experience = () => {
                             {workExperiences.map((item) => (
                                 <div
                                     key={item.id}
-                                    className={`grid grid-cols-[auto_1fr] items-start gap-5 transition-all duration-500 ease-in-out cursor-pointer rounded-lg p-5 group ${theme === 'dark' ? 'hover:bg-black' : 'hover:bg-gray-200'}`}>
+                                    className={`grid grid-cols-[auto_1fr] items-start gap-5 transition-all duration-500 ease-in-out cursor-pointer rounded-lg pt-5 px-5 group ${theme === 'dark' ? 'hover:bg-black' : 'hover:bg-gray-200'}`}>
                                     <div className="flex flex-col h-full justify-start items-center p-2">
                                         <div className="rounded-full w-16 h-16 p-2 overflow-hidden bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
                                             {item.icon ? (
@@ -47,7 +47,7 @@ const Experience = () => {
                                         <div className={`flex-1 w-0.5 mt-4 h-full ${theme === 'dark' ? 'bg-black' : 'bg-gray-300'}`} />
                                     </div>
 
-                                    <div className="p-5">
+                                    <div className="p-5 pt-0">
                                         <p className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>{item.name}</p>
                                         <p className={`text-sm mb-5 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
                                             {item.pos}: <span>{item.duration}</span>

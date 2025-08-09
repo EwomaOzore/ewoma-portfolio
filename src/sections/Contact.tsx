@@ -10,21 +10,27 @@ const Contact = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS config missing. Ensure NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID and NEXT_PUBLIC_EMAILJS_PUBLIC_KEY are set.");
+      alert("Email service not configured. Please try again later.");
+      return;
+    }
+
     if (form.current) {
       emailjs
-        .sendForm(
-          process.env.EMAILJS_SERVICE_ID!,
-          process.env.EMAILJS_TEMPLATE_ID!,
-          form.current,
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-        )
+        .sendForm(serviceId, templateId, form.current, publicKey)
         .then(
-          (result) => {
+          () => {
             alert("Message sent successfully!");
             // @ts-ignore
             form.current.reset();
           },
           (error) => {
+            console.error("EmailJS send error:", error);
             alert("Failed to send message. Please try again later.");
           }
         );
@@ -32,10 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="flex flex-col items-center justify-center py-16"
-    >
+    <section id="contact" className="flex flex-col items-center justify-center py-16">
       <h1 className="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-gray-400 mb-6">
         Get in touch
       </h1>
@@ -46,9 +49,10 @@ const Contact = () => {
           theme === "dark" ? "bg-[#1E201E]" : "bg-white"
         } rounded-lg p-10 flex flex-col items-center justify-between gap-5`}
       >
+        <input type="hidden" name="to_name" value="Ewoma Ozore" />
         <input
           type="text"
-          name="name"
+          name="user_name"
           placeholder="Name"
           className={`mb-4 p-4 w-full rounded-md ${
             theme === "dark" ? "bg-black" : "bg-gray-100"
@@ -58,7 +62,7 @@ const Contact = () => {
         />
         <input
           type="email"
-          name="email"
+          name="user_email"
           placeholder="Email"
           className={`mb-4 p-4 w-full rounded-md ${
             theme === "dark" ? "bg-black" : "bg-gray-100"

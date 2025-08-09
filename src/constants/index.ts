@@ -131,7 +131,7 @@ export const workExperiences = [
         pos: 'Lead Frontend Developer (Web & Mobile)',
         duration: 'Sep 2024 – Apr 2025',
         title: "- Led the design, development, and launch of cross-platform mobile applications on iOS and Android.\n- Engineered robust API integrations to ensure stable and reliable data exchange.\n- Enhanced UI/UX design to improve navigation and usability.\n- Mentored junior developers and promoted best practices across the team.",
-        icon: '',
+        icon: '/assets/smallclosedworld.jpeg',
     },
     {
         id: 4,
