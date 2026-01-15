@@ -11,7 +11,8 @@ const projectCount = myProjects.length;
 
 const Projects = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-    const { theme } = useTheme();
+    const { resolvedTheme } = useTheme();
+    const isDark = resolvedTheme === 'dark';
     const [mounted, setMounted] = useState(false);
     const controls = useAnimation();
     const { ref, inView } = useInView({ triggerOnce: true });
@@ -49,7 +50,7 @@ const Projects = () => {
                     initial={{ x: '-100vw' }}
                     animate={controls}
                     transition={{ type: 'spring', stiffness: 50 }}
-                    className={`flex flex-col gap-5 relative w-full lg:w-3/5 p-10 ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} border border-gray-300 rounded-lg`}
+                    className={`flex flex-col gap-5 relative w-full lg:w-3/5 p-10 ${isDark ? 'bg-[#1E201E]' : 'bg-white'} border border-gray-300 rounded-lg`}
                 >
                     <div className="absolute top-0 right-0">
                         <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-lg z-0" />
@@ -58,14 +59,14 @@ const Projects = () => {
                     <div className="p-3 backdrop-blur-lg w-fit rounded-md" style={currentProject.logoStyle}></div>
 
                     <div className="flex flex-col gap-5 mt-5">
-                        <p className={`text-2xl font-semibold animate-fadeIn ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
+                        <p className={`text-2xl font-semibold animate-fadeIn ${isDark ? 'text-white' : 'text-black'}`}>
                             {currentProject.title}
                         </p>
 
-                        <p className={`animate-fadeIn ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                        <p className={`animate-fadeIn ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                             {currentProject.desc}
                         </p>
-                        <p className={`animate-fadeIn ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                        <p className={`animate-fadeIn ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                             {currentProject.subdesc}
                         </p>
                     </div>
@@ -74,7 +75,7 @@ const Projects = () => {
                         <div className="flex gap-3">
                             {currentProject.tags.map((tag, index) => (
                                 <div key={index}
-                                    className={`w-10 h-10 rounded-md p-2 ${theme === 'dark' ? 'bg-white bg-opacity-10' : 'bg-black bg-opacity-10'} backdrop-blur-md flex justify-center items-center`}>
+                                    className={`w-10 h-10 rounded-md p-2 ${isDark ? 'bg-white bg-opacity-10' : 'bg-black bg-opacity-10'} backdrop-blur-md flex justify-center items-center`}>
                                     <img src={tag.path} alt={tag.name} />
                                 </div>
                             ))}
@@ -82,7 +83,7 @@ const Projects = () => {
 
                         <Link
                             href={currentProject.href}
-                            className={`flex items-center gap-2 cursor-pointer z-10 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}
+                            className={`flex items-center gap-2 cursor-pointer z-10 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -112,7 +113,7 @@ const Projects = () => {
                     initial={{ x: '100vw' }}
                     animate={controls}
                     transition={{ type: 'spring', stiffness: 50 }}
-                    className={`border ${theme === 'dark' ? 'border-white border-opacity-30' : 'border-black border-opacity-30'} bg-opacity-20 ${theme === 'dark' ? 'bg-white' : 'bg-black'} rounded-lg w-full lg:w-2/5`}
+                    className={`border ${isDark ? 'border-white border-opacity-30' : 'border-black border-opacity-30'} bg-opacity-20 ${isDark ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg w-full lg:w-2/5`}
                 >
                     <video key={currentProject.texture} autoPlay loop muted className="w-full h-full rounded-lg">
                         <source src={currentProject.texture} type="video/mp4" />

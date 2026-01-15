@@ -8,7 +8,8 @@ import animationData from '../../public/experience.json';
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const Experience = () => {
-    const { theme } = useTheme();
+    const { resolvedTheme } = useTheme();
+    const isDark = resolvedTheme === 'dark';
 
     const getInitials = (name: string) => {
         return name
@@ -30,11 +31,11 @@ const Experience = () => {
                     <p className="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-gray-400">Work Experience</p>
 
                     <div className="grid grid-cols-1 gap-5 mt-12">
-                        <div className={`col-span-2 rounded-lg ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} border border-gray-300`}>
+                        <div className={`col-span-2 rounded-lg ${isDark ? 'bg-[#1E201E]' : 'bg-white'} border border-gray-300`}>
                             {workExperiences.map((item) => (
                                 <div
                                     key={item.id}
-                                    className={`grid grid-cols-[auto_1fr] items-start gap-5 transition-all duration-500 ease-in-out cursor-pointer rounded-lg pt-5 px-5 group ${theme === 'dark' ? 'hover:bg-black' : 'hover:bg-gray-200'}`}>
+                                    className={`grid grid-cols-[auto_1fr] items-start gap-5 transition-all duration-500 ease-in-out cursor-pointer rounded-lg pt-5 px-5 group ${isDark ? 'hover:bg-black' : 'hover:bg-gray-200'}`}>
                                     <div className="flex flex-col h-full justify-start items-center p-2">
                                         <div className="rounded-full w-16 h-16 p-2 overflow-hidden bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
                                             {item.icon ? (
@@ -44,16 +45,16 @@ const Experience = () => {
                                             )}
                                         </div>
 
-                                        <div className={`flex-1 w-0.5 mt-4 h-full ${theme === 'dark' ? 'bg-black' : 'bg-gray-300'}`} />
+                                        <div className={`flex-1 w-0.5 mt-4 h-full ${isDark ? 'bg-black' : 'bg-gray-300'}`} />
                                     </div>
 
                                     <div className="p-5 pt-0">
-                                        <p className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>{item.name}</p>
-                                        <p className={`text-sm mb-5 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
+                                        <p className={`font-bold ${isDark ? 'text-white' : 'text-black'}`}>{item.name}</p>
+                                        <p className={`text-sm mb-5 ${isDark ? 'text-white' : 'text-black'}`}>
                                             {item.pos}: <span>{item.duration}</span>
                                         </p>
                                         <div
-                                            className={`transition-all duration-500 ease-in-out ${theme === 'dark' ? 'text-white' : 'text-black'}`}
+                                            className={`transition-all duration-500 ease-in-out ${isDark ? 'text-white' : 'text-black'}`}
                                             dangerouslySetInnerHTML={{ __html: item.title.split('\n').join('<br/>') }}
                                         />
                                     </div>

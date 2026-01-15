@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/sections/HeroSection";
 import About from "@/sections/About";
 import Projects from "@/sections/Projects";
+import MobileApps from "@/sections/MobileApps";
 import Experience from "@/sections/Experience";
 import Contact from "@/sections/Contact";
 
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
         <HeroSection />
         <About />
         <Projects />
+        <MobileApps />
         <Experience />
         <Contact />
         <Footer />

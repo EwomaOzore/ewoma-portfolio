@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const ThemeSwitch: React.FC = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -16,7 +16,8 @@ const ThemeSwitch: React.FC = () => {
   }
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    const nextTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
   };
 
   return (
@@ -29,10 +30,10 @@ const ThemeSwitch: React.FC = () => {
     >
       <motion.div
         initial={false}
-        animate={{ rotate: theme === 'dark' ? 180 : 0 }}
+        animate={{ rotate: resolvedTheme === 'dark' ? 180 : 0 }}
         transition={{ duration: 0.3 }}
       >
-        {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
+        {resolvedTheme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
       </motion.div>
     </motion.button>
   );

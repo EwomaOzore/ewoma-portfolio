@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false);
-    const { theme } = useTheme();
+    const { resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });
     const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
@@ -30,16 +30,18 @@ const About = () => {
         }, 2000);
     };
 
+    const isDark = resolvedTheme === 'dark';
+
     return (
         <section id="about" className="p-20 sm:p-4">
             <div className="about-grid grid grid-cols-3 gap-5 h-full">
                 <div className="col-span-1 row-span-2">
-                    <div className={`w-full h-full border border-gray-300 ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col items-center justify-between gap-5`}>
+                    <div className={`w-full h-full border border-gray-300 ${isDark ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col items-center justify-between gap-5`}>
                         <Image src="/assets/profile2.jpg" alt="User Picture" className="w-3/5 h-auto object-contain mt-8" width={500} height={500} />
 
                         <div className="text-center">
-                            <p className={`text-xl font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-black'} font-sans`}>Hi, I’m Ewoma Ozore</p>
-                            <p className={`text-base ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'} font-sans`}>
+                            <p className={`text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'} font-sans`}>Hi, I’m Ewoma Ozore</p>
+                            <p className={`text-base ${isDark ? 'text-gray-400' : 'text-gray-700'} font-sans`}>
                                 Senior Frontend Developer with 5+ years building high-performance web and mobile apps
                                 using React, React Native, Next.js, and TypeScript. I focus on clean architecture,
                                 performance optimization, and delightful, responsive user experiences.
@@ -49,12 +51,12 @@ const About = () => {
                 </div>
 
                 <div className="col-span-1 row-span-2">
-                    <div className={`w-full h-full border border-gray-300 ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col items-center`}>
+                    <div className={`w-full h-full border border-gray-300 ${isDark ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col items-center`}>
                         <Lottie animationData={animationData} loop={true} className="w-4/5 h-auto object-contain" />
 
                         <div className="text-center">
-                            <p className={`text-xl font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-black'} font-sans`}>My Passion for Coding</p>
-                            <p className={`text-base ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'} font-sans`}>
+                            <p className={`text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'} font-sans`}>My Passion for Coding</p>
+                            <p className={`text-base ${isDark ? 'text-gray-400' : 'text-gray-700'} font-sans`}>
                                 I love solving problems and building things through code. Programming isn&apos;t just my
                                 profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
                             </p>
@@ -63,7 +65,7 @@ const About = () => {
                 </div>
 
                 <div className="col-span-1 row-span-3">
-                    <div className={`w-full h-full border border-gray-300 ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col justify-between`}>
+                    <div className={`w-full h-full border border-gray-300 ${isDark ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col justify-between`}>
                         <div className="rounded-3xl w-full h-auto flex justify-center items-center">
                             <Globe
                                 height={326}
@@ -71,15 +73,15 @@ const About = () => {
                                 backgroundColor="rgba(0, 0, 0, 0)"
                                 showAtmosphere
                                 showGraticules
-                                globeImageUrl={theme === 'dark' ? "//unpkg.com/three-globe/example/img/earth-night.jpg" : "//unpkg.com/three-globe/example/img/earth-day.jpg"}
+                                globeImageUrl={isDark ? "//unpkg.com/three-globe/example/img/earth-night.jpg" : "//unpkg.com/three-globe/example/img/earth-day.jpg"}
                                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                                 labelsData={[{ lat: 40, lng: -100, text: 'Rjieka, Croatia', color: 'white', size: 15 }]}
                             />
                         </div>
                         <div className="text-center">
                             <div className="mb-12">
-                                <p className={`text-xl font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-black'} font-sans`}>I’m very flexible with time zone, communications & locations</p>
-                                <p className={`text-base ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'} font-sans`}>I&apos;m based in Lagos, Nigeria and open to remote work worldwide.</p>
+                                <p className={`text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'} font-sans`}>I’m very flexible with time zone, communications & locations</p>
+                                <p className={`text-base ${isDark ? 'text-gray-400' : 'text-gray-700'} font-sans`}>I&apos;m based in Lagos, Nigeria and open to remote work worldwide.</p>
                             </div>
                             <Button name="Contact Me" isBeam containerClass="w-full" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} />
                         </div>
@@ -87,7 +89,7 @@ const About = () => {
                 </div>
 
                 <div className="col-span-2 row-span-3">
-                    <div className={`w-full h-full border border-gray-300 ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col gap-5 justify-between`}>
+                    <div className={`w-full h-full border border-gray-300 ${isDark ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col gap-5 justify-between`}>
                         <div className="flex flex-wrap relative h-[350px]">
                             <img src="assets/nextjs.svg" alt="Next Js" className="w-[8%] h-auto object-contain absolute top-[10%] left-[5%] transition-transform duration-300 hover:scale-125" />
                             <img src="assets/javascript.svg" alt="Javascript" className="w-[8%] h-auto object-contain absolute top-[30%] left-[20%] transition-transform duration-300 hover:rotate-360" />
@@ -106,8 +108,8 @@ const About = () => {
                         </div>
 
                         <div>
-                            <p className={`text-xl font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-black'} font-sans`}>Tech Stacks</p>
-                            <p className={`text-base ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'} font-sans`}>
+                            <p className={`text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'} font-sans`}>Tech Stacks</p>
+                            <p className={`text-base ${isDark ? 'text-gray-400' : 'text-gray-700'} font-sans`}>
                                 I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
                                 applications
                             </p>
@@ -116,7 +118,7 @@ const About = () => {
                 </div>
 
                 <div className="col-span-1 row-span-2">
-                    <div className={`w-full h-full border border-gray-300 ${theme === 'dark' ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col gap-5`}>
+                    <div className={`w-full h-full border border-gray-300 ${isDark ? 'bg-[#1E201E]' : 'bg-white'} rounded-lg p-4 flex flex-col gap-5`}>
                         <img
                             src="assets/grid4.png"
                             alt="grid-4"
@@ -124,7 +126,7 @@ const About = () => {
                         />
 
                         <div className="flex flex-col gap-2 items-center">
-                            <p className={`text-base ${theme === 'dark' ? 'text-gray-400' : 'text-gray-700'} font-sans text-center`}>Contact me</p>
+                            <p className={`text-base ${isDark ? 'text-gray-400' : 'text-gray-700'} font-sans text-center`}>Contact me</p>
                             <button
                                 type="button"
                                 onClick={handleCopy}

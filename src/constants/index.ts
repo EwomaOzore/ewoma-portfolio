@@ -108,6 +108,53 @@ export const myProjects = [
     },
 ];
 
+export const mobileApps = [
+    {
+        name: 'Justrite',
+        description:
+            'The Justrite app allows you to shop online at all our locations across Nigeria, and we deliver your orders right to your doorstep. We offer Swift Home Delivery, N1000 Off Your First Order, Easy Ordering & Secure Payment, Exclusive Deals & Promotions, Instore Pick-Up Option Available, and Earn Rewards on Referrals.',
+        image: 'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ef/af/4c/efaf4cd3-538f-6366-17ea-37ff68f0ce66/Placeholder.mill/400x400bb-75.webp',
+        stores: [
+            {
+                label: 'Google Play',
+                href: 'https://play.google.com/store/apps/details?id=com.justrite',
+            },
+            {
+                label: 'App Store',
+                href: 'https://apps.apple.com/us/app/justrite-app/id1639832988',
+            },
+        ],
+    },
+    {
+        name: 'Zona',
+        description:
+            "ZØNA is Miami's nightlife app — your direct connection to the city's hottest clubs, bars, and events. Book bottle service, join guest lists, and unlock perks with just a tap. No promoters. No middlemen. Just you and the best venues.",
+        image: 'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/87/89/a68789a7-4fc2-56e4-2ee6-1966703abd44/AppIcon-0-0-1x_U007epad-0-1-85-220.png/400x400ia-75.webp',
+        stores: [
+            {
+                label: 'App Store',
+                href: 'https://apps.apple.com/us/app/zona-unlock-miami-nightlife/id6479909742',
+            },
+            {
+                label: 'Google Play',
+                href: 'https://play.google.com/store/apps/details?id=com.myzona',
+            },
+        ],
+    },
+    {
+        name: 'SmallWorld',
+        description:
+            'SmallWorld by SmallClosedWorld International Limited is an innovative social networking app that makes the world feel closer. With SmallWorld, you can interact, share, and engage with people across the globe as if you were in the same room. Our mission is to remove barriers, foster meaningful connections, and empower users to explore cultures, build communities, and create lasting relationships.',
+        image: 'https://play-lh.googleusercontent.com/9GJWQGRy5n0muRCk_xlsoZels7qBlGwN9oXKvdRY57nSGsH5Yi785gGR0FwH6GuWDHaKQNAOk0lbhBtbvxZcemI=w480-h960-rw',
+        stores: [
+            {
+                label: 'Google Play',
+                href: 'https://play.google.com/store/apps/details?id=com.smallworlddev.smallworld',
+            },
+        ],
+    },
+];
+
 export const workExperiences = [
     {
         id: 1,

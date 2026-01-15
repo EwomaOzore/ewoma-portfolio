@@ -5,7 +5,8 @@ import Button from "@/components/Button";
 import { useToast, ToastContainer } from "use-toast-message";
 
 const Contact = () => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
   const form = useRef<HTMLFormElement>(null);
   const { toasts, showSuccess, showError, removeToast } = useToast();
 
@@ -48,7 +49,7 @@ const Contact = () => {
         ref={form}
         onSubmit={sendEmail}
         className={`w-[90%] sm:w-[40%] h-full border border-gray-300 ${
-          theme === "dark" ? "bg-[#1E201E]" : "bg-white"
+          isDark ? "bg-[#1E201E]" : "bg-white"
         } rounded-lg p-10 flex flex-col items-center justify-between gap-5`}
       >
         <input type="hidden" name="to_name" value="Ewoma Ozore" />
@@ -57,7 +58,7 @@ const Contact = () => {
           name="user_name"
           placeholder="Name"
           className={`mb-4 p-4 w-full rounded-md ${
-            theme === "dark" ? "bg-black" : "bg-gray-100"
+            isDark ? "bg-black" : "bg-gray-100"
           }`}
           required
           aria-label="Your name"
@@ -67,7 +68,7 @@ const Contact = () => {
           name="user_email"
           placeholder="Email"
           className={`mb-4 p-4 w-full rounded-md ${
-            theme === "dark" ? "bg-black" : "bg-gray-100"
+            isDark ? "bg-black" : "bg-gray-100"
           }`}
           required
           aria-label="Your email"
@@ -76,7 +77,7 @@ const Contact = () => {
           name="message"
           placeholder="Message"
           className={`mb-4 p-4 w-full rounded-md ${
-            theme === "dark" ? "bg-black" : "bg-gray-100"
+            isDark ? "bg-black" : "bg-gray-100"
           }`}
           required
           aria-label="Your message"
