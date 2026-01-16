@@ -24,8 +24,8 @@ const HeroSection = () => {
 
   const handleDownloadWebCV = () => {
     const link = document.createElement("a");
-    link.href = "/documents/Ewoma Ozore's Frontend Curriculum Vitae.pdf";
-    link.download = "Ewoma Ozore's Frontend CV.pdf";
+    link.href = "/documents/Ewomaoghene Ozore's Curriculum Vitae.pdf";
+    link.download = "Ewomaoghene Ozore's Curriculum Vitae.pdf";
     link.click();
   };
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
       />
       <div className="flex flex-col lg:flex-row items-center justify-between w-full h-full max-w-6xl relative z-10">
         <div className="text-center lg:text-left w-full lg:w-1/2 mb-8 lg:mb-0">
-          <h1 className="text-2xl font-extrabold">
+          <h1 className="text-3xl font-extrabold">
             Hello, I&apos;m Ewoma <span className="waving-hand">👋</span>
           </h1>
           <br />
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 sequence={["Web Developer", 1000, "Mobile Developer", 1000]}
                 wrapper="span"
                 speed={50}
-                className="text-4xl text-[#697565] font-extrabold"
+                className="text-5xl text-[#697565] font-extrabold"
                 repeat={Infinity}
               />
             </div>
@@ -71,7 +71,7 @@ const HeroSection = () => {
               name="Let's work together"
               onClick={handleDownloadWebCV}
               isBeam
-              containerClass="min-w-[40%] h-[35px]"
+              containerClass="min-w-[40%] h-[50px]"
             />
           </div>
         </div>
