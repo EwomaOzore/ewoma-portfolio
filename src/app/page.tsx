@@ -1,46 +1,34 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Header from "@/components/Header";
+import React from "react";
+import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import HeroSection from "@/sections/HeroSection";
-import About from "@/sections/About";
-import Projects from "@/sections/Projects";
-import MobileApps from "@/sections/MobileApps";
-import Experience from "@/sections/Experience";
-import Contact from "@/sections/Contact";
+import Cursor from "@/components/Cursor";
+import ProgressBar from "@/components/ProgressBar";
+import Marquee from "@/components/Marquee";
+import Hero from "@/sections/Hero";
+import Highlights from "@/sections/Highlights";
+import WorkSection from "@/sections/Work";
+import ExperienceSection from "@/sections/Experience";
+import SkillsSection from "@/sections/Skills";
+import ContactSection from "@/sections/Contact";
+import { marqueeItems } from "@/constants";
 
-const Home: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
+export default function Home() {
   return (
-    <div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-[#000000] dark:to-[#1E201E] transition-colors duration-300"
-      >
-        <Header />
-        <HeroSection />
-        <About />
-        <Projects />
-        <MobileApps />
-        <Experience />
-        <Contact />
-        <Footer />
-      </motion.div>
-    </div>
+    <>
+      <div className="noise" aria-hidden />
+      <Cursor />
+      <ProgressBar />
+      <Nav />
+      <main>
+        <Hero />
+        <Marquee items={marqueeItems} />
+        <Highlights />
+        <WorkSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </>
   );
-};
-
-export default Home;
+}

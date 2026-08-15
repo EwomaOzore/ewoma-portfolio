@@ -1,71 +1,76 @@
-"use client";
+import React from "react";
+import Image from "next/image";
+import Reveal from "@/components/Reveal";
+import { experience } from "@/constants";
 
-import dynamic from 'next/dynamic';
-import { workExperiences } from '../constants/index';
-import { useTheme } from 'next-themes';
-import animationData from '../../public/experience.json';
+export default function ExperienceSection() {
+  return (
+    <section id="experience" className="border-y border-line bg-surface/50">
+      <div className="mx-auto max-w-content px-6 py-24 md:py-32">
+        <Reveal>
+          <p className="text-xs uppercase tracking-[0.22em] text-muted">
+            02 — Experience
+          </p>
+          <h2 className="mt-4 max-w-[18ch] font-serif text-5xl tracking-tightest md:text-6xl">
+            Close to production. Every time.
+          </h2>
+        </Reveal>
 
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+        <div className="relative mt-16">
+          <div
+            aria-hidden
+            className="absolute bottom-0 left-[15px] top-2 w-px bg-line md:left-[19px]"
+          />
 
-const Experience = () => {
-    const { resolvedTheme } = useTheme();
-    const isDark = resolvedTheme === 'dark';
-
-    const getInitials = (name: string) => {
-        return name
-            .split(' ')
-            .filter(Boolean)
-            .map((part) => part[0])
-            .join('')
-            .slice(0, 2)
-            .toUpperCase();
-    };
-
-    return (
-        <section className="px-4 sm:p-20" id="experience">
-            <div className="w-full text-white grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div className="flex justify-center items-center col-span-1">
-                    <Lottie animationData={animationData} loop={true} className="w-4/5 h-auto object-contain" />
-                </div>
-                <div className="col-span-2">
-                    <p className="text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-gray-400">Work Experience</p>
-
-                    <div className="grid grid-cols-1 gap-5 mt-12">
-                        <div className={`col-span-2 rounded-lg ${isDark ? 'bg-[#1E201E]' : 'bg-white'} border border-gray-300`}>
-                            {workExperiences.map((item) => (
-                                <div
-                                    key={item.id}
-                                    className={`grid grid-cols-[auto_1fr] items-start gap-5 transition-all duration-500 ease-in-out cursor-pointer rounded-lg pt-5 px-5 group ${isDark ? 'hover:bg-black' : 'hover:bg-gray-200'}`}>
-                                    <div className="flex flex-col h-full justify-start items-center p-2">
-                                        <div className="rounded-full w-16 h-16 p-2 overflow-hidden bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                            {item.icon ? (
-                                                <img className="w-full h-full object-cover rounded-full" src={item.icon} alt={`${item.name} logo`} />
-                                            ) : (
-                                                <span className="text-sm font-bold text-gray-700 dark:text-gray-200">{getInitials(item.name)}</span>
-                                            )}
-                                        </div>
-
-                                        <div className={`flex-1 w-0.5 mt-4 h-full ${isDark ? 'bg-black' : 'bg-gray-300'}`} />
-                                    </div>
-
-                                    <div className="p-5 pt-0">
-                                        <p className={`font-bold ${isDark ? 'text-white' : 'text-black'}`}>{item.name}</p>
-                                        <p className={`text-sm mb-5 ${isDark ? 'text-white' : 'text-black'}`}>
-                                            {item.pos}: <span>{item.duration}</span>
-                                        </p>
-                                        <div
-                                            className={`transition-all duration-500 ease-in-out ${isDark ? 'text-white' : 'text-black'}`}
-                                            dangerouslySetInnerHTML={{ __html: item.title.split('\n').join('<br/>') }}
-                                        />
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+          <div className="flex flex-col gap-12">
+            {experience.map((job, i) => (
+              <Reveal key={`${job.company}-${job.period}`} delay={i * 0.04}>
+                <div className="grid gap-4 md:grid-cols-[220px_1fr] md:gap-12">
+                  <div className="relative pl-10 md:pl-12">
+                    <span
+                      aria-hidden
+                      className={`absolute left-[10px] top-1.5 h-2.5 w-2.5 rounded-full md:left-[14px] ${
+                        i === 0
+                          ? "bg-foreground shadow-[0_0_0_6px_var(--glow)]"
+                          : "bg-muted"
+                      }`}
+                    />
+                    <div className="flex items-center gap-3">
+                      {job.icon && (
+                        <Image
+                          src={job.icon}
+                          alt=""
+                          width={32}
+                          height={32}
+                          className="rounded-lg object-cover"
+                        />
+                      )}
+                      <h3 className="font-medium tracking-tight">
+                        {job.company}
+                      </h3>
                     </div>
-                </div>
-            </div>
-        </section>
-    );
-};
+                    <p className="mt-2 text-sm text-muted">{job.period}</p>
+                  </div>
 
-export default Experience;
+                  <div>
+                    <p className="font-serif text-2xl italic">{job.role}</p>
+                    <ul className="mt-3 space-y-2">
+                      {job.points.map((point) => (
+                        <li
+                          key={point}
+                          className="text-sm leading-relaxed text-muted"
+                        >
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

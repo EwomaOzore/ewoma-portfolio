@@ -1,215 +1,236 @@
-export const myProjects = [
-    {
-        title: 'Ahrelia - The luxurious fit-out company',
-        desc: 'Ahrelia specializes in delivering high-end, luxury fit-outs, combining aesthetics and functionality to create bespoke interiors for residential and commercial spaces.',
-        subdesc: 'Built with Next.js 14, Tailwind CSS, and TypeScript, Ahrelia offers a powerful and scalable platform for designing custom luxury interiors with an emphasis on quality and detail.',
-        href: 'https://ahrelia.netlify.app/',
-        texture: '/videos/ahrelia.mp4',
-        logoStyle: {
-            backgroundColor: '#2A1816',
-            border: '0.2px solid #36201D',
-            boxShadow: '0px 0px 60px 0px #AA3C304D',
-        },
-        spotlight: '/assets/spotlight1.png',
-        tags: [
-            {
-                id: 1,
-                name: 'NextJs',
-                path: '/assets/nextjs.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwind.svg',
-            },
-            {
-                id: 3,
-                name: 'JavaScript',
-                path: '/assets/javascript.svg',
-            },
-            {
-                id: 4,
-                name: 'Node Js',
-                path: '/assets/nodejs.svg',
-            },
-            {
-                id: 5,
-                name: 'Express Js',
-                path: '/assets/expressjs1.svg',
-            },
-            {
-                id: 6,
-                name: 'Mongo DB',
-                path: '/assets/mongodb.png',
-            },
-        ],
-    },
-    {
-        title: 'Hoobank - The Next Generation Payment Method',
-        desc: 'Hoobank is a modern landing page designed to showcase a next-gen digital payment platform, offering sleek design and clear communication of its features and benefits.',
-        subdesc: 'Built using React.js, TailwindCSS and Vite, Hoobank serves as a responsive and visually appealing landing page, optimized for fintech solutions.',
-        href: 'https://hoobank-brown-nine.vercel.app/',
-        texture: '/videos/hoobank.mp4',
-        logoStyle: {
-            backgroundColor: '#13202F',
-            border: '0.2px solid #17293E',
-            boxShadow: '0px 0px 60px 0px #2F6DB54D',
-        },
-        spotlight: '/assets/spotlight2.png',
-        tags: [
-            {
-                id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwind.svg',
-            },
-            {
-                id: 3,
-                name: 'JavaScript',
-                path: '/assets/javascript.svg',
-            },
-        ],
-    },
-    {
-        title: 'Gamebuddy - Your one-stop shop for games!',
-        desc: 'Gamebuddy is a simple e-commerce platform where users can purchase video games, gaming accessories, and consoles, creating a convenient shopping experience for gamers.',
-        subdesc: 'Built using Next.js, TailwindCSS, and TypeScript, Gamebuddy offers a streamlined shopping experience with a focus on user-friendly navigation and product discovery.',
-        href: 'https://gamebuddy.vercel.app/',
-        texture: '/videos/gamebuddy.mp4',
-        logoStyle: {
-            backgroundColor: '#60f5a1',
-            background:
-                'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-            border: '0.2px solid rgba(208, 213, 221, 1)',
-            boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
-        },
-        spotlight: '/assets/spotlight3.png',
-        tags: [
-            {
-                id: 1,
-                name: 'NextJs',
-                path: '/assets/nextjs.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwind.svg',
-            },
-            {
-                id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.svg',
-            },
-        ],
-    },
+export const links = {
+  email: "ewomaozore@gmail.com",
+  github: "https://github.com/EwomaOzore",
+  linkedin: "https://www.linkedin.com/in/ewomaozore",
+  cv: "/documents/Ewomaoghene%20Ozore's%20Resume.pdf",
+};
+
+export const stats = [
+  { value: 5, suffix: "+", label: "years shipping product" },
+  { value: 1, suffix: "M+", label: "customers served" },
+  { value: 10, suffix: "K+", label: "daily user operations" },
+  { value: 60, suffix: "%", label: "fewer production errors" },
 ];
 
-export const mobileApps = [
-    {
-        name: 'Justrite',
-        description:
-            'The Justrite app allows you to shop online at all our locations across Nigeria, and we deliver your orders right to your doorstep. We offer Swift Home Delivery, N1000 Off Your First Order, Easy Ordering & Secure Payment, Exclusive Deals & Promotions, Instore Pick-Up Option Available, and Earn Rewards on Referrals.',
-        image: 'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ef/af/4c/efaf4cd3-538f-6366-17ea-37ff68f0ce66/Placeholder.mill/400x400bb-75.webp',
-        stores: [
-            {
-                label: 'Google Play',
-                href: 'https://play.google.com/store/apps/details?id=com.justrite',
-            },
-            {
-                label: 'App Store',
-                href: 'https://apps.apple.com/us/app/justrite-app/id1639832988',
-            },
-        ],
-    },
-    {
-        name: 'Zona',
-        description:
-            "ZØNA is Miami's nightlife app — your direct connection to the city's hottest clubs, bars, and events. Book bottle service, join guest lists, and unlock perks with just a tap. No promoters. No middlemen. Just you and the best venues.",
-        image: 'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/87/89/a68789a7-4fc2-56e4-2ee6-1966703abd44/AppIcon-0-0-1x_U007epad-0-1-85-220.png/400x400ia-75.webp',
-        stores: [
-            {
-                label: 'App Store',
-                href: 'https://apps.apple.com/us/app/zona-unlock-miami-nightlife/id6479909742',
-            },
-            {
-                label: 'Google Play',
-                href: 'https://play.google.com/store/apps/details?id=com.myzona',
-            },
-        ],
-    },
-    {
-        name: 'SmallWorld',
-        description:
-            'SmallWorld by SmallClosedWorld International Limited is an innovative social networking app that makes the world feel closer. With SmallWorld, you can interact, share, and engage with people across the globe as if you were in the same room. Our mission is to remove barriers, foster meaningful connections, and empower users to explore cultures, build communities, and create lasting relationships.',
-        image: 'https://play-lh.googleusercontent.com/9GJWQGRy5n0muRCk_xlsoZels7qBlGwN9oXKvdRY57nSGsH5Yi785gGR0FwH6GuWDHaKQNAOk0lbhBtbvxZcemI=w480-h960-rw',
-        stores: [
-            {
-                label: 'Google Play',
-                href: 'https://play.google.com/store/apps/details?id=com.smallworlddev.smallworld',
-            },
-        ],
-    },
+export const marqueeItems = [
+  "TypeScript",
+  "React",
+  "React Native",
+  "Next.js",
+  "Expo",
+  "TanStack Query",
+  "Redux Toolkit",
+  "Jest",
+  "SSR",
+  "iOS",
+  "Android",
+  "Accessibility",
 ];
 
-export const workExperiences = [
-    {
-        id: 1,
-        name: 'MTN Nigeria',
-        pos: 'Senior Frontend Developer',
-        duration: 'Feb 2025 – Present',
-        title: "- Leading the development of enterprise-grade mobile and web applications, ensuring platform scalability and seamless performance.\n- Designed and implemented optimized API integrations for improved data handling and speed.\n- Spearheaded UI enhancements, resulting in a smoother and more engaging user experience.",
-        icon: '/assets/mtnnigeria.jpeg',
-    },
-    {
-        id: 2,
-        name: 'AB InBev',
-        pos: 'Frontend Developer',
-        duration: 'Jan 2024 – Present',
-        title: "- Developed and deployed customer-facing web applications with a focus on accessibility and performance.\n- Optimized application workflows using Next.js and React for faster load times.\n- Integrated secure RESTful APIs, enabling smooth data exchange between services.\n- Collaborated with design teams to deliver user-friendly and brand-consistent interfaces.",
-        icon: '/assets/abinbev.jpeg',
-    },
-    {
-        id: 3,
-        name: 'SMALLCLOSEDWORLD',
-        pos: 'Lead Frontend Developer (Web & Mobile)',
-        duration: 'Sep 2024 – Apr 2025',
-        title: "- Led the design, development, and launch of cross-platform mobile applications on iOS and Android.\n- Engineered robust API integrations to ensure stable and reliable data exchange.\n- Enhanced UI/UX design to improve navigation and usability.\n- Mentored junior developers and promoted best practices across the team.",
-        icon: '/assets/smallclosedworld.jpeg',
-    },
-    {
-        id: 4,
-        name: 'Techbeaver',
-        pos: 'React Native Developer',
-        duration: 'Jan 2024 – Sep 2024',
-        title: "- Delivered high-quality mobile applications optimized for usability and speed.\n- Managed complex state flows with Redux and deployed to iOS & Android stores.",
-        icon: '/assets/techbeaver.jpeg',
-    },
-    {
-        id: 5,
-        name: 'Satori Mental Health',
-        pos: 'Frontend Developer',
-        duration: 'Jul 2023 – Aug 2024',
-        title: "- Built responsive, accessible web apps with Redux-driven state management.\n- Maintained clean, scalable codebases and improved cross-device UX.",
-        icon: '/assets/satori.jpeg',
-    },
-    {
-        id: 6,
-        name: 'SubShare Inc.',
-        pos: 'Frontend Developer (Web & Mobile)',
-        duration: 'Aug 2022 – Jan 2024',
-        title: "- Created interactive web & mobile apps using React and React Native.\n- Delivered new features in alignment with client specifications and timelines.",
-        icon: '/assets/subshare.jpeg',
-    },
-    {
-        id: 7,
-        name: 'Integrated Orange',
-        pos: 'Frontend Developer',
-        duration: 'May 2019 – Sep 2022',
-        title: "- Developed responsive, interactive web apps using React.js and modern tooling.\n- Integrated frontend with backend services via RESTful APIs.",
-        icon: '/assets/integratedorange.jpeg',
-    },
+export type Work = {
+  name: string;
+  role: string;
+  description: string;
+  detail: string;
+  icon: string;
+  screen?: string;
+  tags: string[];
+  accent: string;
+  metric: string;
+  index: string;
+  kind: "web" | "mobile";
+  href?: string;
+  stores?: { label: "App Store" | "Google Play"; href: string }[];
+};
+
+export const featuredWork: Work[] = [
+  {
+    name: "MTN Partner Portal",
+    role: "Senior Software Developer",
+    description: "A partner platform reaching millions in Nigeria.",
+    detail:
+      "Production web app for licensed aggregators and VAS partners — onboarding, service integration, payments, and analytics on top of MTN's nationwide customer base.",
+    icon: "/assets/mtnnigeria.jpeg",
+    screen: "/assets/mtnscreen.png",
+    tags: ["React", "TypeScript", "REST APIs"],
+    accent: "#FFCC00",
+    metric: "1M+ customers",
+    index: "01",
+    kind: "web",
+    href: "https://partner.mtn.ng/",
+  },
+  {
+    name: "Justrite",
+    role: "Lead Mobile Developer",
+    description: "E-commerce at retail scale, on iOS and Android.",
+    detail:
+      "Led the modernisation of a production shopping app handling 10,000+ daily user operations. Rebuilt authentication flows, optimised API data retrieval, and cut production errors by 60% with Jest test coverage.",
+    icon: "/assets/justrite.jpeg",
+    screen: "/assets/justritescreen.jpeg",
+    tags: ["React Native", "Expo", "Jest"],
+    accent: "#7B2CBF",
+    metric: "10K+ daily users",
+    index: "02",
+    kind: "mobile",
+    stores: [
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/us/app/justrite-app/id1639832988",
+      },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.justrite",
+      },
+    ],
+  },
+  {
+    name: "Zona",
+    role: "Mobile Engineer",
+    description: "Miami and NYC nightlife, booked from your pocket.",
+    detail:
+      "Cross-platform nightlife and entertainment app for discovering venues, joining guest lists, and booking bottle service — shipped to both stores with a native-feeling, animation-rich interface.",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/84/6c/dc/846cdc17-4557-bdcd-03c7-0520d192a92c/Placeholder.mill/400x400bb-75.webp",
+    screen: "/assets/zonascreen.webp",
+    tags: ["React Native", "TypeScript", "REST APIs"],
+    accent: "#E11D8F",
+    metric: "iOS + Android",
+    index: "03",
+    kind: "mobile",
+    stores: [
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/us/app/zona-unlock-miami-nightlife/id6479909742",
+      },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.myzona",
+      },
+    ],
+  },
+  {
+    name: "Kuja ERP",
+    role: "Senior Frontend Engineer",
+    description: "Enterprise logistics for AB InBev staff and distributors.",
+    detail:
+      "Web ERP for AB InBev Africa — internal staff and distributor access, authentication, and operational workflows across the distribution map. Built as a production React application with a clear split between employee and partner entry points.",
+    icon: "/assets/abinbev.jpeg",
+    screen: "/assets/kujascreen.png",
+    tags: ["React", "TypeScript", "Next.js"],
+    accent: "#F5C400",
+    metric: "AB InBev",
+    index: "04",
+    kind: "web",
+    href: "https://afr-map-kuja-san-dev-appsrvc.azurewebsites.net/auth",
+  },
+];
+
+export type Experience = {
+  company: string;
+  role: string;
+  period: string;
+  icon?: string;
+  points: string[];
+};
+
+export const experience: Experience[] = [
+  {
+    company: "MTN Nigeria",
+    role: "Senior Software Developer",
+    period: "Feb 2025 — Jul 2026",
+    icon: "/assets/mtnnigeria.jpeg",
+    points: [
+      "Built and maintained production React and React Native applications supporting 1M+ customers across web and mobile.",
+      "Integrated REST APIs, authentication workflows, and analytics across critical customer journeys.",
+      "Improved performance through lazy loading, rendering optimisation, and efficient state management.",
+    ],
+  },
+  {
+    company: "Justrite",
+    role: "Lead Mobile Developer",
+    period: "May 2025 — Jun 2026",
+    icon: "/assets/justrite.jpeg",
+    points: [
+      "Spearheaded modernisation of a production e-commerce app supporting 10,000+ daily user operations.",
+      "Implemented unit and integration testing with Jest, contributing to a 60% reduction in production errors.",
+      "Strengthened authentication flows and resolved production performance bottlenecks.",
+    ],
+  },
+  {
+    company: "AB InBev",
+    role: "Senior Frontend Engineer",
+    period: "Jan 2024 — Dec 2025",
+    icon: "/assets/abinbev.jpeg",
+    points: [
+      "Developed scalable customer-facing dashboards with React, Next.js, and TypeScript.",
+      "Improved performance with SSR, code splitting, caching strategies, and rendering optimisation.",
+      "Contributed to architecture discussions, code reviews, and release planning.",
+    ],
+  },
+  {
+    company: "SmallClosedWorld",
+    role: "Lead Frontend Developer — Web & Mobile",
+    period: "Sep 2024 — Apr 2025",
+    icon: "/assets/smallclosedworld.jpeg",
+    points: [
+      "Led development of scalable React Native applications across multiple client and product requirements.",
+      "Contributed to iOS and Android releases and supported technical decision-making across concurrent projects.",
+    ],
+  },
+  {
+    company: "Satori Mental Health",
+    role: "Frontend Developer",
+    period: "Jul 2022 — Feb 2024",
+    icon: "/assets/satori.jpeg",
+    points: [
+      "Built responsive, accessible React applications from Figma designs with Redux and React Hooks.",
+      "Improved rendering efficiency by identifying and eliminating unnecessary component re-renders.",
+    ],
+  },
+  {
+    company: "Techbeaver",
+    role: "React Native Developer",
+    period: "Jan 2022 — Oct 2024",
+    icon: "/assets/techbeaver.jpeg",
+    points: [
+      "Developed and maintained production React Native apps across multiple client projects, from development through release.",
+      "Contributed to releases on the Apple App Store and Google Play Store.",
+    ],
+  },
+  {
+    company: "SubShare Inc.",
+    role: "Frontend Developer — Web & Mobile",
+    period: "Aug 2019 — Jul 2022",
+    icon: "/assets/subshare.jpeg",
+    points: [
+      "Built interactive React and React Native applications across desktop, tablet, and mobile.",
+      "Migrated legacy jQuery interfaces to React, improving maintainability and development velocity.",
+    ],
+  },
+];
+
+export const skillGroups = [
+  {
+    title: "Languages",
+    skills: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"],
+  },
+  {
+    title: "Web",
+    skills: ["React", "Next.js", "Tailwind CSS", "Sass/SCSS", "Node.js", "Express"],
+  },
+  {
+    title: "Mobile",
+    skills: ["React Native", "Expo", "iOS", "Android", "App Store", "Google Play"],
+  },
+  {
+    title: "State & Data",
+    skills: ["Redux Toolkit", "TanStack Query", "Recoil", "Context API", "REST APIs"],
+  },
+  {
+    title: "Quality",
+    skills: ["Jest", "React Testing Library", "Accessibility (WCAG)", "Code Reviews"],
+  },
+  {
+    title: "Performance",
+    skills: ["SSR", "Code Splitting", "Lazy Loading", "Rendering Optimisation"],
+  },
 ];
