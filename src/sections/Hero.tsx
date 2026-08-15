@@ -17,7 +17,7 @@ const item = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -85,7 +85,7 @@ export default function Hero() {
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] as const }}
           className="relative mx-auto hidden h-[420px] w-full max-w-[280px] md:block lg:h-[460px] lg:max-w-[420px]"
         >
           <BrowserFrame

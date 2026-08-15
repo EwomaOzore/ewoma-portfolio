@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #f6f4ef;
@@ -63,10 +63,8 @@ body {
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@utility text-balance {
+  text-wrap: balance;
 }
 
 .grid-overlay {

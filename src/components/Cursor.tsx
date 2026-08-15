@@ -5,16 +5,14 @@ import { useReducedMotion } from "framer-motion";
 
 export default function Cursor() {
   const reduceMotion = useReducedMotion();
-  const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
   const [hover, setHover] = useState(false);
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (reduceMotion) return;
     if (!window.matchMedia("(pointer: fine)").matches) return;
 
     document.body.classList.add("cursor-ready");
-    setVisible(true);
 
     const move = (e: MouseEvent) => setPos({ x: e.clientX, y: e.clientY });
     const over = (e: MouseEvent) => {
@@ -32,7 +30,7 @@ export default function Cursor() {
     };
   }, [reduceMotion]);
 
-  if (!visible) return null;
+  if (!pos) return null;
 
   return (
     <div

@@ -15,10 +15,7 @@ export default function CountUp({ to, suffix = "", className }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (reduceMotion) {
-      setValue(to);
-      return;
-    }
+    if (reduceMotion) return;
 
     const el = ref.current;
     if (!el) return;
@@ -46,7 +43,7 @@ export default function CountUp({ to, suffix = "", className }: CountUpProps) {
 
   return (
     <span ref={ref} className={className}>
-      {value}
+      {reduceMotion ? to : value}
       {suffix}
     </span>
   );

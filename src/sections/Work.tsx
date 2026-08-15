@@ -99,7 +99,7 @@ export default function WorkSection() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] as const }}
                   className="pt-8"
                 >
                   <h3 className="max-w-[18ch] font-serif text-3xl leading-[1.1] tracking-tightest md:text-4xl">
@@ -165,7 +165,7 @@ export default function WorkSection() {
                   initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
-                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as const }}
                   className="flex w-full justify-center"
                 >
                   <Preview work={work} />

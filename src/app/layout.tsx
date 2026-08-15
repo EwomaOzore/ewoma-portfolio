@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
-import { ThemeProvider } from "next-themes";
+import Providers from "@/components/Providers";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
@@ -43,10 +43,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${serif.variable} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
           {children}
           <Analytics />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
