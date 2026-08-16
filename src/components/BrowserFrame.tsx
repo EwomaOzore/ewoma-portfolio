@@ -24,17 +24,17 @@ export default function BrowserFrame({
   const box =
     size === "sm"
       ? "h-[240px] w-[380px]"
-      : "w-full md:h-[520px] md:max-w-[720px]";
+      : "aspect-[16/10] w-full min-w-0 overflow-hidden md:aspect-auto md:h-[520px] md:max-w-[720px]";
 
   return (
-    <div className={`relative ${box} ${className}`}>
+    <div className={`relative min-w-0 shrink-0 ${box} ${className}`}>
       <div
         aria-hidden
-        className="absolute inset-6 rounded-full blur-3xl"
+        className="pointer-events-none absolute inset-6 rounded-full blur-3xl"
         style={{ background: accent, opacity: 0.35 }}
       />
-      <div className="relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#111] shadow-2xl">
-        <div className="flex h-10 shrink-0 items-center gap-2 border-b border-white/10 px-3">
+      <div className="relative flex h-full min-h-0 min-w-0 w-full flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#111] shadow-2xl">
+        <div className="flex h-10 min-w-0 shrink-0 items-center gap-2 border-b border-white/10 px-3">
           <span className="h-2 w-2 shrink-0 rounded-full bg-[#ff5f57]" />
           <span className="h-2 w-2 shrink-0 rounded-full bg-[#febc2e]" />
           <span className="h-2 w-2 shrink-0 rounded-full bg-[#28c840]" />
@@ -43,13 +43,7 @@ export default function BrowserFrame({
           </div>
         </div>
 
-        <div
-          className={`relative w-full overflow-hidden ${
-            size === "sm"
-              ? "min-h-0 flex-1"
-              : "aspect-[16/10] md:aspect-auto md:min-h-0 md:flex-1"
-          }`}
-        >
+        <div className="relative min-h-0 w-full flex-1 overflow-hidden">
           {src ? (
             <Image
               src={src}

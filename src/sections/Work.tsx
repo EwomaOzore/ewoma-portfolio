@@ -15,8 +15,8 @@ function Preview({ work }: { work: Work }) {
 
   return (
     <div
-      className={`flex w-full items-center justify-center ${
-        isWeb ? "h-auto md:h-[560px]" : "py-2 md:h-[560px]"
+      className={`flex w-full min-w-0 items-center justify-center ${
+        isWeb ? "md:h-[560px]" : "py-2 md:h-[560px]"
       }`}
     >
       {isWeb ? (
@@ -164,7 +164,7 @@ export default function WorkSection() {
               </AnimatePresence>
             </div>
 
-            <div className="flex items-center justify-center md:sticky md:top-24 md:min-h-[560px] md:self-stretch">
+            <div className="flex min-w-0 items-center justify-center md:sticky md:top-24 md:min-h-[560px] md:self-stretch">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={work.name}
@@ -172,7 +172,7 @@ export default function WorkSection() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as const }}
-                  className="flex w-full justify-center"
+                  className="flex w-full min-w-0 justify-center"
                 >
                   <Preview work={work} />
                 </motion.div>
