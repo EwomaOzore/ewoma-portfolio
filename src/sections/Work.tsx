@@ -11,26 +11,32 @@ import SpotlightCard from "@/components/SpotlightCard";
 import { featuredWork, type Work } from "@/constants";
 
 function Preview({ work }: { work: Work }) {
-  if (work.kind === "web" && work.href) {
-    return (
-      <BrowserFrame
-        src={work.screen}
-        url={work.href}
-        title={work.name}
-        accent={work.accent}
-        className="max-w-none w-full"
-      />
-    );
-  }
+  const isWeb = work.kind === "web" && Boolean(work.href);
 
   return (
-    <DeviceFrame
-      src={work.screen ?? work.icon}
-      alt={`${work.name} on device`}
-      accent={work.accent}
-      fill={Boolean(work.screen)}
-      size="lg"
-    />
+    <div
+      className={`flex w-full items-center justify-center ${
+        isWeb ? "h-auto md:h-[560px]" : "py-2 md:h-[560px]"
+      }`}
+    >
+      {isWeb ? (
+        <BrowserFrame
+          src={work.screen}
+          url={work.href!}
+          title={work.name}
+          accent={work.accent}
+          size="lg"
+        />
+      ) : (
+        <DeviceFrame
+          src={work.screen ?? work.icon}
+          alt={`${work.name} on device`}
+          accent={work.accent}
+          fill={Boolean(work.screen)}
+          size="lg"
+        />
+      )}
+    </div>
   );
 }
 
@@ -54,7 +60,7 @@ export default function WorkSection() {
           accent={work.accent}
           className="rounded-[2rem] border border-line bg-surface"
         >
-          <div className="grid items-stretch gap-5 p-6 md:grid-cols-[minmax(240px,0.62fr)_1.38fr] md:p-10 lg:gap-12">
+          <div className="grid items-stretch gap-5 p-4 md:grid-cols-[minmax(240px,0.62fr)_1.38fr] md:p-10 lg:gap-12">
             <div>
               <div className="max-h-[420px] overflow-y-auto pr-1 md:max-h-[520px]">
                 {featuredWork.map((item, i) => {
@@ -158,7 +164,7 @@ export default function WorkSection() {
               </AnimatePresence>
             </div>
 
-            <div className="flex min-h-[420px] items-center justify-center md:sticky md:top-24 md:min-h-[560px] md:self-stretch">
+            <div className="flex items-center justify-center md:sticky md:top-24 md:min-h-[560px] md:self-stretch">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={work.name}

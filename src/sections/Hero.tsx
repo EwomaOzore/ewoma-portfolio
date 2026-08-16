@@ -32,7 +32,7 @@ export default function Hero() {
         className="pointer-events-none absolute -left-32 top-24 h-[420px] w-[420px] rounded-full bg-foreground/[0.04] blur-3xl"
       />
 
-      <div className="mx-auto grid min-h-screen max-w-content items-center gap-12 px-6 pb-20 pt-28 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="mx-auto grid min-h-screen max-w-content items-center gap-12 px-6 pb-20 pt-28 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div
           variants={container}
           initial={reduceMotion ? false : "hidden"}
@@ -86,14 +86,15 @@ export default function Hero() {
           initial={reduceMotion ? false : { opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] as const }}
-          className="relative mx-auto hidden h-[420px] w-full max-w-[280px] md:block lg:h-[460px] lg:max-w-[420px]"
+          className="relative mx-auto hidden h-[500px] w-full max-w-[380px] md:block lg:h-[560px] lg:max-w-[560px]"
         >
           <BrowserFrame
             src={featuredWork[0].screen}
             url={featuredWork[0].href ?? "https://partner.mtn.ng/"}
             title={featuredWork[0].name}
             accent={featuredWork[0].accent}
-            className="absolute left-0 top-16 hidden w-[210px] -rotate-[10deg] lg:block"
+            size="sm"
+            className="absolute left-0 top-16 hidden -rotate-[10deg] lg:block"
           />
           <DeviceFrame
             src={featuredWork[1].screen ?? featuredWork[1].icon}
@@ -101,7 +102,7 @@ export default function Hero() {
             accent={featuredWork[1].accent}
             fill={Boolean(featuredWork[1].screen)}
             priority
-            className="absolute left-1/2 top-0 z-10 -translate-x-1/2 rotate-[4deg] lg:left-[150px] lg:translate-x-0"
+            className="absolute left-1/2 top-0 z-10 -translate-x-1/2 rotate-[4deg] lg:left-[210px] lg:translate-x-0"
           />
           <DeviceFrame
             src={featuredWork[2].screen ?? featuredWork[2].icon}
@@ -110,7 +111,7 @@ export default function Hero() {
             fill={Boolean(featuredWork[2].screen)}
             size="sm"
             priority
-            className="absolute right-0 top-24 z-20 hidden rotate-[14deg] lg:block"
+            className="absolute right-0 top-32 z-20 hidden rotate-[14deg] lg:block"
           />
         </motion.div>
       </div>

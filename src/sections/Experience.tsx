@@ -19,22 +19,23 @@ export default function ExperienceSection() {
         <div className="relative mt-16">
           <div
             aria-hidden
-            className="absolute bottom-0 left-[15px] top-2 w-px bg-line md:left-[19px]"
+            className="absolute bottom-4 left-[11px] top-2 w-px bg-line md:left-[15px]"
           />
 
           <div className="flex flex-col gap-12">
             {experience.map((job, i) => (
               <Reveal key={`${job.company}-${job.period}`} delay={i * 0.04}>
-                <div className="grid gap-4 md:grid-cols-[220px_1fr] md:gap-12">
-                  <div className="relative pl-10 md:pl-12">
-                    <span
-                      aria-hidden
-                      className={`absolute left-[10px] top-1.5 h-2.5 w-2.5 rounded-full md:left-[14px] ${
-                        i === 0
-                          ? "bg-foreground shadow-[0_0_0_6px_var(--glow)]"
-                          : "bg-muted"
-                      }`}
-                    />
+                <article className="relative grid gap-3 pl-10 md:grid-cols-[220px_1fr] md:gap-12 md:pl-12">
+                  <span
+                    aria-hidden
+                    className={`absolute left-[11px] top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full md:left-[15px] ${
+                      i === 0
+                        ? "bg-foreground shadow-[0_0_0_6px_var(--glow)]"
+                        : "bg-muted"
+                    }`}
+                  />
+
+                  <div>
                     <div className="flex items-center gap-3">
                       {job.icon && (
                         <Image
@@ -52,8 +53,10 @@ export default function ExperienceSection() {
                     <p className="mt-2 text-sm text-muted">{job.period}</p>
                   </div>
 
-                  <div>
-                    <p className="font-serif text-2xl italic">{job.role}</p>
+                  <div className="min-w-0">
+                    <p className="font-serif text-xl italic md:text-2xl">
+                      {job.role}
+                    </p>
                     <ul className="mt-3 space-y-2">
                       {job.points.map((point) => (
                         <li
@@ -65,7 +68,7 @@ export default function ExperienceSection() {
                       ))}
                     </ul>
                   </div>
-                </div>
+                </article>
               </Reveal>
             ))}
           </div>
