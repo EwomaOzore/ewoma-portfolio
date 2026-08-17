@@ -136,7 +136,7 @@ export const experience: Experience[] = [
   {
     company: "MTN Nigeria",
     role: "Senior Software Developer",
-    period: "Feb 2025 — Present",
+    period: "Feb 2025 — Jul 2026",
     icon: "/assets/mtnnigeria.jpeg",
     points: [
       "Built and maintained production React and React Native applications supporting 1M+ customers across web and mobile.",
@@ -147,7 +147,7 @@ export const experience: Experience[] = [
   {
     company: "Justrite",
     role: "Lead Mobile Developer",
-    period: "May 2025 — Present",
+    period: "May 2025 — Jun 2026",
     icon: "/assets/justrite.jpeg",
     points: [
       "Spearheaded modernisation of a production e-commerce app supporting 10,000+ daily user operations.",
@@ -179,7 +179,7 @@ export const experience: Experience[] = [
   {
     company: "Satori Mental Health",
     role: "Frontend Developer",
-    period: "Jul 2022 — Feb 2024",
+    period: "Jul 2023 — Feb 2024",
     icon: "/assets/satori.jpeg",
     points: [
       "Built responsive, accessible React applications from Figma designs with Redux and React Hooks.",
@@ -189,21 +189,31 @@ export const experience: Experience[] = [
   {
     company: "Techbeaver",
     role: "React Native Developer",
-    period: "Jan 2022 — Oct 2024",
+    period: "Jan 2022 — Oct 2023",
     icon: "/assets/techbeaver.jpeg",
     points: [
-      "Developed and maintained production React Native apps across multiple client projects, from development through release.",
-      "Contributed to releases on the Apple App Store and Google Play Store.",
+      "Developed and maintained production React Native applications across multiple client projects, from development through release.",
+      "Diagnosed application issues and implemented fixes to improve stability, reliability, and user experience.",
     ],
   },
   {
     company: "SubShare Inc.",
-    role: "Frontend Developer — Web & Mobile",
-    period: "Aug 2019 — Jul 2022",
+    role: "Frontend Developer — Web & Mobile Intern",
+    period: "Aug 2021 — Jul 2022",
     icon: "/assets/subshare.jpeg",
     points: [
-      "Built interactive React and React Native applications across desktop, tablet, and mobile.",
-      "Migrated legacy jQuery interfaces to React, improving maintainability and development velocity.",
+      "Developed interactive React and React Native applications based on product and client requirements.",
+      "Built reusable frontend components and responsive interfaces across desktop, tablet, and mobile.",
+    ],
+  },
+  {
+    company: "Integrated Orange",
+    role: "Frontend Developer Intern",
+    period: "May 2020 — Sep 2021",
+    icon: "/assets/integratedorange.jpeg",
+    points: [
+      "Developed responsive, interactive web apps using HTML, CSS, JavaScript, and modern tooling.",
+      "Migrated legacy jQuery interfaces to React architecture, improving maintainability and development velocity.",
     ],
   },
 ];

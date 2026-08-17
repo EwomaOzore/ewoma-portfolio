@@ -43,7 +43,7 @@ export default function ExperienceSection() {
                           alt=""
                           width={32}
                           height={32}
-                          className="rounded-lg object-cover"
+                          className="h-8 w-8 rounded-lg bg-white object-contain"
                         />
                       )}
                       <h3 className="font-medium tracking-tight">
