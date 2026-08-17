@@ -136,7 +136,7 @@ export const experience: Experience[] = [
   {
     company: "MTN Nigeria",
     role: "Senior Software Developer",
-    period: "Feb 2025 — Jul 2026",
+    period: "Feb 2025 — Present",
     icon: "/assets/mtnnigeria.jpeg",
     points: [
       "Built and maintained production React and React Native applications supporting 1M+ customers across web and mobile.",
@@ -147,7 +147,7 @@ export const experience: Experience[] = [
   {
     company: "Justrite",
     role: "Lead Mobile Developer",
-    period: "May 2025 — Jun 2026",
+    period: "May 2025 — Present",
     icon: "/assets/justrite.jpeg",
     points: [
       "Spearheaded modernisation of a production e-commerce app supporting 10,000+ daily user operations.",
