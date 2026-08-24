@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import TrackedLink from "./TrackedLink";
 import { links } from "@/constants";
 
 const navItems = [
@@ -33,14 +34,16 @@ export default function Nav() {
               {item.label}
             </a>
           ))}
-          <a
+          <TrackedLink
             href={links.cv}
             target="_blank"
             rel="noopener noreferrer"
+            event="Resume Click"
+            data={{ location: "nav" }}
             className="rounded-full bg-foreground px-3.5 py-1.5 text-[13px] font-medium text-background transition-transform hover:scale-[1.03]"
           >
             Résumé
-          </a>
+          </TrackedLink>
           <ThemeToggle />
         </div>
 
@@ -77,14 +80,16 @@ export default function Nav() {
                   {item.label}
                 </a>
               ))}
-              <a
+              <TrackedLink
                 href={links.cv}
                 target="_blank"
                 rel="noopener noreferrer"
+                event="Resume Click"
+                data={{ location: "nav-mobile" }}
                 className="py-2 text-sm font-medium"
               >
                 Download résumé
-              </a>
+              </TrackedLink>
             </div>
           </motion.div>
         )}

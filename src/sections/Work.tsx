@@ -8,6 +8,7 @@ import BrowserFrame from "@/components/BrowserFrame";
 import DeviceFrame from "@/components/DeviceFrame";
 import Reveal from "@/components/Reveal";
 import SpotlightCard from "@/components/SpotlightCard";
+import TrackedLink from "@/components/TrackedLink";
 import { featuredWork, type Work } from "@/constants";
 
 function Preview({ work }: { work: Work }) {
@@ -137,27 +138,34 @@ export default function WorkSection() {
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     {work.href && (
-                      <a
+                      <TrackedLink
                         href={work.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        event="Live Site Click"
+                        data={{ project: work.name, destination: "web" }}
                         className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
                       >
                         Visit live site
                         <ArrowUpRight size={14} />
-                      </a>
+                      </TrackedLink>
                     )}
                     {work.stores?.map((store) => (
-                      <a
+                      <TrackedLink
                         key={store.label}
                         href={store.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        event="Live Site Click"
+                        data={{
+                          project: work.name,
+                          destination: store.label,
+                        }}
                         className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
                       >
                         {store.label}
                         <ArrowUpRight size={14} />
-                      </a>
+                      </TrackedLink>
                     ))}
                   </div>
                 </motion.div>

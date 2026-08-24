@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import TrackedLink from "@/components/TrackedLink";
 import { links } from "@/constants";
 
 export default function ContactSection() {
@@ -33,15 +34,17 @@ export default function ContactSection() {
           </a>
 
           <div className="mt-10">
-            <a
+            <TrackedLink
               href={links.cv}
               target="_blank"
               rel="noopener noreferrer"
+              event="Resume Click"
+              data={{ location: "contact" }}
               className="inline-flex items-center gap-1.5 rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:bg-surface"
             >
               Download résumé
               <ArrowUpRight size={14} />
-            </a>
+            </TrackedLink>
           </div>
         </Reveal>
       </div>

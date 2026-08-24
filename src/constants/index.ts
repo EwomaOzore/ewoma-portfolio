@@ -3,6 +3,7 @@ export const links = {
   github: "https://github.com/EwomaOzore",
   linkedin: "https://www.linkedin.com/in/ewomaozore",
   cv: "/documents/Ewomaoghene%20Ozore's%20Resume.pdf",
+  site: "https://ewomaozore.vercel.app",
 };
 
 export const stats = [

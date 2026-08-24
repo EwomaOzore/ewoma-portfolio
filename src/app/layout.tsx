@@ -34,6 +34,9 @@ export const metadata: Metadata = {
       "5+ years shipping production web and mobile products for 1M+ customers.",
     type: "website",
   },
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export default function RootLayout({
