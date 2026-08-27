@@ -4,13 +4,19 @@ import Reveal from "@/components/Reveal";
 import TrackedLink from "@/components/TrackedLink";
 import { links } from "@/constants";
 
-export default function ContactSection() {
+export default function ContactSection({
+  glow = true,
+}: Readonly<{
+  glow?: boolean;
+}>) {
   return (
     <section id="contact" className="relative overflow-hidden border-t border-line">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground/[0.04] blur-3xl"
-      />
+      {glow && (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground/[0.04] blur-3xl"
+        />
+      )}
 
       <div className="mx-auto max-w-content px-6 py-28 md:py-40">
         <Reveal>

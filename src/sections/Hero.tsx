@@ -74,6 +74,12 @@ export default function Hero() {
               See selected work
             </a>
             <a
+              href="/projects"
+              className="rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:bg-surface"
+            >
+              Personal projects
+            </a>
+            <a
               href={`mailto:${links.email}`}
               className="rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:bg-surface"
             >

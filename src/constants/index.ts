@@ -219,6 +219,88 @@ export const experience: Experience[] = [
   },
 ];
 
+export type PersonalProject = {
+  name: string;
+  year: string;
+  kind: "web" | "mobile";
+  description: string;
+  detail: string;
+  tags: string[];
+  accent: string;
+  metric: string;
+  href?: string;
+  github: string;
+  screen?: string;
+  screenWidth?: number;
+  screenHeight?: number;
+};
+
+export const personalProjects: PersonalProject[] = [
+  {
+    name: "GameBuddy",
+    year: "2023 — 2026",
+    kind: "web",
+    description: "Official consoles, priced in Naira, sold like you have a match tonight.",
+    detail:
+      "A Lagos storefront for PlayStation, Xbox, Nintendo, PC, and Steam Deck — catalogue, deals, cart, and loyalty. Next-day delivery copy, platform pages, and a commerce UI I still iterate on.",
+    tags: ["Next.js", "TypeScript", "Zustand", "Tailwind"],
+    accent: "#D1FF52",
+    metric: "Live store",
+    href: "https://gamebuddy.vercel.app",
+    github: "https://github.com/EwomaOzore/gamebuddy",
+    screen: "/assets/gamebuddy.png",
+    screenWidth: 3578,
+    screenHeight: 1814,
+  },
+  {
+    name: "HooBank",
+    year: "2023",
+    kind: "web",
+    description: "A payments landing page with the volume turned up.",
+    detail:
+      "Responsive React marketing site for a next-generation payments product — hero, stats, features, and a Get Started flow. Built with Vite and Tailwind, shipped live.",
+    tags: ["React", "Vite", "Tailwind"],
+    accent: "#5CE1E6",
+    metric: "Live site",
+    href: "https://hoobank-brown-nine.vercel.app/",
+    github: "https://github.com/EwomaOzore/hoobank",
+    screen: "/assets/hoobank.png",
+    screenWidth: 3600,
+    screenHeight: 2072,
+  },
+  {
+    name: "Interswitch",
+    year: "2025",
+    kind: "web",
+    description: "A Nigerian banking dashboard you can actually read.",
+    detail:
+      "Next.js account overview — savings, current, and loan balances in Naira, send-money, and a recent-activity feed. Typed forms, TanStack Query, and Jest plus Playwright coverage.",
+    tags: ["Next.js", "TypeScript", "TanStack Query", "Playwright"],
+    accent: "#0EA5E9",
+    metric: "Live dashboard",
+    href: "https://interswitch-dashboard.vercel.app/dashboard",
+    github: "https://github.com/EwomaOzore/interswitch-dashboard",
+    screen: "/assets/interswitch.png",
+    screenWidth: 3600,
+    screenHeight: 2080,
+  },
+  {
+    name: "Flux",
+    year: "2026",
+    kind: "mobile",
+    description: "A budget app I actually open on payday.",
+    detail:
+      "React Native money app: spending timeline, payday planning, receipt capture, Face ID, and local backups. Built for how I spend — not a spreadsheet wearing an app icon.",
+    tags: ["React Native", "Expo", "Zustand", "EAS"],
+    accent: "#2D6A4F",
+    metric: "Personal finance",
+    github: "https://github.com/EwomaOzore/Flux",
+    screen: "/assets/flux.png",
+    screenWidth: 1206,
+    screenHeight: 2622,
+  },
+];
+
 export const skillGroups = [
   {
     title: "Languages",

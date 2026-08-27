@@ -11,7 +11,7 @@ import SpotlightCard from "@/components/SpotlightCard";
 import TrackedLink from "@/components/TrackedLink";
 import { featuredWork, type Work } from "@/constants";
 
-function Preview({ work }: { work: Work }) {
+function Preview({ work }: Readonly<{ work: Work }>) {
   const isWeb = work.kind === "web" && Boolean(work.href);
 
   return (
@@ -54,6 +54,13 @@ export default function WorkSection() {
         <h2 className="mt-4 max-w-[16ch] font-serif text-5xl tracking-tightest md:text-6xl">
           Shipped to real people, not just staging.
         </h2>
+        <a
+          href="/projects"
+          className="mt-6 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
+        >
+          Personal projects
+          <ArrowUpRight size={14} />
+        </a>
       </Reveal>
 
       <Reveal className="mt-14">
@@ -106,7 +113,10 @@ export default function WorkSection() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] as const }}
+                  transition={{
+                    duration: 0.28,
+                    ease: [0.22, 1, 0.36, 1] as const,
+                  }}
                   className="pt-8"
                 >
                   <h3 className="max-w-[18ch] font-serif text-3xl leading-[1.1] tracking-tightest md:text-4xl">
@@ -179,7 +189,10 @@ export default function WorkSection() {
                   initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
-                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as const }}
+                  transition={{
+                    duration: 0.3,
+                    ease: [0.22, 1, 0.36, 1] as const,
+                  }}
                   className="flex w-full min-w-0 justify-center"
                 >
                   <Preview work={work} />

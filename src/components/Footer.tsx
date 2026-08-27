@@ -10,6 +10,12 @@ export default function Footer() {
         </p>
         <div className="flex items-center gap-6 text-sm text-muted">
           <a
+            href="/projects"
+            className="transition-colors hover:text-foreground"
+          >
+            Projects
+          </a>
+          <a
             href={links.github}
             target="_blank"
             rel="noopener noreferrer"
