@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import { featuredWork, links } from "@/constants";
+import { availability, featuredWork, links } from "@/constants";
 import BrowserFrame from "@/components/BrowserFrame";
 import DeviceFrame from "@/components/DeviceFrame";
 
@@ -64,6 +64,13 @@ export default function Hero() {
             I&apos;m Ewoma Ozore — a senior frontend and mobile engineer. For
             5+ years I&apos;ve shipped React, React Native, and Next.js products
             used by 1M+ people across web, iOS, and Android.
+          </motion.p>
+
+          <motion.p
+            variants={item}
+            className="mt-7 max-w-xl text-sm tracking-wide text-muted"
+          >
+            {availability.join("  ·  ")}
           </motion.p>
 
           <motion.div variants={item} className="mt-9 flex flex-wrap gap-3">

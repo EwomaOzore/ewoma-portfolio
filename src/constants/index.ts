@@ -8,6 +8,12 @@ export const links = {
   telegram: "https://t.me/+2348134970348",
 };
 
+export const availability = [
+  "Remote from anywhere",
+  "Open to relocate",
+  "I overlap your working hours from anywhere",
+];
+
 export const stats = [
   { value: 5, suffix: "+", label: "years shipping product" },
   { value: 1, suffix: "M+", label: "customers served" },

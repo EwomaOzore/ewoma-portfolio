@@ -27,8 +27,9 @@ export default function ContactSection({
             Let&apos;s build something people love to use.
           </h2>
           <p className="mt-6 max-w-xl text-lg text-muted">
-            Open to senior frontend and mobile engineering roles — remote or
-            relocation.
+            Senior frontend and mobile roles. Remote from Nigeria or
+            anywhere, and open to relocate. I overlap your working hours
+            from anywhere.
           </p>
 
           <a
@@ -39,7 +40,7 @@ export default function ContactSection({
             <ArrowUpRight className="h-6 w-6 md:h-8 md:w-8" />
           </a>
 
-          <div className="mt-10">
+          <div className="mt-10 flex flex-wrap gap-3">
             <TrackedLink
               href={links.cv}
               target="_blank"
@@ -51,6 +52,15 @@ export default function ContactSection({
               Download résumé
               <ArrowUpRight size={14} />
             </TrackedLink>
+            <a
+              href={links.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:bg-surface"
+            >
+              LinkedIn
+              <ArrowUpRight size={14} />
+            </a>
           </div>
         </Reveal>
       </div>
