@@ -4,6 +4,8 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/ewomaozore",
   cv: "/documents/Ewomaoghene%20Ozore's%20Resume.pdf",
   site: "https://ewomaozore.vercel.app",
+  whatsapp: "https://wa.me/2348134970348",
+  telegram: "https://t.me/+2348134970348",
 };
 
 export const stats = [

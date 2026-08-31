@@ -10,12 +10,6 @@ export default function Footer() {
         </p>
         <div className="flex items-center gap-6 text-sm text-muted">
           <a
-            href="/projects"
-            className="transition-colors hover:text-foreground"
-          >
-            Projects
-          </a>
-          <a
             href={links.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -32,10 +26,20 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href={`mailto:${links.email}`}
+            href={links.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
             className="transition-colors hover:text-foreground"
           >
-            Email
+            WhatsApp
+          </a>
+          <a
+            href={links.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-foreground"
+          >
+            Telegram
           </a>
         </div>
       </div>
