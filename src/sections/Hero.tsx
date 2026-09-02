@@ -51,19 +51,19 @@ export default function Hero() {
 
           <motion.h1
             variants={item}
-            className="mt-7 max-w-[14ch] font-serif text-[4.2rem] leading-[0.92] tracking-tightest sm:text-7xl md:text-8xl"
+            className="mt-7 max-w-[18ch] font-serif text-[3.4rem] leading-[0.94] tracking-tightest sm:text-7xl md:text-8xl"
           >
-            Software used by{" "}
-            <em className="italic text-muted">millions.</em>
+            Senior frontend engineer. Product systems at{" "}
+            <em className="italic text-muted">scale.</em>
           </motion.h1>
 
           <motion.p
             variants={item}
             className="mt-7 max-w-xl text-lg leading-relaxed text-muted"
           >
-            I&apos;m Ewoma Ozore — a senior frontend and mobile engineer. For
-            5+ years I&apos;ve shipped React, React Native, and Next.js products
-            used by 1M+ people across web, iOS, and Android.
+            I own the surface people actually use — React, React Native, and
+            Next.js, shipped to 1M+ customers. I write about the trade-offs,
+            not just the screenshots.
           </motion.p>
 
           <motion.p
@@ -78,13 +78,7 @@ export default function Hero() {
               href="#work"
               className="rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-transform hover:scale-[1.03] active:scale-[0.98]"
             >
-              See selected work
-            </a>
-            <a
-              href="/projects"
-              className="rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:bg-surface"
-            >
-              Personal projects
+              Read the case studies
             </a>
             <a
               href={`mailto:${links.email}`}

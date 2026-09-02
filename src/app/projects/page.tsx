@@ -7,11 +7,11 @@ import ContactSection from "@/sections/Contact";
 export const metadata: Metadata = {
   title: "Personal projects — Ewoma Ozore",
   description:
-    "Side projects by Ewoma Ozore — GameBuddy, HooBank, Interswitch, and Flux. Built nights and weekends.",
+    "Side projects by Ewoma Ozore — QuantumSpecs, GameBuddy, Interswitch, and Flux. Built nights and weekends.",
   openGraph: {
     title: "Personal projects — Ewoma Ozore",
     description:
-      "A store, a payments site, a banking dashboard, and a budget app I designed and shipped myself.",
+      "An AI ops console, a store, a banking dashboard, and a budget app I designed and shipped myself.",
   },
 };
 

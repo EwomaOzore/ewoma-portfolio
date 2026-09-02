@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ewomaozore.vercel.app"),
   title: "Ewoma Ozore — Senior Frontend & Mobile Engineer",
   description:
-    "Senior Frontend & Mobile Engineer with 5+ years shipping React, React Native, and Next.js products used by over a million people across web, iOS, and Android.",
+    "Senior frontend engineer. Case studies of React, React Native, and Next.js systems shipped to 1M+ people across web, iOS, and Android.",
   keywords: [
     "Ewoma Ozore",
     "Senior Frontend Engineer",

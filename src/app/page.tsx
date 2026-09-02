@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <SiteShell>
       <Hero />
-      <Marquee items={marqueeItems} />
-      <Highlights />
       <WorkSection />
+      <Highlights />
+      <Marquee items={marqueeItems} />
       <ExperienceSection />
       <SkillsSection />
       <ContactSection />

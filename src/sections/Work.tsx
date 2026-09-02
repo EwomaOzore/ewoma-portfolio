@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import BrowserFrame from "@/components/BrowserFrame";
@@ -51,16 +52,13 @@ export default function WorkSection() {
         <p className="text-xs uppercase tracking-[0.22em] text-muted">
           01 — Selected work
         </p>
-        <h2 className="mt-4 max-w-[16ch] font-serif text-5xl tracking-tightest md:text-6xl">
-          Shipped to real people, not just staging.
+        <h2 className="mt-4 max-w-[18ch] font-serif text-5xl tracking-tightest md:text-6xl">
+          How I think — not just what shipped.
         </h2>
-        <a
-          href="/projects"
-          className="mt-6 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
-        >
-          Personal projects
-          <ArrowUpRight size={14} />
-        </a>
+        <p className="mt-5 max-w-xl text-base text-muted">
+          Case studies from production. Trade-offs, constraints, and what I
+          would do with more time.
+        </p>
       </Reveal>
 
       <Reveal className="mt-14">
@@ -147,6 +145,13 @@ export default function WorkSection() {
                   </div>
 
                   <div className="mt-6 flex flex-wrap gap-3">
+                    <Link
+                      href={`/work/${work.slug}`}
+                      className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
+                    >
+                      Read the case study
+                      <ArrowUpRight size={14} />
+                    </Link>
                     {work.href && (
                       <TrackedLink
                         href={work.href}
@@ -154,7 +159,7 @@ export default function WorkSection() {
                         rel="noopener noreferrer"
                         event="Live Site Click"
                         data={{ project: work.name, destination: "web" }}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-sm font-medium transition-colors hover:bg-background/60"
                       >
                         Visit live site
                         <ArrowUpRight size={14} />
@@ -171,7 +176,7 @@ export default function WorkSection() {
                           project: work.name,
                           destination: store.label,
                         }}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-sm font-medium transition-colors hover:bg-background/60"
                       >
                         {store.label}
                         <ArrowUpRight size={14} />

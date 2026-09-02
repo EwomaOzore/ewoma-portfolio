@@ -38,6 +38,7 @@ export const marqueeItems = [
 
 export type Work = {
   name: string;
+  slug: string;
   role: string;
   description: string;
   detail: string;
@@ -54,14 +55,15 @@ export type Work = {
 
 export const featuredWork: Work[] = [
   {
-    name: "MTN Partner Portal",
-    role: "Senior Software Developer",
-    description: "A partner platform reaching millions in Nigeria.",
+    name: "MTN Digital Partner Portal",
+    slug: "mtn-partner-portal",
+    role: "Lead Frontend Engineer",
+    description: "The operational surface for becoming an MTN digital partner.",
     detail:
-      "Production web app for licensed aggregators and VAS partners — onboarding, service integration, payments, and analytics on top of MTN's nationwide customer base.",
+      "Production Next.js portal for licensed aggregators, NCC-approved VAS partners, and the people who run them — onboarding, compliance, contracts, and service integration with MTN, live at partner.mtn.ng.",
     icon: "/assets/mtnnigeria.jpeg",
     screen: "/assets/mtnscreen.png",
-    tags: ["React", "TypeScript", "REST APIs"],
+    tags: ["Next.js", "TypeScript", "TanStack Query", "Zod"],
     accent: "#FFCC00",
     metric: "1M+ customers",
     index: "01",
@@ -70,15 +72,16 @@ export const featuredWork: Work[] = [
   },
   {
     name: "Justrite",
-    role: "Lead Mobile Developer",
-    description: "E-commerce at retail scale, on iOS and Android.",
+    slug: "justrite",
+    role: "Mobile Engineer",
+    description: "Grocery ecommerce that matches the physical shop.",
     detail:
-      "Led the modernisation of a production shopping app handling 10,000+ daily user operations. Rebuilt authentication flows, optimised API data retrieval, and cut production errors by 60% with Jest test coverage.",
+      "React Native client for Justrite Superstore — store-aware inventory, multi-gateway checkout, and bank BNPL, plus the upgrade to React Native 0.77 and CodePush OTA. Live on iOS, Android, and justriteonline.com.",
     icon: "/assets/justrite.jpeg",
     screen: "/assets/justritescreen.jpeg",
-    tags: ["React Native", "Expo", "Jest"],
+    tags: ["React Native", "TypeScript", "Redux Toolkit"],
     accent: "#7B2CBF",
-    metric: "10K+ daily users",
+    metric: "4.6 on Play",
     index: "02",
     kind: "mobile",
     stores: [
@@ -94,6 +97,7 @@ export const featuredWork: Work[] = [
   },
   {
     name: "Zona",
+    slug: "zona",
     role: "Mobile Engineer",
     description: "Miami and NYC nightlife, booked from your pocket.",
     detail:
@@ -117,14 +121,15 @@ export const featuredWork: Work[] = [
     ],
   },
   {
-    name: "Kuja ERP",
-    role: "Senior Frontend Engineer",
-    description: "Enterprise logistics for AB InBev staff and distributors.",
+    name: "KUJA Web",
+    slug: "kuja-erp",
+    role: "Frontend Engineer",
+    description: "The web control plane for AB InBev Africa’s route-to-market.",
     detail:
-      "Web ERP for AB InBev Africa — internal staff and distributor access, authentication, and operational workflows across the distribution map. Built as a production React application with a clear split between employee and partner entry points.",
+      "Distributor ERP for admins and backoffice — network, inventory, walk-in sales, claims, finance, and loyalty — in a bilingual Next.js app with a permissioned, country-aware shell.",
     icon: "/assets/abinbev.jpeg",
     screen: "/assets/kujascreen.png",
-    tags: ["React", "TypeScript", "Next.js"],
+    tags: ["Next.js", "TypeScript", "React Query", "Mantine"],
     accent: "#F5C400",
     metric: "AB InBev",
     index: "04",
@@ -144,35 +149,35 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "MTN Nigeria",
-    role: "Senior Software Developer",
-    period: "Feb 2025 — Jul 2026",
+    role: "Lead Frontend Engineer",
+    period: "Feb 2025 — Sep 2026",
     icon: "/assets/mtnnigeria.jpeg",
     points: [
-      "Built and maintained production React and React Native applications supporting 1M+ customers across web and mobile.",
-      "Integrated REST APIs, authentication workflows, and analytics across critical customer journeys.",
-      "Improved performance through lazy loading, rendering optimisation, and efficient state management.",
+      "Built the Digital Partner Portal frontend in Next.js 15, TypeScript, TanStack Query, React Hook Form and Zod.",
+      "Owned partner and aggregator onboarding, service-documentation and service-integration v2, role-gated navigation, and dashboard task widgets.",
+      "Shipped through GitHub PRs into production across on-prem, Azure, and OpenShift.",
     ],
   },
   {
     company: "Justrite",
-    role: "Lead Mobile Developer",
-    period: "May 2025 — Jun 2026",
+    role: "Mobile Engineer",
+    period: "Jun 2025 — present",
     icon: "/assets/justrite.jpeg",
     points: [
-      "Spearheaded modernisation of a production e-commerce app supporting 10,000+ daily user operations.",
-      "Implemented unit and integration testing with Jest, contributing to a 60% reduction in production errors.",
-      "Strengthened authentication flows and resolved production performance bottlenecks.",
+      "Own the React Native client for Justrite Superstore — store-aware catalog, multi-gateway checkout, and bank BNPL on iOS and Android.",
+      "Shipped checkout, Stanbic / Wema / CashConnect BNPL, catalog performance, and a design refresh of Home, Wallet, Cart, Loyalty, and You.",
+      "Took the native stack to React Native 0.77 (Hermes, Play 16 KB pages) and CodePush OTA without freezing weekly releases.",
     ],
   },
   {
     company: "AB InBev",
-    role: "Senior Frontend Engineer",
-    period: "Jan 2024 — Dec 2025",
+    role: "Frontend Engineer",
+    period: "Jan 2024 — Aug 2026",
     icon: "/assets/abinbev.jpeg",
     points: [
-      "Developed scalable customer-facing dashboards with React, Next.js, and TypeScript.",
-      "Improved performance with SSR, code splitting, caching strategies, and rendering optimisation.",
-      "Contributed to architecture discussions, code reviews, and release planning.",
+      "Frontend on KUJA Web, AB InBev Africa’s distributor ERP — Next.js 14, TypeScript, a custom KJ design system, React Query, and Redux.",
+      "Owned vertical slices: Super Admin, user roles, catalog and empties, Awoof loyalty, claims, finance, and seller migration.",
+      "The hard parts were permissioned multi-persona UX, bilingual markets (English and Portuguese), and making tables and observability trustworthy in production.",
     ],
   },
   {
@@ -229,6 +234,7 @@ export const experience: Experience[] = [
 
 export type PersonalProject = {
   name: string;
+  slug?: string;
   year: string;
   kind: "web" | "mobile";
   description: string;
@@ -237,13 +243,30 @@ export type PersonalProject = {
   accent: string;
   metric: string;
   href?: string;
-  github: string;
+  github?: string;
   screen?: string;
   screenWidth?: number;
   screenHeight?: number;
 };
 
 export const personalProjects: PersonalProject[] = [
+  {
+    name: "QuantumSpecs",
+    slug: "quantumspecs",
+    year: "2026",
+    kind: "web",
+    description:
+      "An ops console that watches checkout health across five regions, then lets an AI analyst query the same data and propose actions you confirm before anything mutates production.",
+    detail:
+      "Operations intelligence for Kora, a fictional pan-African payments company. It tracks revenue, failure rate, latency, merchants, incidents, and deploys — then an analyst calls tools against live Postgres instead of inventing metrics. Opening an incident, paging a team, rolling back checkout-api, or disabling Paystack Nigeria still requires a human click.",
+    tags: ["Next.js", "Vercel AI SDK", "Prisma", "TanStack Query"],
+    accent: "#2DD4BF",
+    metric: "Live console",
+    href: "https://quantumspecs.vercel.app/",
+    screen: "/assets/quantumspecs.png",
+    screenWidth: 3588,
+    screenHeight: 2084,
+  },
   {
     name: "GameBuddy",
     year: "2023 — 2026",
@@ -259,22 +282,6 @@ export const personalProjects: PersonalProject[] = [
     screen: "/assets/gamebuddy.png",
     screenWidth: 3578,
     screenHeight: 1814,
-  },
-  {
-    name: "HooBank",
-    year: "2023",
-    kind: "web",
-    description: "A payments landing page with the volume turned up.",
-    detail:
-      "Responsive React marketing site for a next-generation payments product — hero, stats, features, and a Get Started flow. Built with Vite and Tailwind, shipped live.",
-    tags: ["React", "Vite", "Tailwind"],
-    accent: "#5CE1E6",
-    metric: "Live site",
-    href: "https://hoobank-brown-nine.vercel.app/",
-    github: "https://github.com/EwomaOzore/hoobank",
-    screen: "/assets/hoobank.png",
-    screenWidth: 3600,
-    screenHeight: 2072,
   },
   {
     name: "Interswitch",

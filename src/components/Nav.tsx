@@ -30,6 +30,7 @@ export default function Nav() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const onProjects = pathname === "/projects";
+  const onWork = pathname.startsWith("/work");
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-background/65 backdrop-blur-2xl">
@@ -44,7 +45,9 @@ export default function Nav() {
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => {
             const href = itemHref(item, isHome);
-            const active = "href" in item && onProjects;
+            const active =
+              ("href" in item && onProjects) ||
+              (item.label === "Work" && onWork);
 
             return (
               <Link
@@ -96,7 +99,9 @@ export default function Nav() {
             <div className="flex flex-col gap-1 px-6 py-4">
               {navItems.map((item) => {
                 const href = itemHref(item, isHome);
-                const active = "href" in item && onProjects;
+                const active =
+                  ("href" in item && onProjects) ||
+                  (item.label === "Work" && onWork);
 
                 return (
                   <Link

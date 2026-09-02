@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import BrowserFrame from "@/components/BrowserFrame";
 import DeviceFrame from "@/components/DeviceFrame";
@@ -13,7 +14,7 @@ function Preview({ project }: Readonly<{ project: PersonalProject }>) {
     return (
       <BrowserFrame
         src={project.screen}
-        url={project.href ?? project.github}
+        url={project.href ?? project.github ?? ""}
         title={project.name}
         accent={project.accent}
         size="lg"
@@ -51,7 +52,7 @@ export default function PersonalProjects() {
           Nights and weekends.
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-          Not client briefs. A store, a payments site, a banking dashboard,
+          Not client briefs. An ops console, a store, a banking dashboard,
           and a budget app I wanted to exist — designed and shipped myself.
         </p>
       </Reveal>
@@ -93,6 +94,15 @@ export default function PersonalProjects() {
                   ))}
                 </div>
                 <div className="mt-6 flex flex-wrap gap-3">
+                  {project.slug && (
+                    <Link
+                      href={`/work/${project.slug}`}
+                      className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
+                    >
+                      Read the case study
+                      <ArrowUpRight size={14} />
+                    </Link>
+                  )}
                   {project.href && (
                     <TrackedLink
                       href={project.href}
@@ -100,23 +110,29 @@ export default function PersonalProjects() {
                       rel="noopener noreferrer"
                       event="Live Site Click"
                       data={{ project: project.name, destination: "web" }}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
+                      className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium ${
+                        project.slug
+                          ? "border border-line transition-colors hover:bg-surface"
+                          : "bg-foreground text-background transition-transform hover:scale-[1.03]"
+                      }`}
                     >
                       Visit live site
                       <ArrowUpRight size={14} />
                     </TrackedLink>
                   )}
-                  <TrackedLink
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    event="GitHub Click"
-                    data={{ project: project.name }}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-sm font-medium transition-colors hover:bg-surface"
-                  >
-                    GitHub
-                    <ArrowUpRight size={14} />
-                  </TrackedLink>
+                  {project.github && (
+                    <TrackedLink
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      event="GitHub Click"
+                      data={{ project: project.name }}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-sm font-medium transition-colors hover:bg-surface"
+                    >
+                      GitHub
+                      <ArrowUpRight size={14} />
+                    </TrackedLink>
+                  )}
                 </div>
               </div>
 
