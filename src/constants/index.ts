@@ -161,7 +161,7 @@ export const experience: Experience[] = [
   {
     company: "Justrite",
     role: "Mobile Engineer",
-    period: "Jun 2025 — present",
+    period: "Jun 2025 — Sep 2026",
     icon: "/assets/justrite.jpeg",
     points: [
       "Own the React Native client for Justrite Superstore — store-aware catalog, multi-gateway checkout, and bank BNPL on iOS and Android.",
