@@ -26,13 +26,15 @@ function Preview({ work }: Readonly<{ work: Work }>) {
           src={work.screen}
           url={work.href!}
           title={work.name}
+          alt={`Screenshot of ${work.name}`}
           accent={work.accent}
           size="lg"
+          priority={work.index === "01"}
         />
       ) : (
         <DeviceFrame
           src={work.screen ?? work.icon}
-          alt={`${work.name} on device`}
+          alt={`${work.name} app screenshot`}
           accent={work.accent}
           fill={Boolean(work.screen)}
           size="lg"
@@ -59,6 +61,13 @@ export default function WorkSection() {
           Case studies from production. Trade-offs, constraints, and what I
           would do with more time.
         </p>
+        <Link
+          href="/projects"
+          className="mt-4 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
+        >
+          Personal projects
+          <ArrowUpRight size={14} />
+        </Link>
       </Reveal>
 
       <Reveal className="mt-14">
@@ -84,7 +93,7 @@ export default function WorkSection() {
                     >
                       <Image
                         src={item.icon}
-                        alt=""
+                        alt={`${item.name} logo`}
                         width={40}
                         height={40}
                         className="rounded-lg"

@@ -14,6 +14,7 @@ type BrowserFrameProps = {
   glow?: boolean;
   imageWidth?: number;
   imageHeight?: number;
+  alt?: string;
 };
 
 export default function BrowserFrame({
@@ -29,6 +30,7 @@ export default function BrowserFrame({
   glow = true,
   imageWidth = 1600,
   imageHeight = 900,
+  alt,
 }: BrowserFrameProps) {
   const host = url.replace(/^https?:\/\//, "").replace(/\/$/, "");
   const box =
@@ -68,7 +70,7 @@ export default function BrowserFrame({
             (src && fit === "contain" ? (
               <Image
                 src={src}
-                alt={title}
+                alt={alt ?? `Screenshot of ${title}`}
                 width={imageWidth}
                 height={imageHeight}
                 sizes={size === "sm" ? "380px" : "(max-width: 768px) 100vw, 640px"}
@@ -78,7 +80,7 @@ export default function BrowserFrame({
             ) : src ? (
               <Image
                 src={src}
-                alt={title}
+                alt={alt ?? `Screenshot of ${title}`}
                 fill
                 sizes={size === "sm" ? "380px" : "(max-width: 768px) 100vw, 720px"}
                 className="object-cover object-top"

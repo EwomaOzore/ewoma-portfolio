@@ -37,6 +37,7 @@ export default function Nav() {
       <nav className="mx-auto flex h-14 max-w-content items-center justify-between px-6">
         <Link
           href={isHome ? "#top" : "/"}
+          aria-label="Ewoma Ozore, home"
           className="font-serif text-lg italic tracking-tight"
         >
           E. Ozore

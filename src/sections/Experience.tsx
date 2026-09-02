@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { experience } from "@/constants";
 
@@ -40,14 +41,23 @@ export default function ExperienceSection() {
                       {job.icon && (
                         <Image
                           src={job.icon}
-                          alt=""
+                          alt={`${job.company} logo`}
                           width={32}
                           height={32}
                           className="h-8 w-8 rounded-lg bg-white object-contain"
                         />
                       )}
                       <h3 className="font-medium tracking-tight">
-                        {job.company}
+                        {job.href ? (
+                          <Link
+                            href={job.href}
+                            className="transition-colors hover:text-muted"
+                          >
+                            {job.company}
+                          </Link>
+                        ) : (
+                          job.company
+                        )}
                       </h3>
                     </div>
                     <p className="mt-2 text-sm text-muted">{job.period}</p>

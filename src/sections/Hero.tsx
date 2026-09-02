@@ -99,13 +99,15 @@ export default function Hero() {
             src={featuredWork[0].screen}
             url={featuredWork[0].href ?? "https://partner.mtn.ng/"}
             title={featuredWork[0].name}
+            alt={`Screenshot of ${featuredWork[0].name}`}
             accent={featuredWork[0].accent}
             size="sm"
+            priority
             className="absolute left-0 top-16 hidden -rotate-[10deg] lg:block"
           />
           <DeviceFrame
             src={featuredWork[1].screen ?? featuredWork[1].icon}
-            alt={featuredWork[1].name}
+            alt={`${featuredWork[1].name} app screenshot`}
             accent={featuredWork[1].accent}
             fill={Boolean(featuredWork[1].screen)}
             priority
@@ -113,7 +115,7 @@ export default function Hero() {
           />
           <DeviceFrame
             src={featuredWork[2].screen ?? featuredWork[2].icon}
-            alt={featuredWork[2].name}
+            alt={`${featuredWork[2].name} app screenshot`}
             accent={featuredWork[2].accent}
             fill={Boolean(featuredWork[2].screen)}
             size="sm"

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import BrowserFrame from "@/components/BrowserFrame";
 import DeviceFrame from "@/components/DeviceFrame";
 import Reveal from "@/components/Reveal";
@@ -97,13 +98,13 @@ export default function CaseStudySection({
   return (
     <article className="mx-auto max-w-content px-6 pb-28 pt-28 md:pb-40 md:pt-32">
       <Reveal>
-        <Link
-          href={work.backHref}
-          className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
-        >
-          <ArrowLeft size={14} />
-          {work.backLabel}
-        </Link>
+        <Breadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { href: work.backHref, label: work.backLabel },
+            { label: work.name },
+          ]}
+        />
 
         <p className="mt-10 text-xs uppercase tracking-[0.22em] text-muted">
           {work.index} — {work.role}
@@ -185,6 +186,7 @@ export default function CaseStudySection({
             src={work.screen}
             url={work.href!}
             title={work.name}
+            alt={`Screenshot of ${work.name}`}
             accent={work.accent}
             size="lg"
             fit={work.fit}
@@ -196,7 +198,7 @@ export default function CaseStudySection({
         ) : (
           <DeviceFrame
             src={work.screen ?? work.icon}
-            alt={`${work.name} on device`}
+            alt={`${work.name} app screenshot`}
             accent={work.accent}
             fill={Boolean(work.screen)}
             glow={work.glow}

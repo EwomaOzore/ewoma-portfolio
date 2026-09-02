@@ -143,6 +143,7 @@ export type Experience = {
   role: string;
   period: string;
   icon?: string;
+  href?: string;
   points: string[];
 };
 
@@ -152,6 +153,7 @@ export const experience: Experience[] = [
     role: "Lead Frontend Engineer",
     period: "Feb 2025 — Sep 2026",
     icon: "/assets/mtnnigeria.jpeg",
+    href: "/work/mtn-partner-portal",
     points: [
       "Built the Digital Partner Portal frontend in Next.js 15, TypeScript, TanStack Query, React Hook Form and Zod.",
       "Owned partner and aggregator onboarding, service-documentation and service-integration v2, role-gated navigation, and dashboard task widgets.",
@@ -163,6 +165,7 @@ export const experience: Experience[] = [
     role: "Mobile Engineer",
     period: "Jun 2025 — Sep 2026",
     icon: "/assets/justrite.jpeg",
+    href: "/work/justrite",
     points: [
       "Own the React Native client for Justrite Superstore — store-aware catalog, multi-gateway checkout, and bank BNPL on iOS and Android.",
       "Shipped checkout, Stanbic / Wema / CashConnect BNPL, catalog performance, and a design refresh of Home, Wallet, Cart, Loyalty, and You.",
@@ -174,6 +177,7 @@ export const experience: Experience[] = [
     role: "Frontend Engineer",
     period: "Jan 2024 — Aug 2026",
     icon: "/assets/abinbev.jpeg",
+    href: "/work/kuja-erp",
     points: [
       "Frontend on KUJA Web, AB InBev Africa’s distributor ERP — Next.js 14, TypeScript, a custom KJ design system, React Query, and Redux.",
       "Owned vertical slices: Super Admin, user roles, catalog and empties, Awoof loyalty, claims, finance, and seller migration.",

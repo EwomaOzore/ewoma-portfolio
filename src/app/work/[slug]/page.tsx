@@ -2,14 +2,23 @@ import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
+import JsonLd from "@/components/JsonLd";
 import CaseStudySection from "@/sections/CaseStudy";
 import ContactSection from "@/sections/Contact";
-import { featuredWork, personalProjects } from "@/constants";
+import { personalProjects } from "@/constants";
 import { caseStudies, getCaseStudy } from "@/constants/caseStudies";
+import {
+  breadcrumbJsonLd,
+  caseStudyJsonLd,
+  caseStudyMeta,
+  workBySlug,
+} from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -19,23 +28,7 @@ export async function generateMetadata({
   params,
 }: Readonly<PageProps>): Promise<Metadata> {
   const { slug } = await params;
-  const study = getCaseStudy(slug);
-  const work =
-    featuredWork.find((item) => item.slug === slug) ??
-    personalProjects.find((item) => item.slug === slug);
-
-  if (!study || !work) {
-    return { title: "Case study — Ewoma Ozore" };
-  }
-
-  return {
-    title: `${work.name} — Case study — Ewoma Ozore`,
-    description: study.lede,
-    openGraph: {
-      title: `${work.name} — Case study — Ewoma Ozore`,
-      description: study.lede,
-    },
-  };
+  return caseStudyMeta(slug);
 }
 
 export default async function CaseStudyPage({
@@ -43,13 +36,26 @@ export default async function CaseStudyPage({
 }: Readonly<PageProps>) {
   const { slug } = await params;
   const study = getCaseStudy(slug);
+  const work = workBySlug(slug);
 
-  if (!study) {
+  if (!study || !work) {
     notFound();
   }
 
+  const parent = personalProjects.some((item) => item.slug === slug)
+    ? { name: "Personal projects", path: "/projects" }
+    : { name: "Selected work", path: "/#work" };
+
   return (
     <SiteShell>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          parent,
+          { name: work.name, path: `/work/${slug}` },
+        ])}
+      />
+      <JsonLd data={caseStudyJsonLd(slug)} />
       <CaseStudySection study={study} />
       <ContactSection glow={slug !== "quantumspecs"} />
     </SiteShell>

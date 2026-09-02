@@ -7,6 +7,7 @@ import BrowserFrame from "@/components/BrowserFrame";
 import DeviceFrame from "@/components/DeviceFrame";
 import Reveal from "@/components/Reveal";
 import TrackedLink from "@/components/TrackedLink";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { personalProjects, type PersonalProject } from "@/constants";
 
 function Preview({ project }: Readonly<{ project: PersonalProject }>) {
@@ -16,6 +17,7 @@ function Preview({ project }: Readonly<{ project: PersonalProject }>) {
         src={project.screen}
         url={project.href ?? project.github ?? ""}
         title={project.name}
+        alt={`Screenshot of ${project.name}`}
         accent={project.accent}
         size="lg"
         fit="contain"
@@ -30,7 +32,7 @@ function Preview({ project }: Readonly<{ project: PersonalProject }>) {
   return (
     <DeviceFrame
       src={project.screen}
-      alt={project.name}
+      alt={`${project.name} app screenshot`}
       accent={project.accent}
       size="phone"
       fill
@@ -45,7 +47,13 @@ export default function PersonalProjects() {
   return (
     <section id="projects" className="mx-auto max-w-[1280px] px-6 pb-24 pt-28 md:pb-32 md:pt-36">
       <Reveal>
-        <p className="text-xs uppercase tracking-[0.22em] text-muted">
+        <Breadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { label: "Personal projects" },
+          ]}
+        />
+        <p className="mt-10 text-xs uppercase tracking-[0.22em] text-muted">
           Personal work
         </p>
         <h1 className="mt-4 max-w-[14ch] font-serif text-5xl tracking-tightest md:text-7xl">

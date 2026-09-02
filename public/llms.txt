@@ -1,0 +1,26 @@
+# Ewoma Ozore
+
+> Senior frontend and mobile engineer. Portfolio of production case studies — React, React Native, Next.js — shipped to 1M+ people across web, iOS, and Android.
+
+- Site: https://ewomaozore.vercel.app
+- Email: ewomaozore@gmail.com
+- GitHub: https://github.com/EwomaOzore
+- LinkedIn: https://www.linkedin.com/in/ewomaozore
+- Résumé: https://ewomaozore.vercel.app/documents/Ewomaoghene%20Ozore's%20Resume.pdf
+
+Remote worldwide. Open to relocate. Overlaps working hours from anywhere.
+
+## Pages
+
+- [Home](https://ewomaozore.vercel.app/): Positioning, selected work, experience, skills, contact
+- [Personal projects](https://ewomaozore.vercel.app/projects): QuantumSpecs, GameBuddy, Interswitch, Flux
+- [MTN Digital Partner Portal](https://ewomaozore.vercel.app/work/mtn-partner-portal): Lead frontend engineer, Next.js partner portal
+- [Justrite](https://ewomaozore.vercel.app/work/justrite): React Native grocery ecommerce, iOS and Android
+- [Zona](https://ewomaozore.vercel.app/work/zona): Nightlife app, Miami and New York
+- [KUJA Web](https://ewomaozore.vercel.app/work/kuja-erp): AB InBev Africa distributor ERP
+- [QuantumSpecs](https://ewomaozore.vercel.app/work/quantumspecs): AI operations console for a fictional payments company
+
+## Optional
+
+- [Sitemap](https://ewomaozore.vercel.app/sitemap.xml)
+- [Robots](https://ewomaozore.vercel.app/robots.txt)
