@@ -60,8 +60,9 @@ export default function PersonalProjects() {
           Nights and weekends.
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-          Not client briefs. An ops console, a store, a banking dashboard,
-          and a budget app I wanted to exist — designed and shipped myself.
+          Not client briefs. An ops console, a developer control plane, a
+          store, a banking dashboard, and a budget app I wanted to exist —
+          designed and shipped myself.
         </p>
       </Reveal>
 

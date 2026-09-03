@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
               maxWidth: 760,
             }}
           >
-            QuantumSpecs, GameBuddy, Interswitch, and Flux.
+            QuantumSpecs, Pollux, GameBuddy, Interswitch, and Flux.
           </p>
         </div>
       </div>

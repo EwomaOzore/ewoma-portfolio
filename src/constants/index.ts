@@ -272,6 +272,22 @@ export const personalProjects: PersonalProject[] = [
     screenHeight: 2084,
   },
   {
+    name: "Pollux",
+    year: "2026",
+    kind: "web",
+    description:
+      "A dark, keyboard-first developer platform — a Vercel-style control plane for shipping, watching, and securing apps.",
+    detail:
+      "Pick a project, deploy from git, and walk a live pipeline: git → build → tests → scan → deploy → health. Logs are virtualized past 10k rows; traces and web vitals sit in observability; security covers RBAC, API keys, and an audit log. A CLI and GitHub PR → preview hook sit on the same APIs. SSE keeps the UI live. The catalog is named after stars — pollux, castor, sirius, vega, altair, rigel, polaris, and betelgeuse, the degraded incident.",
+    tags: ["Next.js", "TanStack Query", "Zustand", "Playwright"],
+    accent: "#E5E5E5",
+    metric: "Live platform",
+    href: "https://pollux-khaki.vercel.app/",
+    screen: "/assets/pollux.png",
+    screenWidth: 3600,
+    screenHeight: 2080,
+  },
+  {
     name: "GameBuddy",
     year: "2023 — 2026",
     kind: "web",

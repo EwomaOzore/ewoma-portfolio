@@ -9,7 +9,7 @@ import { breadcrumbJsonLd, pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Personal projects",
   description:
-    "Side projects by Ewoma Ozore — QuantumSpecs, GameBuddy, Interswitch, and Flux. Built nights and weekends.",
+    "Side projects by Ewoma Ozore — QuantumSpecs, Pollux, GameBuddy, Interswitch, and Flux. Built nights and weekends.",
   path: "/projects",
 });
 
