@@ -3,9 +3,7 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import { availability, featuredWork, links } from "@/constants";
-import BrowserFrame from "@/components/BrowserFrame";
-import DeviceFrame from "@/components/DeviceFrame";
+import { availability, links } from "@/constants";
 
 const container = {
   hidden: {},
@@ -28,11 +26,12 @@ export default function Hero() {
     <section id="top" className="relative min-h-screen overflow-hidden">
       <div aria-hidden className="grid-overlay pointer-events-none absolute inset-0" />
 
-      <div className="mx-auto grid min-h-screen max-w-content items-center gap-12 px-6 pb-20 pt-28 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="mx-auto flex min-h-screen max-w-content items-center justify-center px-6 pb-20 pt-28">
         <motion.div
           variants={container}
           initial={reduceMotion ? false : "hidden"}
           animate="show"
+          className="flex w-full flex-col items-center text-center"
         >
           <motion.div
             variants={item}
@@ -53,14 +52,14 @@ export default function Hero() {
             <em className="italic text-muted">scale.</em>
           </motion.h1>
 
-          <motion.p
+          {/* <motion.p
             variants={item}
             className="mt-7 max-w-xl text-lg leading-relaxed text-muted"
           >
             I own the surface people actually use — React, React Native, and
             Next.js, shipped to 1M+ customers. I write about the trade-offs,
             not just the screenshots.
-          </motion.p>
+          </motion.p> */}
 
           <motion.p
             variants={item}
@@ -69,7 +68,7 @@ export default function Hero() {
             {availability.join("  ·  ")}
           </motion.p>
 
-          <motion.div variants={item} className="mt-9 flex flex-wrap gap-3">
+          <motion.div variants={item} className="mt-9 flex flex-wrap justify-center gap-3">
             <a
               href="#work"
               className="rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-transform hover:scale-[1.03] active:scale-[0.98]"
@@ -83,44 +82,6 @@ export default function Hero() {
               Get in touch
             </a>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] as const }}
-          className="relative mx-auto hidden h-[500px] w-full max-w-[380px] md:block lg:h-[560px] lg:max-w-[560px]"
-        >
-          <BrowserFrame
-            src={featuredWork[0].screen}
-            url={featuredWork[0].href ?? "https://partner.mtn.ng/"}
-            title={featuredWork[0].name}
-            alt={`Screenshot of ${featuredWork[0].name}`}
-            accent={featuredWork[0].accent}
-            size="sm"
-            glow={false}
-            priority
-            className="absolute left-0 top-16 hidden -rotate-[10deg] lg:block"
-          />
-          <DeviceFrame
-            src={featuredWork[1].screen ?? featuredWork[1].icon}
-            alt={`${featuredWork[1].name} app screenshot`}
-            accent={featuredWork[1].accent}
-            fill={Boolean(featuredWork[1].screen)}
-            glow={false}
-            priority
-            className="absolute left-1/2 top-0 z-10 -translate-x-1/2 rotate-[4deg] lg:left-[210px] lg:translate-x-0"
-          />
-          <DeviceFrame
-            src={featuredWork[2].screen ?? featuredWork[2].icon}
-            alt={`${featuredWork[2].name} app screenshot`}
-            accent={featuredWork[2].accent}
-            fill={Boolean(featuredWork[2].screen)}
-            size="sm"
-            glow={false}
-            priority
-            className="absolute right-0 top-32 z-20 hidden rotate-[14deg] lg:block"
-          />
         </motion.div>
       </div>
 

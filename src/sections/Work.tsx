@@ -29,6 +29,7 @@ function Preview({ work }: Readonly<{ work: Work }>) {
           alt={`Screenshot of ${work.name}`}
           accent={work.accent}
           size="lg"
+          glow={false}
           priority={work.index === "01"}
         />
       ) : (
@@ -38,6 +39,7 @@ function Preview({ work }: Readonly<{ work: Work }>) {
           accent={work.accent}
           fill={Boolean(work.screen)}
           size="lg"
+          glow={false}
         />
       )}
     </div>
