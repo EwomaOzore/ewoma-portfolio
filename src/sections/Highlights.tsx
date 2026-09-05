@@ -17,7 +17,7 @@ export default function Highlights() {
               i < 2 ? "max-md:border-b max-md:border-line" : ""
             }`}
           >
-            <p className="font-serif text-5xl tracking-tightest md:text-6xl">
+            <p className="font-display text-5xl tracking-tightest md:text-6xl">
               <CountUp to={stat.value} suffix={stat.suffix} />
             </p>
             <p className="mt-3 max-w-[12ch] text-sm text-muted">{stat.label}</p>

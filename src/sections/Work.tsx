@@ -54,7 +54,7 @@ export default function WorkSection() {
         <p className="text-xs uppercase tracking-[0.22em] text-muted">
           01 — Selected work
         </p>
-        <h2 className="mt-4 max-w-[18ch] font-serif text-5xl tracking-tightest md:text-6xl">
+        <h2 className="mt-4 max-w-[18ch] font-display text-5xl tracking-tightest md:text-6xl">
           How I think — not just what shipped.
         </h2>
         <p className="mt-5 max-w-xl text-base text-muted">
@@ -126,7 +126,7 @@ export default function WorkSection() {
                   }}
                   className="pt-8"
                 >
-                  <h3 className="max-w-[18ch] font-serif text-3xl leading-[1.1] tracking-tightest md:text-4xl">
+                  <h3 className="max-w-[18ch] font-display text-3xl leading-[1.1] tracking-tightest md:text-4xl">
                     {work.description}
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed text-muted">

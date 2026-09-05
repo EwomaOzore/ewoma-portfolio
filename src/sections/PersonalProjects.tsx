@@ -56,7 +56,7 @@ export default function PersonalProjects() {
         <p className="mt-10 text-xs uppercase tracking-[0.22em] text-muted">
           Personal work
         </p>
-        <h1 className="mt-4 max-w-[14ch] font-serif text-5xl tracking-tightest md:text-7xl">
+        <h1 className="mt-4 max-w-[14ch] font-display text-5xl tracking-tightest md:text-7xl">
           Nights and weekends.
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
@@ -74,7 +74,7 @@ export default function PersonalProjects() {
                 <p className="font-serif text-sm italic text-muted">
                   {project.year} · {project.kind}
                 </p>
-                <h2 className="mt-3 font-serif text-3xl tracking-tightest md:text-4xl">
+                <h2 className="mt-3 font-display text-3xl tracking-tightest md:text-4xl">
                   {project.name}
                 </h2>
                 <p className="mt-4 max-w-[22ch] font-serif text-xl leading-snug italic text-muted md:text-2xl">

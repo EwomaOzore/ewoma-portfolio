@@ -12,7 +12,7 @@ export default function ExperienceSection() {
           <p className="text-xs uppercase tracking-[0.22em] text-muted">
             02 — Experience
           </p>
-          <h2 className="mt-4 max-w-[18ch] font-serif text-5xl tracking-tightest md:text-6xl">
+          <h2 className="mt-4 max-w-[18ch] font-display text-5xl tracking-tightest md:text-6xl">
             Close to production. Every time.
           </h2>
         </Reveal>

@@ -109,7 +109,7 @@ export default function CaseStudySection({
         <p className="mt-10 text-xs uppercase tracking-[0.22em] text-muted">
           {work.index} — {work.role}
         </p>
-        <h1 className="mt-4 max-w-[16ch] font-serif text-5xl leading-[0.95] tracking-tightest md:text-7xl">
+        <h1 className="mt-4 max-w-[16ch] font-display text-5xl leading-[0.95] tracking-tightest md:text-7xl">
           {work.name}
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
@@ -237,7 +237,7 @@ export default function CaseStudySection({
               <section
                 id={section.title.toLowerCase().replace(/\s+/g, "-")}
               >
-                <h2 className="font-serif text-3xl tracking-tightest md:text-4xl">
+                <h2 className="font-display text-3xl tracking-tightest md:text-4xl">
                   {section.title}
                 </h2>
                 <div className="mt-5 space-y-4 text-base leading-relaxed text-muted md:text-lg">
@@ -260,7 +260,7 @@ export default function CaseStudySection({
             <p className="text-xs uppercase tracking-[0.18em] text-muted">
               Previous
             </p>
-            <p className="mt-2 font-serif text-2xl tracking-tightest group-hover:italic">
+            <p className="mt-2 font-display text-2xl tracking-tightest group-hover:italic">
               {previousWork.name}
             </p>
           </Link>
@@ -275,7 +275,7 @@ export default function CaseStudySection({
             <p className="text-xs uppercase tracking-[0.18em] text-muted">
               Next
             </p>
-            <p className="mt-2 font-serif text-2xl tracking-tightest group-hover:italic">
+            <p className="mt-2 font-display text-2xl tracking-tightest group-hover:italic">
               {nextWork.name}
             </p>
           </Link>

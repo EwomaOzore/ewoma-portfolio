@@ -9,7 +9,7 @@
   --muted: #6b675e;
   --accent: #141414;
   --border: rgba(20, 20, 20, 0.1);
-  --grid: rgba(20, 20, 20, 0.05);
+  --grid: rgba(20, 20, 20, 0.07);
   --glow: rgba(20, 20, 20, 0.06);
 }
 
@@ -20,7 +20,7 @@
   --muted: #8a857c;
   --accent: #f4f1ea;
   --border: rgba(244, 241, 234, 0.1);
-  --grid: rgba(244, 241, 234, 0.045);
+  --grid: rgba(244, 241, 234, 0.08);
   --glow: rgba(244, 241, 234, 0.08);
 }
 
@@ -35,6 +35,12 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 700;
 }
 
 ::selection {
@@ -68,11 +74,19 @@ body {
 }
 
 .grid-overlay {
+  overflow: hidden;
+  mask-image: radial-gradient(ellipse at 50% 38%, black 20%, transparent 75%);
+}
+
+.grid-overlay::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
   background-image:
     linear-gradient(to right, var(--grid) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+  background-size: 64px 64px;
+  animation: grid-pan 28s linear infinite;
 }
 
 .noise {
@@ -90,7 +104,8 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track {
+  .marquee-track,
+  .grid-overlay::before {
     animation: none;
   }
 
@@ -105,5 +120,14 @@ body {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes grid-pan {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-64px, -64px, 0);
   }
 }

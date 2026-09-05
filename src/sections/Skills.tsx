@@ -9,7 +9,7 @@ export default function SkillsSection() {
         <p className="text-xs uppercase tracking-[0.22em] text-muted">
           03 — Capabilities
         </p>
-        <h2 className="mt-4 max-w-[18ch] font-serif text-5xl tracking-tightest md:text-6xl">
+        <h2 className="mt-4 max-w-[18ch] font-display text-5xl tracking-tightest md:text-6xl">
           From Figma to the App Store.
         </h2>
       </Reveal>
@@ -37,7 +37,7 @@ export default function SkillsSection() {
                   {group.title}
                 </h3>
                 {featured && (
-                  <p className="mt-4 font-serif text-3xl leading-tight tracking-tightest">
+                  <p className="mt-4 font-display text-3xl leading-tight tracking-tightest">
                     Native-feeling apps, shipped to both stores.
                   </p>
                 )}

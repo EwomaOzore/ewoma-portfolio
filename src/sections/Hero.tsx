@@ -51,7 +51,7 @@ export default function Hero() {
 
           <motion.h1
             variants={item}
-            className="mt-7 max-w-[18ch] font-serif text-[3.4rem] leading-[0.94] tracking-tightest sm:text-7xl md:text-8xl"
+            className="mt-7 max-w-[16ch] font-display text-5xl leading-[0.96] tracking-tightest md:text-6xl"
           >
             Senior frontend engineer. Product systems at{" "}
             <em className="italic text-muted">scale.</em>

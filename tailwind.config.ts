@@ -19,12 +19,13 @@ const config: Config = {
       },
       fontFamily: {
         sans: [
-          "var(--font-inter)",
+          "var(--font-sans)",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
         ],
         serif: ["var(--font-serif)", "Georgia", "serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
       letterSpacing: {
         tightest: "-0.04em",

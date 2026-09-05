@@ -23,7 +23,7 @@ export default function ContactSection({
           <p className="text-xs uppercase tracking-[0.22em] text-muted">
             04 — Contact
           </p>
-          <h2 className="mt-6 max-w-[16ch] font-serif text-5xl leading-[0.95] tracking-tightest md:text-7xl">
+          <h2 className="mt-6 max-w-[16ch] font-display text-5xl leading-[0.95] tracking-tightest md:text-7xl">
             Let&apos;s build something people love to use.
           </h2>
           <p className="mt-6 max-w-xl text-lg text-muted">
