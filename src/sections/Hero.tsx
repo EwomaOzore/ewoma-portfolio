@@ -27,10 +27,6 @@ export default function Hero() {
   return (
     <section id="top" className="relative min-h-screen overflow-hidden">
       <div aria-hidden className="grid-overlay pointer-events-none absolute inset-0" />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-32 top-24 h-[420px] w-[420px] rounded-full bg-foreground/[0.04] blur-3xl"
-      />
 
       <div className="mx-auto grid min-h-screen max-w-content items-center gap-12 px-6 pb-20 pt-28 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div
@@ -102,6 +98,7 @@ export default function Hero() {
             alt={`Screenshot of ${featuredWork[0].name}`}
             accent={featuredWork[0].accent}
             size="sm"
+            glow={false}
             priority
             className="absolute left-0 top-16 hidden -rotate-[10deg] lg:block"
           />
@@ -110,6 +107,7 @@ export default function Hero() {
             alt={`${featuredWork[1].name} app screenshot`}
             accent={featuredWork[1].accent}
             fill={Boolean(featuredWork[1].screen)}
+            glow={false}
             priority
             className="absolute left-1/2 top-0 z-10 -translate-x-1/2 rotate-[4deg] lg:left-[210px] lg:translate-x-0"
           />
@@ -119,6 +117,7 @@ export default function Hero() {
             accent={featuredWork[2].accent}
             fill={Boolean(featuredWork[2].screen)}
             size="sm"
+            glow={false}
             priority
             className="absolute right-0 top-32 z-20 hidden rotate-[14deg] lg:block"
           />
