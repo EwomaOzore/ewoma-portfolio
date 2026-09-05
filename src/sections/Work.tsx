@@ -126,7 +126,7 @@ export default function WorkSection() {
                   }}
                   className="pt-8"
                 >
-                  <h3 className="max-w-[18ch] font-display text-3xl leading-[1.1] tracking-tightest md:text-4xl">
+                  <h3 className="max-w-[22ch] font-display text-xl leading-snug tracking-tight md:text-2xl">
                     {work.description}
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed text-muted">
