@@ -48,7 +48,7 @@ export default function Hero() {
             variants={item}
             className="mt-7 max-w-[16ch] font-display text-5xl leading-[0.96] tracking-tightest md:text-6xl"
           >
-            Senior frontend engineer. Product systems at{" "}
+            Senior frontend engineer. Building product systems at{" "}
             <em className="italic text-muted">scale.</em>
           </motion.h1>
 
