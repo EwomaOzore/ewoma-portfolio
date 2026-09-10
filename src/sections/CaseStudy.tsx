@@ -44,7 +44,7 @@ function getDisplay(slug: string): CaseStudyDisplay | null {
     return {
       ...featured,
       fit: "cover",
-      glow: true,
+      glow: false,
       backHref: "/#work",
       backLabel: "Selected work",
       disclaimer:

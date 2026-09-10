@@ -1,0 +1,15 @@
+/* TEAM */
+
+  Ewomaoghene Ozore
+  Senior frontend & mobile engineer
+  Site: https://ewomaozore.vercel.app
+  Email: ewomaozore@gmail.com
+  GitHub: https://github.com/EwomaOzore
+  LinkedIn: https://www.linkedin.com/in/ewomaozore
+
+/* SITE */
+
+  Language: English
+  Standards: HTML5, CSS, Schema.org
+  Software: Next.js, React, TypeScript
+  Last update: 2026/09/10

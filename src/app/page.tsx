@@ -14,6 +14,7 @@ import {
   defaultDescription,
   defaultTitle,
   pageMeta,
+  localBusinessJsonLd,
   professionalServiceJsonLd,
 } from "@/lib/seo";
 
@@ -30,6 +31,7 @@ export default function Home() {
   return (
     <SiteShell>
       <JsonLd data={professionalServiceJsonLd()} />
+      <JsonLd data={localBusinessJsonLd()} />
       <Hero />
       <WorkSection />
       <Highlights />

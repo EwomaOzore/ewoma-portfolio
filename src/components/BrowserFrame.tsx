@@ -27,7 +27,7 @@ export default function BrowserFrame({
   size = "lg",
   children,
   fit = "cover",
-  glow = true,
+  glow = false,
   imageWidth = 1600,
   imageHeight = 900,
   alt,

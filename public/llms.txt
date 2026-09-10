@@ -25,3 +25,4 @@ Remote worldwide. Open to relocate. Overlaps working hours from anywhere.
 
 - [Sitemap](https://ewomaozore.vercel.app/sitemap.xml)
 - [Robots](https://ewomaozore.vercel.app/robots.txt)
+- [Humans](https://ewomaozore.vercel.app/humans.txt)

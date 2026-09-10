@@ -23,7 +23,7 @@ export default function DeviceFrame({
   priority = false,
   fill = false,
   children,
-  glow = true,
+  glow = false,
   notch = true,
 }: Readonly<DeviceFrameProps>) {
   const dims =

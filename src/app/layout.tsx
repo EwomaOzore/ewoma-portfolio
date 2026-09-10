@@ -1,5 +1,5 @@
 import React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Instrument_Sans, Instrument_Serif } from "next/font/google";
 import Providers from "@/components/Providers";
 import JsonLd from "@/components/JsonLd";
@@ -32,6 +32,15 @@ const display = Fraunces({
   variable: "--font-display",
 });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f4ef" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -42,6 +51,14 @@ export const metadata: Metadata = {
   applicationName: siteName,
   authors: [{ name: "Ewomaoghene Ozore", url: siteUrl }],
   creator: "Ewomaoghene Ozore",
+  category: "portfolio",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon", type: "image/png" },
+    ],
+    apple: "/apple-icon",
+  },
   keywords: [
     "Ewoma Ozore",
     "Senior Frontend Engineer",
@@ -59,11 +76,20 @@ export const metadata: Metadata = {
     siteName,
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: defaultTitle,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,

@@ -6,9 +6,9 @@ export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
 }
 
-export const alt = "Case study — Ewoma Ozore";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const alt = "Case study — Ewoma Ozore";
 
 type Props = {
   params: Promise<{ slug: string }>;

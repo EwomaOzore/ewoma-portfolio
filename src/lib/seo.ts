@@ -15,6 +15,21 @@ export function canonicalUrl(path: string) {
   return `${siteUrl}${normalized}`;
 }
 
+function socialImage(path: string, alt: string) {
+  const resolved = path === "/404" ? "/" : path;
+  const imagePath =
+    resolved === "/"
+      ? "/opengraph-image"
+      : `${resolved.replace(/\/$/, "")}/opengraph-image`;
+
+  return {
+    url: imagePath,
+    width: 1200,
+    height: 630,
+    alt,
+  };
+}
+
 export function pageMeta({
   title,
   description,
@@ -28,6 +43,7 @@ export function pageMeta({
 }): Metadata {
   const url = canonicalUrl(path);
   const socialTitle = title.includes(siteName) ? title : `${title} — ${siteName}`;
+  const image = socialImage(path, socialTitle);
 
   return {
     title,
@@ -40,11 +56,13 @@ export function pageMeta({
       siteName,
       type,
       locale: "en_US",
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title: socialTitle,
       description,
+      images: [image.url],
     },
   };
 }
@@ -77,6 +95,11 @@ export function caseStudyMeta(slug: string): Metadata {
   });
 }
 
+const postalAddress = {
+  "@type": "PostalAddress",
+  addressCountry: "NG",
+};
+
 export function personJsonLd() {
   return {
     "@context": "https://schema.org",
@@ -87,6 +110,12 @@ export function personJsonLd() {
     image: `${siteUrl}/opengraph-image`,
     jobTitle: "Senior Frontend & Mobile Engineer",
     email: links.email,
+    telephone: "+2348134970348",
+    address: postalAddress,
+    workLocation: {
+      "@type": "Place",
+      name: "Remote — worldwide",
+    },
     sameAs: [links.github, links.linkedin],
     knowsAbout: [
       "React",
@@ -112,13 +141,34 @@ export function professionalServiceJsonLd() {
       name: "Worldwide",
     },
     availableLanguage: "English",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "NG",
-    },
+    address: postalAddress,
     founder: {
       "@type": "Person",
       name: "Ewomaoghene Ozore",
+    },
+    sameAs: [links.github, links.linkedin],
+    description: defaultDescription,
+    serviceType: [
+      "Frontend engineering",
+      "Mobile engineering",
+      "React Native development",
+    ],
+  };
+}
+
+export function localBusinessJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Ewoma Ozore — Frontend & Mobile Engineering",
+    url: siteUrl,
+    image: `${siteUrl}/opengraph-image`,
+    email: links.email,
+    telephone: "+2348134970348",
+    address: postalAddress,
+    areaServed: {
+      "@type": "Place",
+      name: "Worldwide",
     },
     sameAs: [links.github, links.linkedin],
     description: defaultDescription,

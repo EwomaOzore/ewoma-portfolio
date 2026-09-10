@@ -52,15 +52,6 @@ export default function Hero() {
             <em className="italic text-muted">scale.</em>
           </motion.h1>
 
-          {/* <motion.p
-            variants={item}
-            className="mt-7 max-w-xl text-lg leading-relaxed text-muted"
-          >
-            I own the surface people actually use — React, React Native, and
-            Next.js, shipped to 1M+ customers. I write about the trade-offs,
-            not just the screenshots.
-          </motion.p> */}
-
           <motion.p
             variants={item}
             className="mt-7 max-w-xl text-sm tracking-wide text-muted"
