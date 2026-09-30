@@ -39,7 +39,7 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          Ewoma Ozore, a software engineer shipping product for 6 years.
+          Ewoma Ozore — Senior Frontend & Mobile Engineer.
         </p>
         <p
           style={{

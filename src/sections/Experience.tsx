@@ -19,6 +19,9 @@ export default async function ExperienceSection() {
           <h2 className="mt-4 max-w-[18ch] font-display text-5xl tracking-tightest md:text-6xl">
             {dict.experience.title}
           </h2>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
+            {dict.experience.context}
+          </p>
         </Reveal>
 
         <div className="relative mt-16">
@@ -64,7 +67,12 @@ export default async function ExperienceSection() {
                         )}
                       </h3>
                     </div>
-                    <p className="mt-2 text-sm text-muted">{job.period}</p>
+                    <p className="mt-2 text-sm text-muted">
+                      {job.period.replace("Present", dict.experience.present)}
+                    </p>
+                    <p className="mt-2 text-xs uppercase tracking-widest text-muted">
+                      {dict.experience.engagements[job.engagement]}
+                    </p>
                   </div>
 
                   <div className="min-w-0">

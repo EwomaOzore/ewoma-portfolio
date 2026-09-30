@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: "Ewoma Ozore — Senior Frontend & Mobile Engineer",
     description:
-      "Senior frontend and mobile engineer. Case studies of React, React Native, and Next.js systems shipped to 1M+ people across web, iOS, and Android.",
+      "Senior frontend and mobile engineer in Lagos, Nigeria. React, React Native, and Next.js case studies from MTN, Justrite, Zona, and AB InBev. Open to remote roles and relocation.",
     projectsTitle: "Personal projects",
     projectsDescription:
       "Side projects by Ewoma Ozore — QuantumSpecs, Pollux, GameBuddy, Interswitch, and Flux. Built nights and weekends.",
@@ -14,10 +14,10 @@ export const en = {
     "mtn-partner-portal":
       "The partner-facing frontend for MTN Nigeria’s digital partner ecosystem — onboard, submit compliance, sign contracts, launch services, and integrate with MTN platforms, without a paper-and-email process.",
     justrite:
-      "I own the React Native client for Justrite Superstore — Nigeria grocery ecommerce with store-aware inventory, multi-gateway checkout, and bank BNPL — including the upgrade to React Native 0.77 and CodePush OTA.",
+      "I lead development of Justrite’s React Native app: store-aware shopping, checkout, bank buy-now-pay-later integrations, and releases on iOS and Android.",
     zona: "Nightlife is time-sensitive. Discover a venue, join a guest list, book bottle service — from a phone, tonight.",
     "kuja-erp":
-      "A bilingual, permissioned distributor ERP for AB InBev Africa — the shared interface for network admins and distributor backoffice, not a marketing site with a logo swapped in.",
+      "A distributor ERP for AB InBev Africa, covering inventory, sales, claims, and finance across English- and Portuguese-speaking markets.",
   },
   caseDisclaimers: {
     quantumspecs:
@@ -39,13 +39,14 @@ export const en = {
     download: "Download résumé",
   },
   hero: {
+    location: "Lagos, Nigeria · WAT (UTC+1) · Open to remote roles and relocation",
     hello: "Hello There!",
     before: "I'm",
     name: "Ewoma Ozore",
-    afterStart: "a software engineer shipping",
-    afterEnd: "product for 6 years.",
+    afterStart: "a senior frontend engineer",
+    afterEnd: "building for web and mobile.",
     intro:
-      "I build product interfaces for the web, iOS, and Android, and I stay with them through production.",
+      "I own onboarding, checkout, and enterprise workflows from design and API integration through release and production support.",
     studies: "Read the case studies",
     contact: "Get in touch",
     scroll: "Scroll to work",
@@ -63,24 +64,24 @@ export const en = {
     app: "{name} app screenshot",
   },
   roles: {
-    "mtn-partner-portal": "Lead Frontend Engineer",
-    justrite: "Mobile Engineer",
+    "mtn-partner-portal": "Senior Software Developer",
+    justrite: "Lead Mobile Developer",
     zona: "Mobile Engineer",
-    "kuja-erp": "Frontend Engineer",
+    "kuja-erp": "Senior Frontend Engineer",
   },
   workCopy: {
     "mtn-partner-portal": {
       description:
-        "The operational surface for becoming an MTN digital partner.",
+        "Partner onboarding and service integration for MTN Nigeria.",
       detail:
         "Production Next.js portal for licensed aggregators, NCC-approved VAS partners, and the people who run them — onboarding, compliance, contracts, and service integration with MTN, live at partner.mtn.ng.",
-      metric: "1M+ customers",
+      metric: "Live partner portal",
     },
     justrite: {
       description: "Grocery ecommerce that matches the physical shop.",
       detail:
         "React Native client for Justrite Superstore — store-aware inventory, multi-gateway checkout, and bank BNPL, plus the upgrade to React Native 0.77 and CodePush OTA. Live on iOS, Android, and justriteonline.com.",
-      metric: "4.6 on Play",
+      metric: "iOS + Android",
     },
     zona: {
       description: "Miami and NYC nightlife, booked from your pocket.",
@@ -90,25 +91,31 @@ export const en = {
     },
     "kuja-erp": {
       description:
-        "The web control plane for AB InBev Africa’s route-to-market.",
+        "Inventory, sales, and finance for AB InBev Africa’s distributors.",
       detail:
         "Distributor ERP for admins and backoffice — network, inventory, walk-in sales, claims, finance, and loyalty — in a bilingual Next.js app with a permissioned, country-aware shell.",
       metric: "AB InBev",
     },
   },
   stats: [
-    "years shipping product",
-    "customers served",
-    "daily user operations",
-    "fewer production errors",
+    "years in frontend, including internships",
+    "production case studies",
+    "mobile apps on both stores",
+    "bank BNPL integrations at Justrite",
   ],
   experience: {
+    context: "My client engagements are contract roles, some extended through renewals. MTN, Justrite, and AB InBev are ongoing contracts; the overlapping dates reflect concurrent engagements.",
+    present: "Present",
+    engagements: {
+      contract: "Contract",
+      internship: "Internship",
+    },
     eyebrow: "02 — Experience",
     title: "Close to production. Every time.",
     roles: {
-      "MTN Nigeria": "Lead Frontend Engineer",
-      Justrite: "Mobile Engineer",
-      "AB InBev": "Frontend Engineer",
+      "MTN Nigeria": "Senior Software Developer",
+      Justrite: "Lead Mobile Developer",
+      "AB InBev": "Senior Frontend Engineer",
       SmallClosedWorld: "Lead Frontend Developer — Web & Mobile",
       "Satori Mental Health": "Frontend Developer",
       Techbeaver: "React Native Developer",
@@ -120,16 +127,19 @@ export const en = {
         "Built the Digital Partner Portal frontend in Next.js 15, TypeScript, TanStack Query, React Hook Form and Zod.",
         "Owned partner and aggregator onboarding, service-documentation and service-integration v2, role-gated navigation, and dashboard task widgets.",
         "Shipped through GitHub PRs into production across on-prem, Azure, and OpenShift.",
+        "Work with product, design, backend, and QA on API integration, code reviews, release planning, and production support.",
       ],
       Justrite: [
         "Own the React Native client for Justrite Superstore — store-aware catalog, multi-gateway checkout, and bank BNPL on iOS and Android.",
         "Shipped checkout, Stanbic / Wema / CashConnect BNPL, catalog performance, and a design refresh of Home, Wallet, Cart, Loyalty, and You.",
         "Took the native stack to React Native 0.77 (Hermes, Play 16 KB pages) and CodePush OTA without freezing weekly releases.",
+        "Implemented Jest unit and integration tests and work with product, design, and backend teams on release quality and production troubleshooting.",
       ],
       "AB InBev": [
         "Frontend on KUJA Web, AB InBev Africa’s distributor ERP — Next.js 14, TypeScript, a custom KJ design system, React Query, and Redux.",
         "Owned vertical slices: Super Admin, user roles, catalog and empties, Awoof loyalty, claims, finance, and seller migration.",
         "The hard parts were permissioned multi-persona UX, bilingual markets (English and Portuguese), and making tables and observability trustworthy in production.",
+        "Contribute to architecture discussions and code reviews, carrying features through API integration, QA, and release.",
       ],
       SmallClosedWorld: [
         "Led development of scalable React Native applications across multiple client and product requirements.",
@@ -220,12 +230,14 @@ export const en = {
     },
   },
   contact: {
+    language: "Working language: English. This site is also translated into French, German, and Spanish.",
     eyebrow: "04 — Contact",
     title: "Let's build something people love to use.",
-    body: "Senior frontend and mobile roles. Remote across Europe, open to relocate, and I overlap your working hours.",
+    body: "Based in Lagos, Nigeria (WAT, UTC+1). Open to senior frontend and mobile roles with international teams, remotely or with relocation support. Working-hour overlap can be agreed for each role.",
     resume: "Download résumé",
   },
   caseStudy: {
+    detailLanguage: "Technical case study in English",
     visit: "Visit live site",
     previous: "Previous",
     next: "Next",

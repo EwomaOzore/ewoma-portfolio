@@ -14,7 +14,7 @@ export const siteUrl = links.site;
 export const defaultTitle =
   "Ewoma Ozore — Senior Frontend & Mobile Engineer";
 export const defaultDescription =
-  "Senior frontend and mobile engineer. Case studies of React, React Native, and Next.js systems shipped to 1M+ people across web, iOS, and Android.";
+  "Senior frontend and mobile engineer in Lagos, Nigeria. React, React Native, and Next.js case studies from MTN, Justrite, Zona, and AB InBev. Open to remote roles and relocation.";
 
 export function canonicalUrl(path: string) {
   if (path === "/") return siteUrl;
@@ -127,6 +127,7 @@ export function caseStudyMeta(
 const postalAddress = {
   "@type": "PostalAddress",
   addressCountry: "NG",
+  addressLocality: "Lagos",
 };
 
 export function personJsonLd() {
@@ -145,7 +146,7 @@ export function personJsonLd() {
       "@type": "Place",
       name: "Remote — Europe and English-speaking countries",
     },
-    knowsLanguage: ["en", "es", "fr", "de"],
+    knowsLanguage: ["en"],
     sameAs: [links.github, links.linkedin],
     knowsAbout: [
       "React",
@@ -170,7 +171,7 @@ export function professionalServiceJsonLd() {
       "@type": "Country",
       name: country.en,
     })),
-    availableLanguage: ["English", "Spanish", "French", "German"],
+    availableLanguage: ["English"],
     address: postalAddress,
     founder: {
       "@type": "Person",

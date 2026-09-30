@@ -8,17 +8,11 @@ export const links = {
   telegram: "https://t.me/+2348134970348",
 };
 
-export const availability = [
-  "Remote from anywhere",
-  "Open to relocate",
-  "I overlap your working hours from anywhere",
-];
-
 export const stats = [
-  { value: 6, suffix: "+", label: "years shipping product" },
-  { value: 1, suffix: "M+", label: "customers served" },
-  { value: 10, suffix: "K+", label: "daily user operations" },
-  { value: 60, suffix: "%", label: "fewer production errors" },
+  { value: 7, suffix: "+", label: "years in frontend, including internships" },
+  { value: 4, suffix: "", label: "production case studies" },
+  { value: 2, suffix: "", label: "mobile apps on both stores" },
+  { value: 3, suffix: "", label: "bank BNPL integrations at Justrite" },
 ];
 
 export const marqueeItems = [
@@ -57,15 +51,15 @@ export const featuredWork: Work[] = [
   {
     name: "MTN Digital Partner Portal",
     slug: "mtn-partner-portal",
-    role: "Lead Frontend Engineer",
-    description: "The operational surface for becoming an MTN digital partner.",
+    role: "Senior Software Developer",
+    description: "Partner onboarding and service integration for MTN Nigeria.",
     detail:
       "Production Next.js portal for licensed aggregators, NCC-approved VAS partners, and the people who run them — onboarding, compliance, contracts, and service integration with MTN, live at partner.mtn.ng.",
     icon: "/assets/mtnnigeria.jpeg",
     screen: "/assets/mtnscreen.png",
     tags: ["Next.js", "TypeScript", "TanStack Query", "Zod"],
     accent: "#FFCC00",
-    metric: "1M+ customers",
+    metric: "Live partner portal",
     index: "01",
     kind: "web",
     href: "https://partner.mtn.ng/",
@@ -73,7 +67,7 @@ export const featuredWork: Work[] = [
   {
     name: "Justrite",
     slug: "justrite",
-    role: "Mobile Engineer",
+    role: "Lead Mobile Developer",
     description: "Grocery ecommerce that matches the physical shop.",
     detail:
       "React Native client for Justrite Superstore — store-aware inventory, multi-gateway checkout, and bank BNPL, plus the upgrade to React Native 0.77 and CodePush OTA. Live on iOS, Android, and justriteonline.com.",
@@ -81,7 +75,7 @@ export const featuredWork: Work[] = [
     screen: "/assets/justritescreen.jpeg",
     tags: ["React Native", "TypeScript", "Redux Toolkit"],
     accent: "#7B2CBF",
-    metric: "4.6 on Play",
+    metric: "iOS + Android",
     index: "02",
     kind: "mobile",
     stores: [
@@ -123,8 +117,8 @@ export const featuredWork: Work[] = [
   {
     name: "KUJA Web",
     slug: "kuja-erp",
-    role: "Frontend Engineer",
-    description: "The web control plane for AB InBev Africa’s route-to-market.",
+    role: "Senior Frontend Engineer",
+    description: "Inventory, sales, and finance for AB InBev Africa’s distributors.",
     detail:
       "Distributor ERP for admins and backoffice — network, inventory, walk-in sales, claims, finance, and loyalty — in a bilingual Next.js app with a permissioned, country-aware shell.",
     icon: "/assets/abinbev.jpeg",
@@ -142,6 +136,7 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
+  engagement: "contract" | "internship";
   icon?: string;
   href?: string;
   points: string[];
@@ -150,8 +145,9 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "MTN Nigeria",
-    role: "Lead Frontend Engineer",
-    period: "Feb 2025 — Sep 2026",
+    role: "Senior Software Developer",
+    period: "Feb 2025 — Present",
+    engagement: "contract",
     icon: "/assets/mtnnigeria.jpeg",
     href: "/work/mtn-partner-portal",
     points: [
@@ -162,8 +158,9 @@ export const experience: Experience[] = [
   },
   {
     company: "Justrite",
-    role: "Mobile Engineer",
-    period: "Jun 2025 — Sep 2026",
+    role: "Lead Mobile Developer",
+    period: "May 2025 — Present",
+    engagement: "contract",
     icon: "/assets/justrite.jpeg",
     href: "/work/justrite",
     points: [
@@ -174,8 +171,9 @@ export const experience: Experience[] = [
   },
   {
     company: "AB InBev",
-    role: "Frontend Engineer",
-    period: "Jan 2024 — Aug 2026",
+    role: "Senior Frontend Engineer",
+    period: "Jan 2024 — Present",
+    engagement: "contract",
     icon: "/assets/abinbev.jpeg",
     href: "/work/kuja-erp",
     points: [
@@ -188,6 +186,7 @@ export const experience: Experience[] = [
     company: "SmallClosedWorld",
     role: "Lead Frontend Developer — Web & Mobile",
     period: "Sep 2024 — Apr 2025",
+    engagement: "contract",
     icon: "/assets/smallclosedworld.jpeg",
     points: [
       "Led development of scalable React Native applications across multiple client and product requirements.",
@@ -197,7 +196,8 @@ export const experience: Experience[] = [
   {
     company: "Satori Mental Health",
     role: "Frontend Developer",
-    period: "Jul 2023 — Feb 2024",
+    period: "Jul 2023 — Jun 2024",
+    engagement: "contract",
     icon: "/assets/satori.jpeg",
     points: [
       "Built responsive, accessible React applications from Figma designs with Redux and React Hooks.",
@@ -208,6 +208,7 @@ export const experience: Experience[] = [
     company: "Techbeaver",
     role: "React Native Developer",
     period: "Jan 2022 — Oct 2023",
+    engagement: "contract",
     icon: "/assets/techbeaver.jpeg",
     points: [
       "Developed and maintained production React Native applications across multiple client projects, from development through release.",
@@ -218,6 +219,7 @@ export const experience: Experience[] = [
     company: "SubShare Inc.",
     role: "Frontend Developer — Web & Mobile Intern",
     period: "Aug 2021 — Jul 2022",
+    engagement: "internship",
     icon: "/assets/subshare.jpeg",
     points: [
       "Developed interactive React and React Native applications based on product and client requirements.",
@@ -227,7 +229,8 @@ export const experience: Experience[] = [
   {
     company: "Integrated Orange",
     role: "Frontend Developer Intern",
-    period: "May 2020 — Sep 2021",
+    period: "May 2019 — Sep 2021",
+    engagement: "internship",
     icon: "/assets/integratedorange.jpeg",
     points: [
       "Developed responsive, interactive web apps using HTML, CSS, JavaScript, and modern tooling.",

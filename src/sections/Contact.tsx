@@ -39,6 +39,9 @@ export default async function ContactSection({
           <p className="mt-6 max-w-xl text-lg text-muted">
             {dict.contact.body}
           </p>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+            {dict.contact.language}
+          </p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground/80">
             {europe.join("  ·  ")}
           </p>

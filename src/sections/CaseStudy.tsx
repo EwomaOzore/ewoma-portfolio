@@ -198,6 +198,22 @@ export default async function CaseStudySection({
         </div>
       </Reveal>
 
+      <div className="mt-12 border-y border-line py-8">
+        <p className="text-xs uppercase tracking-widest text-muted">
+          {dict.caseStudy.detailLanguage}
+        </p>
+        <dl lang="en" className="mt-5 grid gap-8 md:grid-cols-3">
+          {study.summary.map((item) => (
+            <div key={item.title}>
+              <dt className="font-medium">{item.title}</dt>
+              <dd className="mt-3 text-sm leading-relaxed text-muted">
+                {item.body}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
       <Reveal className="mt-16 flex justify-center">
         {isWeb ? (
           <BrowserFrame
@@ -255,7 +271,7 @@ export default async function CaseStudySection({
                     section.title as keyof typeof dict.caseStudy.sections
                   ] ?? section.title}
                 </h2>
-                <div className="mt-5 space-y-4 text-base leading-relaxed text-muted md:text-lg">
+                <div lang="en" className="mt-5 space-y-4 text-base leading-relaxed text-muted md:text-lg">
                   {section.paragraphs.map((paragraph) => (
                     <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                   ))}

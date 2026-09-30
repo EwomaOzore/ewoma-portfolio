@@ -82,6 +82,12 @@ export default function Hero() {
             >
               {dict.hero.intro}
             </motion.p>
+            <motion.p
+              variants={item}
+              className="mt-4 max-w-xl text-sm leading-relaxed text-muted"
+            >
+              {dict.hero.location}
+            </motion.p>
 
             <motion.div
               variants={item}

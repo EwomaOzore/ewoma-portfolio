@@ -4,7 +4,7 @@ export const es = {
   meta: {
     title: "Ewoma Ozore — Ingeniero frontend y mobile sénior",
     description:
-      "Ingeniero frontend y mobile sénior. Casos de estudio de sistemas en React, React Native y Next.js usados por más de 1 millón de personas en web, iOS y Android.",
+      "Ingeniero frontend y mobile sénior en Lagos, Nigeria. Casos de estudio con React, React Native y Next.js: MTN, Justrite, Zona y AB InBev. Disponible para trabajo remoto y reubicación.",
     projectsTitle: "Proyectos personales",
     projectsDescription:
       "Proyectos propios de Ewoma Ozore — QuantumSpecs, Pollux, GameBuddy, Interswitch y Flux. Hechos de noche y en fines de semana.",
@@ -16,10 +16,10 @@ export const es = {
     "mtn-partner-portal":
       "El frontend para partners del ecosistema digital de MTN Nigeria: alta, cumplimiento, contratos, lanzamiento de servicios e integración con las plataformas de MTN, sin un proceso de papeles y correos.",
     justrite:
-      "Llevo el cliente React Native de Justrite Superstore, el ecommerce de supermercado en Nigeria: inventario por tienda, pago con varias pasarelas y BNPL bancario, incluida la subida a React Native 0.77 y CodePush OTA.",
+      "Lidero el desarrollo de la app React Native de Justrite: compras por tienda, pagos, integraciones bancarias de pago aplazado y publicaciones en iOS y Android.",
     zona: "La noche no espera. Descubrir un local, entrar en la lista y reservar botella, desde el teléfono, esta noche.",
     "kuja-erp":
-      "Un ERP de distribuidores bilingüe y con permisos para AB InBev África: la interfaz compartida de los admins de red y el backoffice del distribuidor, no un sitio de marketing con el logo cambiado.",
+      "Un ERP para distribuidores de AB InBev África: inventario, ventas, reclamaciones y finanzas para mercados de habla inglesa y portuguesa.",
   },
   caseDisclaimers: {
     quantumspecs:
@@ -41,13 +41,14 @@ export const es = {
     download: "Descargar currículum",
   },
   hero: {
+    location: "Lagos, Nigeria · WAT (UTC+1) · Trabajo remoto y reubicación",
     hello: "¡Hola!",
     before: "Soy",
     name: "Ewoma Ozore",
-    afterStart: "ingeniero de software enviando",
-    afterEnd: "producto desde hace 6 años.",
+    afterStart: "ingeniero frontend sénior,",
+    afterEnd: "creo productos web y móviles.",
     intro:
-      "Construyo interfaces de producto para web, iOS y Android, y las acompaño hasta producción.",
+      "Me encargo del registro, los pagos y las herramientas de negocio, desde el diseño y la integración de API hasta la publicación y el soporte en producción.",
     studies: "Leer los casos de estudio",
     contact: "Escribirme",
     scroll: "Ir al trabajo",
@@ -65,24 +66,24 @@ export const es = {
     app: "Captura de la app {name}",
   },
   roles: {
-    "mtn-partner-portal": "Ingeniero frontend principal",
-    justrite: "Ingeniero mobile",
+    "mtn-partner-portal": "Desarrollador de software sénior",
+    justrite: "Desarrollador mobile principal",
     zona: "Ingeniero mobile",
-    "kuja-erp": "Ingeniero frontend",
+    "kuja-erp": "Ingeniero frontend sénior",
   },
   workCopy: {
     "mtn-partner-portal": {
       description:
-        "La superficie operativa para convertirse en partner digital de MTN.",
+        "Registro e integración de servicios para partners de MTN Nigeria.",
       detail:
         "Portal Next.js en producción para agregadores con licencia, partners VAS aprobados por la NCC y quienes los operan: alta, cumplimiento, contratos e integración de servicios con MTN, en vivo en partner.mtn.ng.",
-      metric: "Más de 1 millón de clientes",
+      metric: "Portal en producción",
     },
     justrite: {
       description: "Ecommerce de supermercado que se parece a la tienda.",
       detail:
         "Cliente React Native de Justrite Superstore: inventario por tienda, pago con varias pasarelas y BNPL bancario, más la subida a React Native 0.77 y CodePush OTA. En iOS, Android y justriteonline.com.",
-      metric: "4,6 en Play",
+      metric: "iOS + Android",
     },
     zona: {
       description:
@@ -93,25 +94,31 @@ export const es = {
     },
     "kuja-erp": {
       description:
-        "El plano de control web de la ruta al mercado de AB InBev África.",
+        "Inventario, ventas y finanzas para distribuidores de AB InBev África.",
       detail:
         "ERP de distribuidores para admins y backoffice: red, inventario, venta en mostrador, reclamaciones, finanzas y fidelización. Una app Next.js bilingüe, con permisos y contexto de país.",
       metric: "AB InBev",
     },
   },
   stats: [
-    "años enviando producto",
-    "clientes atendidos",
-    "operaciones diarias",
-    "menos errores en producción",
+    "años en frontend, incluidas prácticas",
+    "casos de estudio en producción",
+    "apps móviles en ambas tiendas",
+    "integraciones bancarias BNPL en Justrite",
   ],
   experience: {
+    context: "Mis colaboraciones con clientes son por contrato, algunas con renovaciones. Los contratos con MTN, Justrite y AB InBev siguen activos; las fechas se solapan porque son colaboraciones simultáneas.",
+    present: "Actualidad",
+    engagements: {
+      contract: "Por contrato",
+      internship: "Prácticas",
+    },
     eyebrow: "02 — Experiencia",
     title: "Cerca de producción. Siempre.",
     roles: {
-      "MTN Nigeria": "Ingeniero frontend principal",
-      Justrite: "Ingeniero mobile",
-      "AB InBev": "Ingeniero frontend",
+      "MTN Nigeria": "Desarrollador de software sénior",
+      Justrite: "Desarrollador mobile principal",
+      "AB InBev": "Ingeniero frontend sénior",
       SmallClosedWorld: "Desarrollador frontend principal — web y mobile",
       "Satori Mental Health": "Desarrollador frontend",
       Techbeaver: "Desarrollador React Native",
@@ -123,16 +130,19 @@ export const es = {
         "Construí el frontend del Digital Partner Portal en Next.js 15, TypeScript, TanStack Query, React Hook Form y Zod.",
         "Me encargué del alta de partners y agregadores, la documentación de servicios y la integración v2, la navegación por rol y los widgets de tareas del panel.",
         "Lo llevé a producción con PRs de GitHub, en on-prem, Azure y OpenShift.",
+        "Colaboro con producto, diseño, backend y QA en la integración de API, revisiones de código, planificación de versiones y soporte en producción.",
       ],
       Justrite: [
         "Llevo el cliente React Native de Justrite Superstore: catálogo por tienda, pago con varias pasarelas y BNPL bancario en iOS y Android.",
         "Entregué el checkout, BNPL de Stanbic, Wema y CashConnect, el rendimiento del catálogo y un rediseño de Inicio, Wallet, Carrito, Fidelización y Tú.",
         "Subí el stack nativo a React Native 0.77 (Hermes, páginas de 16 KB en Play) y CodePush OTA sin congelar las entregas semanales.",
+        "Implementé pruebas unitarias y de integración con Jest y colaboro con producto, diseño y backend en la calidad de las versiones y la resolución de problemas en producción.",
       ],
       "AB InBev": [
         "Frontend de KUJA Web, el ERP de distribuidores de AB InBev África: Next.js 14, TypeScript, el sistema de diseño KJ, React Query y Redux.",
         "Corté verticales: Super Admin, roles, catálogo y envases, fidelización Awoof, reclamaciones, finanzas y migración de vendedores.",
         "Lo difícil fue el UX con permisos y varias personas, mercados bilingües (inglés y portugués) y tablas y observabilidad fiables en producción.",
+        "Participo en decisiones de arquitectura y revisiones de código, llevando funcionalidades desde la integración de API hasta QA y publicación.",
       ],
       SmallClosedWorld: [
         "Lideré el desarrollo de aplicaciones React Native escalables para varios clientes y productos.",
@@ -223,12 +233,14 @@ export const es = {
     },
   },
   contact: {
+    language: "Idioma de trabajo: inglés. Este sitio también está traducido al francés, alemán y español.",
     eyebrow: "04 — Contacto",
     title: "Construyamos algo que la gente quiera usar.",
-    body: "Roles sénior de frontend y mobile. En remoto por Europa, abierto a mudarme, y me adapto a tu horario.",
+    body: "Resido en Lagos, Nigeria (WAT, UTC+1). Busco puestos sénior de frontend y mobile en equipos internacionales, en remoto o con apoyo para reubicación. El horario compartido se puede acordar para cada puesto.",
     resume: "Descargar currículum",
   },
   caseStudy: {
+    detailLanguage: "Caso de estudio técnico en inglés",
     visit: "Ver el sitio",
     previous: "Anterior",
     next: "Siguiente",
