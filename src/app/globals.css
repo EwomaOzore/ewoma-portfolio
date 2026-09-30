@@ -2,26 +2,31 @@
 @config "../../tailwind.config.ts";
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #f6f4ef;
-  --surface: #ece8df;
-  --foreground: #141414;
-  --muted: #6b675e;
-  --accent: #141414;
-  --border: rgba(20, 20, 20, 0.1);
-  --grid: rgba(20, 20, 20, 0.07);
-  --glow: rgba(20, 20, 20, 0.06);
+:root,
+.dark {
+  --background: #0c1117;
+  --surface: #151c26;
+  --foreground: #e8e4db;
+  --muted: #93a0ae;
+  --accent: #e8e4db;
+  --border: rgba(232, 228, 219, 0.12);
+  --grid: rgba(176, 198, 214, 0.08);
+  --glow: rgba(176, 198, 214, 0.06);
+  --sunset: #e3a36a;
+  color-scheme: dark;
 }
 
-.dark {
-  --background: #0a0a0a;
-  --surface: #141414;
-  --foreground: #f4f1ea;
-  --muted: #8a857c;
-  --accent: #f4f1ea;
-  --border: rgba(244, 241, 234, 0.1);
-  --grid: rgba(244, 241, 234, 0.08);
-  --glow: rgba(244, 241, 234, 0.08);
+.light {
+  --background: #f3ecdf;
+  --surface: #e7dece;
+  --foreground: #1a1612;
+  --muted: #6d6458;
+  --accent: #1a1612;
+  --border: rgba(26, 22, 18, 0.12);
+  --grid: rgba(26, 22, 18, 0.07);
+  --glow: rgba(180, 83, 42, 0.1);
+  --sunset: #b4532a;
+  color-scheme: light;
 }
 
 html {
@@ -43,9 +48,20 @@ h2 {
   font-weight: 700;
 }
 
+h1.hero-title {
+  font-family: var(--font-grotesk), "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+}
+
+h1.hero-title em {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+}
+
 ::selection {
-  background: var(--foreground);
-  color: var(--background);
+  background: var(--sunset);
+  color: #1a1612;
 }
 
 ::-webkit-scrollbar {
@@ -73,22 +89,6 @@ h2 {
   text-wrap: balance;
 }
 
-.grid-overlay {
-  overflow: hidden;
-  mask-image: radial-gradient(ellipse at 50% 38%, black 20%, transparent 75%);
-}
-
-.grid-overlay::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background-image:
-    linear-gradient(to right, var(--grid) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
-  background-size: 64px 64px;
-  animation: grid-pan 28s linear infinite;
-}
-
 .noise {
   position: fixed;
   inset: 0;
@@ -104,8 +104,7 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track,
-  .grid-overlay::before {
+  .marquee-track {
     animation: none;
   }
 
@@ -123,11 +122,3 @@ h2 {
   }
 }
 
-@keyframes grid-pan {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-64px, -64px, 0);
-  }
-}

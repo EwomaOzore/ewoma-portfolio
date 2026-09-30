@@ -16,16 +16,19 @@ const config: Config = {
         muted: "var(--muted)",
         accent: "var(--accent)",
         line: "var(--border)",
+        sunset: "var(--sunset)",
       },
       fontFamily: {
-        sans: [
-          "var(--font-sans)",
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
+        grotesk: [
+          "var(--font-grotesk)",
+          "Schibsted Grotesk",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
         ],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
-        display: ["var(--font-display)", "Georgia", "serif"],
       },
       letterSpacing: {
         tightest: "-0.04em",

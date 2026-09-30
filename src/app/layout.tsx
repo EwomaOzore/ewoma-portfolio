@@ -1,6 +1,11 @@
 import React from "react";
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Instrument_Sans, Instrument_Serif } from "next/font/google";
+import {
+  Fraunces,
+  Instrument_Sans,
+  Instrument_Serif,
+  Schibsted_Grotesk,
+} from "next/font/google";
 import Providers from "@/components/Providers";
 import JsonLd from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/next";
@@ -31,11 +36,17 @@ const display = Fraunces({
   style: ["normal", "italic"],
   variable: "--font-display",
 });
+const grotesk = Schibsted_Grotesk({
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--font-grotesk",
+  display: "swap",
+});
 
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#f6f4ef" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c1117" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -108,7 +119,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body
-        className={`${sans.variable} ${serif.variable} ${display.variable} font-sans`}
+        className={`${sans.variable} ${serif.variable} ${display.variable} ${grotesk.variable} font-sans`}
       >
         <JsonLd data={personJsonLd()} />
         <JsonLd data={websiteJsonLd()} />

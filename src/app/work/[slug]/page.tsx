@@ -31,9 +31,7 @@ export async function generateMetadata({
   return caseStudyMeta(slug);
 }
 
-export default async function CaseStudyPage({
-  params,
-}: Readonly<PageProps>) {
+export default async function CaseStudyPage({ params }: Readonly<PageProps>) {
   const { slug } = await params;
   const study = getCaseStudy(slug);
   const work = workBySlug(slug);
@@ -57,7 +55,7 @@ export default async function CaseStudyPage({
       />
       <JsonLd data={caseStudyJsonLd(slug)} />
       <CaseStudySection study={study} />
-      <ContactSection glow={slug !== "quantumspecs"} />
+      <ContactSection />
     </SiteShell>
   );
 }

@@ -9,15 +9,19 @@ type RevealProps = {
   className?: string;
 };
 
-export default function Reveal({ children, delay = 0, className }: RevealProps) {
+export default function Reveal({
+  children,
+  delay = 0,
+  className,
+}: RevealProps) {
   const reduceMotion = useReducedMotion();
 
   return (
     <motion.div
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      initial={reduceMotion ? false : { y: 16 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] as const }}
     >
       {children}

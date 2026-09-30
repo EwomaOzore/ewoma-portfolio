@@ -11,9 +11,8 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { y: 12 },
   show: {
-    opacity: 1,
     y: 0,
     transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] as const },
   },
@@ -23,9 +22,7 @@ export default function Hero() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden">
-      <div aria-hidden className="grid-overlay pointer-events-none absolute inset-0" />
-
+    <section id="top" className="relative min-h-screen">
       <div className="mx-auto flex min-h-screen max-w-content items-center justify-center px-6 pb-20 pt-28">
         <motion.div
           variants={container}
@@ -46,7 +43,7 @@ export default function Hero() {
 
           <motion.h1
             variants={item}
-            className="mt-7 max-w-[16ch] font-display text-5xl leading-[0.96] tracking-tightest md:text-6xl"
+            className="hero-title mt-7 max-w-[16ch] text-5xl leading-[0.96] tracking-tightest md:text-6xl"
           >
             Senior frontend engineer. Building product systems at{" "}
             <em className="italic text-muted">scale.</em>
@@ -59,7 +56,10 @@ export default function Hero() {
             {availability.join("  ·  ")}
           </motion.p>
 
-          <motion.div variants={item} className="mt-9 flex flex-wrap justify-center gap-3">
+          <motion.div
+            variants={item}
+            className="mt-9 flex flex-wrap justify-center gap-3"
+          >
             <a
               href="#work"
               className="rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-transform hover:scale-[1.03] active:scale-[0.98]"

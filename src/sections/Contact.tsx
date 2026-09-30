@@ -5,12 +5,15 @@ import TrackedLink from "@/components/TrackedLink";
 import { links } from "@/constants";
 
 export default function ContactSection({
-  glow = true,
+  glow = false,
 }: Readonly<{
   glow?: boolean;
 }>) {
   return (
-    <section id="contact" className="relative overflow-hidden border-t border-line">
+    <section
+      id="contact"
+      className="relative overflow-hidden border-t border-line"
+    >
       {glow && (
         <div
           aria-hidden
@@ -27,14 +30,13 @@ export default function ContactSection({
             Let&apos;s build something people love to use.
           </h2>
           <p className="mt-6 max-w-xl text-lg text-muted">
-            Senior frontend and mobile roles. Remote from Nigeria or
-            anywhere, and open to relocate. I overlap your working hours
-            from anywhere.
+            Senior frontend and mobile roles. Remote from Nigeria or anywhere,
+            and open to relocate. I overlap your working hours from anywhere.
           </p>
 
           <a
             href={`mailto:${links.email}`}
-            className="mt-10 inline-flex items-center gap-3 font-serif text-2xl italic underline decoration-line underline-offset-8 transition-colors hover:text-muted md:text-4xl"
+            className="mt-10 inline-flex items-center gap-3 font-serif text-2xl italic underline decoration-sunset/70 underline-offset-8 transition-colors hover:text-muted md:text-4xl"
           >
             {links.email}
             <ArrowUpRight className="h-6 w-6 md:h-8 md:w-8" />

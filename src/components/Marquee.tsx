@@ -16,7 +16,7 @@ export default function Marquee({ items }: MarqueeProps) {
             className="flex items-center gap-10 text-sm tracking-wide text-muted"
           >
             {item}
-            <span aria-hidden className="font-serif text-foreground/40">
+            <span aria-hidden className="font-serif text-sunset">
               ✦
             </span>
           </span>
