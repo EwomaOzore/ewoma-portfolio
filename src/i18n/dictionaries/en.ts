@@ -39,7 +39,8 @@ export const en = {
     download: "Download résumé",
   },
   hero: {
-    location: "Lagos, Nigeria · WAT (UTC+1) · Open to remote roles and relocation",
+    location:
+      "Lagos, Nigeria · WAT (UTC+1) · Open to remote roles and relocation",
     hello: "Hello There!",
     before: "I'm",
     name: "Ewoma Ozore",
@@ -101,10 +102,11 @@ export const en = {
     "years in frontend, including internships",
     "production case studies",
     "mobile apps on both stores",
-    "bank BNPL integrations at Justrite",
+    "customers served across projects",
   ],
   experience: {
-    context: "MTN and AB InBev are ongoing contract roles, extended through renewals. These engagements run alongside my role at Justrite, which explains the overlapping dates.",
+    context:
+      "MTN and AB InBev are ongoing contract roles, extended through renewals. These engagements run alongside my role at Justrite, which explains the overlapping dates.",
     present: "Present",
     engagements: {
       contract: "Contract",
@@ -230,7 +232,8 @@ export const en = {
     },
   },
   contact: {
-    language: "Working language: English. This site is also translated into French, German, and Spanish.",
+    language:
+      "Working language: English. This site is also translated into French, German, and Spanish.",
     eyebrow: "04 — Contact",
     title: "Let's build something people love to use.",
     body: "Based in Lagos, Nigeria (WAT, UTC+1). Open to senior frontend and mobile roles with international teams, remotely or with relocation support. Working-hour overlap can be agreed for each role.",

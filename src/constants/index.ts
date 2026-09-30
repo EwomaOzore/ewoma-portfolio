@@ -9,10 +9,10 @@ export const links = {
 };
 
 export const stats = [
-  { value: 7, suffix: "+", label: "years in frontend, including internships" },
+  { value: 6, suffix: "+", label: "years in frontend, including internships" },
   { value: 4, suffix: "", label: "production case studies" },
   { value: 2, suffix: "", label: "mobile apps on both stores" },
-  { value: 3, suffix: "", label: "bank BNPL integrations at Justrite" },
+  { value: 1, suffix: "M+", label: "customers served across projects" },
 ];
 
 export const marqueeItems = [
@@ -118,7 +118,8 @@ export const featuredWork: Work[] = [
     name: "KUJA Web",
     slug: "kuja-erp",
     role: "Senior Frontend Engineer",
-    description: "Inventory, sales, and finance for AB InBev Africa’s distributors.",
+    description:
+      "Inventory, sales, and finance for AB InBev Africa’s distributors.",
     detail:
       "Distributor ERP for admins and backoffice — network, inventory, walk-in sales, claims, finance, and loyalty — in a bilingual Next.js app with a permissioned, country-aware shell.",
     icon: "/assets/abinbev.jpeg",

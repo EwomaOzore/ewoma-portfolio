@@ -41,7 +41,8 @@ export const fr = {
     download: "Télécharger le CV",
   },
   hero: {
-    location: "Lagos, Nigeria · WAT (UTC+1) · Télétravail et mobilité internationale",
+    location:
+      "Lagos, Nigeria · WAT (UTC+1) · Télétravail et mobilité internationale",
     hello: "Bonjour !",
     before: "Je suis",
     name: "Ewoma Ozore",
@@ -103,10 +104,11 @@ export const fr = {
     "années en frontend, stages inclus",
     "études de cas en production",
     "apps mobiles sur les deux stores",
-    "intégrations bancaires BNPL chez Justrite",
+    "clients servis sur l’ensemble des projets",
   ],
   experience: {
-    context: "MTN et AB InBev sont des missions contractuelles en cours, prolongées par renouvellement. Elles sont menées en parallèle de mon poste chez Justrite, ce qui explique le chevauchement des dates.",
+    context:
+      "MTN et AB InBev sont des missions contractuelles en cours, prolongées par renouvellement. Elles sont menées en parallèle de mon poste chez Justrite, ce qui explique le chevauchement des dates.",
     present: "Aujourd’hui",
     engagements: {
       contract: "Mission contractuelle",
@@ -233,7 +235,8 @@ export const fr = {
     },
   },
   contact: {
-    language: "Langue de travail : anglais. Ce site est aussi traduit en français, allemand et espagnol.",
+    language:
+      "Langue de travail : anglais. Ce site est aussi traduit en français, allemand et espagnol.",
     eyebrow: "04 — Contact",
     title: "Construisons quelque chose que les gens aiment utiliser.",
     body: "Basé à Lagos, au Nigeria (WAT, UTC+1). Ouvert aux postes senior en frontend et mobile avec des équipes internationales, à distance ou avec une aide à la mobilité. Les plages horaires communes sont à convenir pour chaque poste.",

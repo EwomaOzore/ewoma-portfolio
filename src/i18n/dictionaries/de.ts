@@ -41,7 +41,8 @@ export const de = {
     download: "Lebenslauf herunterladen",
   },
   hero: {
-    location: "Lagos, Nigeria · WAT (UTC+1) · Offen für Remote-Arbeit und Umzug",
+    location:
+      "Lagos, Nigeria · WAT (UTC+1) · Offen für Remote-Arbeit und Umzug",
     hello: "Hallo!",
     before: "Ich bin",
     name: "Ewoma Ozore",
@@ -92,7 +93,8 @@ export const de = {
       metric: "iOS + Android",
     },
     "kuja-erp": {
-      description: "Bestand, Vertrieb und Finanzen für AB InBevs Händler in Afrika.",
+      description:
+        "Bestand, Vertrieb und Finanzen für AB InBevs Händler in Afrika.",
       detail:
         "Händler-ERP für Admins und Backoffice: Netzwerk, Bestand, Laufkundschaft, Claims, Finanzen und Loyalty. Eine zweisprachige Next.js-App mit Rechten und Länderkontext.",
       metric: "AB InBev",
@@ -102,10 +104,11 @@ export const de = {
     "Jahre im Frontend, inklusive Praktika",
     "Fallstudien aus der Produktion",
     "Mobile-Apps in beiden Stores",
-    "Bank-BNPL-Integrationen bei Justrite",
+    "Kundinnen und Kunden über die Projekte",
   ],
   experience: {
-    context: "MTN und AB InBev sind laufende Vertragsengagements, die verlängert wurden. Sie laufen parallel zu meiner Stelle bei Justrite, was die überlappenden Zeiträume erklärt.",
+    context:
+      "MTN und AB InBev sind laufende Vertragsengagements, die verlängert wurden. Sie laufen parallel zu meiner Stelle bei Justrite, was die überlappenden Zeiträume erklärt.",
     present: "Heute",
     engagements: {
       contract: "Vertragsengagement",
@@ -232,7 +235,8 @@ export const de = {
     },
   },
   contact: {
-    language: "Arbeitssprache: Englisch. Diese Website ist auch ins Französische, Deutsche und Spanische übersetzt.",
+    language:
+      "Arbeitssprache: Englisch. Diese Website ist auch ins Französische, Deutsche und Spanische übersetzt.",
     eyebrow: "04 — Kontakt",
     title: "Bauen wir etwas, das Menschen gern benutzen.",
     body: "Ansässig in Lagos, Nigeria (WAT, UTC+1). Offen für Senior-Stellen in Frontend und Mobile in internationalen Teams, remote oder mit Unterstützung beim Umzug. Gemeinsame Arbeitszeiten lassen sich je nach Stelle vereinbaren.",
