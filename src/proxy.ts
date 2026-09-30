@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const prefixed = new Set(["es", "fr", "de"]);
+const prefixed = new Set(["en", "es", "fr", "de"]);
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -19,12 +19,6 @@ export function proxy(request: NextRequest) {
   }
 
   const segment = pathname.split("/")[1] ?? "";
-
-  if (segment === "en") {
-    const url = request.nextUrl.clone();
-    url.pathname = pathname.replace(/^\/en/, "") || "/";
-    return NextResponse.redirect(url);
-  }
 
   if (prefixed.has(segment)) {
     return NextResponse.next();
