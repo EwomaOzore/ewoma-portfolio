@@ -11,8 +11,14 @@ import Reveal from "@/components/Reveal";
 import SpotlightCard from "@/components/SpotlightCard";
 import TrackedLink from "@/components/TrackedLink";
 import { featuredWork, type Work } from "@/constants";
+import { useI18n, useLocalize } from "@/components/I18nProvider";
+import { fill } from "@/i18n/config";
 
-function Preview({ work }: Readonly<{ work: Work }>) {
+function Preview({
+  work,
+  screenshot,
+  app,
+}: Readonly<{ work: Work; screenshot: string; app: string }>) {
   const isWeb = work.kind === "web" && Boolean(work.href);
 
   return (
@@ -26,7 +32,7 @@ function Preview({ work }: Readonly<{ work: Work }>) {
           src={work.screen}
           url={work.href!}
           title={work.name}
-          alt={`Screenshot of ${work.name}`}
+          alt={screenshot}
           accent={work.accent}
           size="lg"
           glow={false}
@@ -35,7 +41,7 @@ function Preview({ work }: Readonly<{ work: Work }>) {
       ) : (
         <DeviceFrame
           src={work.screen ?? work.icon}
-          alt={`${work.name} app screenshot`}
+          alt={app}
           accent={work.accent}
           fill={Boolean(work.screen)}
           size="lg"
@@ -49,25 +55,27 @@ function Preview({ work }: Readonly<{ work: Work }>) {
 export default function WorkSection() {
   const [active, setActive] = useState(0);
   const work = featuredWork[active];
+  const { dict } = useI18n();
+  const { href } = useLocalize();
+  const copy = dict.workCopy[work.slug as keyof typeof dict.workCopy];
 
   return (
     <section id="work" className="mx-auto max-w-[1280px] px-6 py-24 md:py-32">
       <Reveal>
         <p className="text-xs uppercase tracking-[0.22em] text-muted">
-          01 — Selected work
+          {dict.work.eyebrow}
         </p>
         <h2 className="mt-4 max-w-[18ch] font-display text-5xl tracking-tightest md:text-6xl">
-          How I think — not just what shipped.
+          {dict.work.title}
         </h2>
         <p className="mt-5 max-w-xl text-base text-muted">
-          Case studies from production. Trade-offs, constraints, and what I
-          would do with more time.
+          {dict.work.body}
         </p>
         <Link
-          href="/projects"
+          href={href("/projects")}
           className="mt-4 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
         >
-          Personal projects
+          {dict.work.personal}
           <ArrowUpRight size={14} />
         </Link>
       </Reveal>
@@ -95,7 +103,7 @@ export default function WorkSection() {
                     >
                       <Image
                         src={item.icon}
-                        alt={`${item.name} logo`}
+                        alt={`${item.name} ${dict.work.logo}`}
                         width={40}
                         height={40}
                         className="rounded-lg"
@@ -105,7 +113,7 @@ export default function WorkSection() {
                           {item.name}
                         </span>
                         <span className="block truncate text-xs text-muted">
-                          {item.role}
+                          {dict.roles[item.slug as keyof typeof dict.roles]}
                         </span>
                       </span>
                       <span className="font-serif text-lg italic text-muted">
@@ -129,10 +137,10 @@ export default function WorkSection() {
                   className="pt-8"
                 >
                   <h3 className="max-w-[22ch] font-display text-xl leading-snug tracking-tight md:text-2xl">
-                    {work.description}
+                    {copy.description}
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed text-muted">
-                    {work.detail}
+                    {copy.detail}
                   </p>
 
                   <div className="mt-5 flex flex-wrap items-center gap-2">
@@ -143,7 +151,7 @@ export default function WorkSection() {
                         color: work.accent,
                       }}
                     >
-                      {work.metric}
+                      {copy.metric}
                     </span>
                     {work.tags.map((tag) => (
                       <span
@@ -157,10 +165,10 @@ export default function WorkSection() {
 
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Link
-                      href={`/work/${work.slug}`}
+                      href={href(`/work/${work.slug}`)}
                       className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
                     >
-                      Read the case study
+                      {dict.work.read}
                       <ArrowUpRight size={14} />
                     </Link>
                     {work.href && (
@@ -172,7 +180,7 @@ export default function WorkSection() {
                         data={{ project: work.name, destination: "web" }}
                         className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-sm font-medium transition-colors hover:bg-background/60"
                       >
-                        Visit live site
+                        {dict.work.visit}
                         <ArrowUpRight size={14} />
                       </TrackedLink>
                     )}
@@ -211,7 +219,11 @@ export default function WorkSection() {
                   }}
                   className="flex w-full min-w-0 justify-center"
                 >
-                  <Preview work={work} />
+                  <Preview
+                    work={work}
+                    screenshot={fill(dict.work.screenshot, work.name)}
+                    app={fill(dict.work.app, work.name)}
+                  />
                 </motion.div>
               </AnimatePresence>
             </div>

@@ -10,6 +10,8 @@
 
 Remote worldwide. Open to relocate. Overlaps working hours from anywhere.
 
+Languages: [English](https://ewomaozore.vercel.app/), [Español](https://ewomaozore.vercel.app/es), [Français](https://ewomaozore.vercel.app/fr), [Deutsch](https://ewomaozore.vercel.app/de).
+
 ## Pages
 
 - [Home](https://ewomaozore.vercel.app/): Positioning, selected work, experience, skills, contact

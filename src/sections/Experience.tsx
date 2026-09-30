@@ -3,17 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { experience } from "@/constants";
+import { localize } from "@/i18n/config";
+import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 
-export default function ExperienceSection() {
+export default async function ExperienceSection() {
+  const dict = await getDictionary();
+  const locale = await getLocale();
   return (
     <section id="experience" className="border-y border-line bg-surface/50">
       <div className="mx-auto max-w-content px-6 py-24 md:py-32">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.22em] text-muted">
-            02 — Experience
+            {dict.experience.eyebrow}
           </p>
           <h2 className="mt-4 max-w-[18ch] font-display text-5xl tracking-tightest md:text-6xl">
-            Close to production. Every time.
+            {dict.experience.title}
           </h2>
         </Reveal>
 
@@ -50,7 +54,7 @@ export default function ExperienceSection() {
                       <h3 className="font-medium tracking-tight">
                         {job.href ? (
                           <Link
-                            href={job.href}
+                            href={localize(locale, job.href)}
                             className="transition-colors hover:text-muted"
                           >
                             {job.company}
@@ -65,10 +69,10 @@ export default function ExperienceSection() {
 
                   <div className="min-w-0">
                     <p className="font-serif text-xl italic md:text-2xl">
-                      {job.role}
+                      {dict.experience.roles[job.company as keyof typeof dict.experience.roles]}
                     </p>
                     <ul className="mt-3 space-y-2">
-                      {job.points.map((point) => (
+                      {dict.experience.points[job.company as keyof typeof dict.experience.points].map((point) => (
                         <li
                           key={point}
                           className="text-sm leading-relaxed text-muted"

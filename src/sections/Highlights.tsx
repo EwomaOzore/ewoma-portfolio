@@ -2,8 +2,10 @@ import React from "react";
 import CountUp from "@/components/CountUp";
 import Reveal from "@/components/Reveal";
 import { stats } from "@/constants";
+import { getDictionary } from "@/i18n/get-dictionary";
 
-export default function Highlights() {
+export default async function Highlights() {
+  const dict = await getDictionary();
   return (
     <section className="border-y border-line">
       <div className="mx-auto grid max-w-content grid-cols-2 md:grid-cols-4">
@@ -20,7 +22,9 @@ export default function Highlights() {
             <p className="font-display text-5xl tracking-tightest md:text-6xl">
               <CountUp to={stat.value} suffix={stat.suffix} />
             </p>
-            <p className="mt-3 max-w-[12ch] text-sm text-muted">{stat.label}</p>
+            <p className="mt-3 max-w-[14ch] text-sm text-muted">
+              {dict.stats[i]}
+            </p>
           </Reveal>
         ))}
       </div>

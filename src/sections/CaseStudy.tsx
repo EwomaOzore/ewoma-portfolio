@@ -9,6 +9,8 @@ import TrackedLink from "@/components/TrackedLink";
 import { featuredWork, personalProjects, type Work } from "@/constants";
 import type { CaseStudy } from "@/constants/caseStudies";
 import { caseStudies, getCaseStudy } from "@/constants/caseStudies";
+import { fill, localize } from "@/i18n/config";
+import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 
 type CaseStudyDisplay = Omit<
   Pick<
@@ -78,9 +80,11 @@ function getDisplay(slug: string): CaseStudyDisplay | null {
   };
 }
 
-export default function CaseStudySection({
+export default async function CaseStudySection({
   study,
 }: Readonly<{ study: CaseStudy }>) {
+  const dict = await getDictionary();
+  const locale = await getLocale();
   const work = getDisplay(study.slug);
   if (!work) return null;
 
@@ -94,26 +98,40 @@ export default function CaseStudySection({
   const nextWork = next ? getDisplay(next.slug) : null;
 
   const isWeb = work.kind === "web" && Boolean(work.href);
+  const lede =
+    dict.caseLedes[study.slug as keyof typeof dict.caseLedes] ?? study.lede;
+  const role =
+    dict.roles[study.slug as keyof typeof dict.roles] ??
+    dict.caseStudy.selectedDemo;
+  const indexLabel = work.index === "Demo" ? dict.caseStudy.demo : work.index;
+  const disclaimer =
+    dict.caseDisclaimers[study.slug as keyof typeof dict.caseDisclaimers] ??
+    (personalProjects.some((item) => item.slug === study.slug)
+      ? dict.caseStudy.demoDisclaimer
+      : dict.caseStudy.privateDisclaimer);
+  const backLabel = personalProjects.some((item) => item.slug === study.slug)
+    ? dict.caseStudy.personalProjects
+    : dict.caseStudy.selectedWork;
 
   return (
     <article className="mx-auto max-w-content px-6 pb-28 pt-28 md:pb-40 md:pt-32">
       <Reveal>
         <Breadcrumbs
           items={[
-            { href: "/", label: "Home" },
-            { href: work.backHref, label: work.backLabel },
+            { href: localize(locale, "/"), label: dict.caseStudy.home },
+            { href: localize(locale, work.backHref), label: backLabel },
             { label: work.name },
           ]}
         />
 
         <p className="mt-10 text-xs uppercase tracking-[0.22em] text-muted">
-          {work.index} — {work.role}
+          {indexLabel} — {role}
         </p>
         <h1 className="mt-4 max-w-[16ch] font-display text-5xl leading-[0.95] tracking-tightest md:text-7xl">
           {work.name}
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-          {study.lede}
+          {lede}
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-2">
@@ -146,7 +164,7 @@ export default function CaseStudySection({
               data={{ project: work.name, destination: "web" }}
               className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-[1.03]"
             >
-              Visit live site
+              {dict.caseStudy.visit}
               <ArrowUpRight size={14} />
             </TrackedLink>
           )}
@@ -186,7 +204,7 @@ export default function CaseStudySection({
             src={work.screen}
             url={work.href!}
             title={work.name}
-            alt={`Screenshot of ${work.name}`}
+            alt={fill(dict.work.screenshot, work.name)}
             accent={work.accent}
             size="lg"
             fit={work.fit}
@@ -198,7 +216,7 @@ export default function CaseStudySection({
         ) : (
           <DeviceFrame
             src={work.screen ?? work.icon}
-            alt={`${work.name} app screenshot`}
+            alt={fill(dict.work.app, work.name)}
             accent={work.accent}
             fill={Boolean(work.screen)}
             glow={work.glow}
@@ -208,15 +226,10 @@ export default function CaseStudySection({
         )}
       </Reveal>
 
-      <p className="mt-8 text-xs text-muted">
-        {work.disclaimer}
-      </p>
+      <p className="mt-8 text-xs text-muted">{disclaimer}</p>
 
       <div className="mt-20 grid gap-16 lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-20">
-        <nav
-          aria-label="On this page"
-          className="hidden lg:block"
-        >
+        <nav aria-label={dict.caseStudy.onThisPage} className="hidden lg:block">
           <ul className="sticky top-24 space-y-3 text-sm text-muted">
             {study.sections.map((section) => (
               <li key={section.title}>
@@ -224,7 +237,9 @@ export default function CaseStudySection({
                   href={`#${section.title.toLowerCase().replace(/\s+/g, "-")}`}
                   className="transition-colors hover:text-foreground"
                 >
-                  {section.title}
+                  {dict.caseStudy.sections[
+                    section.title as keyof typeof dict.caseStudy.sections
+                  ] ?? section.title}
                 </a>
               </li>
             ))}
@@ -234,11 +249,11 @@ export default function CaseStudySection({
         <div className="space-y-16">
           {study.sections.map((section, i) => (
             <Reveal key={section.title} delay={i * 0.04}>
-              <section
-                id={section.title.toLowerCase().replace(/\s+/g, "-")}
-              >
+              <section id={section.title.toLowerCase().replace(/\s+/g, "-")}>
                 <h2 className="font-display text-3xl tracking-tightest md:text-4xl">
-                  {section.title}
+                  {dict.caseStudy.sections[
+                    section.title as keyof typeof dict.caseStudy.sections
+                  ] ?? section.title}
                 </h2>
                 <div className="mt-5 space-y-4 text-base leading-relaxed text-muted md:text-lg">
                   {section.paragraphs.map((paragraph) => (
@@ -254,11 +269,11 @@ export default function CaseStudySection({
       <div className="mt-24 grid gap-6 border-t border-line pt-10 sm:grid-cols-2">
         {previous && previousWork ? (
           <Link
-            href={`/work/${previous.slug}`}
+            href={localize(locale, `/work/${previous.slug}`)}
             className="group rounded-2xl border border-line p-6 transition-colors hover:bg-surface"
           >
             <p className="text-xs uppercase tracking-[0.18em] text-muted">
-              Previous
+              {dict.caseStudy.previous}
             </p>
             <p className="mt-2 font-display text-2xl tracking-tightest group-hover:italic">
               {previousWork.name}
@@ -269,11 +284,11 @@ export default function CaseStudySection({
         )}
         {next && nextWork ? (
           <Link
-            href={`/work/${next.slug}`}
+            href={localize(locale, `/work/${next.slug}`)}
             className="group rounded-2xl border border-line p-6 text-right transition-colors hover:bg-surface sm:justify-self-end"
           >
             <p className="text-xs uppercase tracking-[0.18em] text-muted">
-              Next
+              {dict.caseStudy.next}
             </p>
             <p className="mt-2 font-display text-2xl tracking-tightest group-hover:italic">
               {nextWork.name}

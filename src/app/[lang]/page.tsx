@@ -10,22 +10,27 @@ import ExperienceSection from "@/sections/Experience";
 import SkillsSection from "@/sections/Skills";
 import ContactSection from "@/sections/Contact";
 import { marqueeItems } from "@/constants";
+import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import {
-  defaultDescription,
-  defaultTitle,
-  pageMeta,
   localBusinessJsonLd,
+  pageMeta,
   professionalServiceJsonLd,
 } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  ...pageMeta({
-    title: defaultTitle,
-    description: defaultDescription,
-    path: "/",
-  }),
-  title: { absolute: defaultTitle },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const dict = await getDictionary();
+
+  return {
+    ...pageMeta({
+      title: dict.meta.title,
+      description: dict.meta.description,
+      path: "/",
+      locale,
+    }),
+    title: { absolute: dict.meta.title },
+  };
+}
 
 export default function Home() {
   return (

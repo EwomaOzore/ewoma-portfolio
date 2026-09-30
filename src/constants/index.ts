@@ -15,7 +15,7 @@ export const availability = [
 ];
 
 export const stats = [
-  { value: 5, suffix: "+", label: "years shipping product" },
+  { value: 6, suffix: "+", label: "years shipping product" },
   { value: 1, suffix: "M+", label: "customers served" },
   { value: 10, suffix: "K+", label: "daily user operations" },
   { value: 60, suffix: "%", label: "fewer production errors" },
@@ -291,7 +291,8 @@ export const personalProjects: PersonalProject[] = [
     name: "GameBuddy",
     year: "2023 — 2026",
     kind: "web",
-    description: "Official consoles, priced in Naira, sold like you have a match tonight.",
+    description:
+      "Official consoles, priced in Naira, sold like you have a match tonight.",
     detail:
       "A Lagos storefront for PlayStation, Xbox, Nintendo, PC, and Steam Deck — catalogue, deals, cart, and loyalty. Next-day delivery copy, platform pages, and a commerce UI I still iterate on.",
     tags: ["Next.js", "TypeScript", "Zustand", "Tailwind"],
@@ -343,19 +344,44 @@ export const skillGroups = [
   },
   {
     title: "Web",
-    skills: ["React", "Next.js", "Tailwind CSS", "Sass/SCSS", "Node.js", "Express"],
+    skills: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Sass/SCSS",
+      "Node.js",
+      "Express",
+    ],
   },
   {
     title: "Mobile",
-    skills: ["React Native", "Expo", "iOS", "Android", "App Store", "Google Play"],
+    skills: [
+      "React Native",
+      "Expo",
+      "iOS",
+      "Android",
+      "App Store",
+      "Google Play",
+    ],
   },
   {
     title: "State & Data",
-    skills: ["Redux Toolkit", "TanStack Query", "Recoil", "Context API", "REST APIs"],
+    skills: [
+      "Redux Toolkit",
+      "TanStack Query",
+      "Recoil",
+      "Context API",
+      "REST APIs",
+    ],
   },
   {
     title: "Quality",
-    skills: ["Jest", "React Testing Library", "Accessibility (WCAG)", "Code Reviews"],
+    skills: [
+      "Jest",
+      "React Testing Library",
+      "Accessibility (WCAG)",
+      "Code Reviews",
+    ],
   },
   {
     title: "Performance",

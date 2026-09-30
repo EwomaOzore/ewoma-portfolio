@@ -3,12 +3,19 @@ import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import TrackedLink from "@/components/TrackedLink";
 import { links } from "@/constants";
+import { countryNames } from "@/i18n/config";
+import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 
-export default function ContactSection({
+export default async function ContactSection({
   glow = false,
 }: Readonly<{
   glow?: boolean;
 }>) {
+  const dict = await getDictionary();
+  const locale = await getLocale();
+  const europe = countryNames(locale, "europe");
+  const english = countryNames(locale, "english");
+
   return (
     <section
       id="contact"
@@ -24,14 +31,19 @@ export default function ContactSection({
       <div className="mx-auto max-w-content px-6 py-28 md:py-40">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.22em] text-muted">
-            04 — Contact
+            {dict.contact.eyebrow}
           </p>
           <h2 className="mt-6 max-w-[16ch] font-display text-5xl leading-[0.95] tracking-tightest md:text-7xl">
-            Let&apos;s build something people love to use.
+            {dict.contact.title}
           </h2>
           <p className="mt-6 max-w-xl text-lg text-muted">
-            Senior frontend and mobile roles. Remote from Nigeria or anywhere,
-            and open to relocate. I overlap your working hours from anywhere.
+            {dict.contact.body}
+          </p>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground/80">
+            {europe.join("  ·  ")}
+          </p>
+          <p className="mt-1 max-w-2xl text-sm leading-relaxed text-foreground/80">
+            {english.join("  ·  ")}
           </p>
 
           <a
@@ -51,7 +63,7 @@ export default function ContactSection({
               data={{ location: "contact" }}
               className="inline-flex items-center gap-1.5 rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:bg-surface"
             >
-              Download résumé
+              {dict.contact.resume}
               <ArrowUpRight size={14} />
             </TrackedLink>
             <a
