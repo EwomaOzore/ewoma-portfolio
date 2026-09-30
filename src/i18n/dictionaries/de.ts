@@ -44,7 +44,8 @@ export const de = {
     hello: "Hallo!",
     before: "Ich bin",
     name: "Ewoma Ozore",
-    after: "6 Jahre Produkt ausgeliefert.",
+    afterStart: "Softwareentwickler und liefere",
+    afterEnd: "seit 6 Jahren Produkt aus.",
     intro:
       "Ich baue Produkt-Interfaces für Web, iOS und Android und bleibe bis in die Produktion dabei.",
     studies: "Fallstudien lesen",

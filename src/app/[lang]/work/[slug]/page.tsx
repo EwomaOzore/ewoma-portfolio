@@ -19,7 +19,7 @@ type PageProps = {
   params: Promise<{ lang: string; slug: string }>;
 };
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -35,7 +35,9 @@ export async function generateMetadata({
 
   return caseStudyMeta(slug, locale, {
     title: `${work?.name ?? slug} — ${dict.meta.caseStudy}`,
-    description: dict.caseLedes[slug as keyof typeof dict.caseLedes] ?? dict.meta.description,
+    description:
+      dict.caseLedes[slug as keyof typeof dict.caseLedes] ??
+      dict.meta.description,
   });
 }
 

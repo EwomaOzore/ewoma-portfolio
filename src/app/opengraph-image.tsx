@@ -39,7 +39,7 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          Ewoma Ozore, 6 years shipping product.
+          Ewoma Ozore, a software engineer shipping product for 6 years.
         </p>
         <p
           style={{

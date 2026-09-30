@@ -40,7 +40,7 @@ export default function Hero() {
           animate="show"
           className="mx-auto grid w-fit max-w-full items-center gap-8 lg:grid-cols-[minmax(0,max-content)_auto] lg:gap-8"
         >
-          <div className="flex flex-col items-start text-left">
+          <div className="flex flex-col items-start text-left md:items-center md:text-center lg:items-start lg:text-left">
             <motion.p
               variants={item}
               className="relative px-5 py-2.5 text-sm text-foreground"
@@ -70,7 +70,10 @@ export default function Hero() {
                 </span>
                 ,
               </span>
-              <span className="mt-1 block">{dict.hero.after}</span>
+              <span className="mt-1 block">
+                {dict.hero.afterStart} <br className="hidden lg:block" />
+                {dict.hero.afterEnd}
+              </span>
             </motion.h1>
 
             <motion.p
@@ -80,7 +83,10 @@ export default function Hero() {
               {dict.hero.intro}
             </motion.p>
 
-            <motion.div variants={item} className="mt-9 flex flex-wrap gap-3">
+            <motion.div
+              variants={item}
+              className="mt-9 flex flex-wrap gap-3 md:justify-center lg:justify-start"
+            >
               <a
                 href="#work"
                 className="rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-transform hover:scale-[1.03] active:scale-[0.98]"

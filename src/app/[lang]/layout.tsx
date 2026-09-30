@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata, Viewport } from "next";
-import { notFound } from "next/navigation";
 import {
   Fraunces,
   Instrument_Sans,
@@ -12,7 +11,7 @@ import Providers from "@/components/Providers";
 import JsonLd from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { hasLocale, locales } from "@/i18n/config";
+import { defaultLocale, hasLocale, locales } from "@/i18n/config";
 import { dictionaryFor } from "@/i18n/get-dictionary";
 import { personJsonLd, siteName, siteUrl, websiteJsonLd } from "@/lib/seo";
 import "../globals.css";
@@ -122,8 +121,8 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }>) {
-  const { lang } = await params;
-  if (!hasLocale(lang)) notFound();
+  const { lang: requested } = await params;
+  const lang = hasLocale(requested) ? requested : defaultLocale;
   const dict = dictionaryFor(lang);
 
   return (

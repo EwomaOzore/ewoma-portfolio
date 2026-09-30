@@ -44,7 +44,8 @@ export const es = {
     hello: "¡Hola!",
     before: "Soy",
     name: "Ewoma Ozore",
-    after: "6 años enviando producto.",
+    afterStart: "ingeniero de software enviando",
+    afterEnd: "producto desde hace 6 años.",
     intro:
       "Construyo interfaces de producto para web, iOS y Android, y las acompaño hasta producción.",
     studies: "Leer los casos de estudio",
