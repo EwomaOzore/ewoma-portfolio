@@ -105,7 +105,7 @@ export const de = {
     "Bank-BNPL-Integrationen bei Justrite",
   ],
   experience: {
-    context: "Meine Kundenprojekte sind Vertragsengagements, die zum Teil verlängert wurden. Die Verträge mit MTN, Justrite und AB InBev laufen weiter; die überlappenden Zeiträume stehen für parallele Engagements.",
+    context: "MTN und AB InBev sind laufende Vertragsengagements, die verlängert wurden. Sie laufen parallel zu meiner Stelle bei Justrite, was die überlappenden Zeiträume erklärt.",
     present: "Heute",
     engagements: {
       contract: "Vertragsengagement",

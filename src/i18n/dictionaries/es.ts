@@ -107,7 +107,7 @@ export const es = {
     "integraciones bancarias BNPL en Justrite",
   ],
   experience: {
-    context: "Mis colaboraciones con clientes son por contrato, algunas con renovaciones. Los contratos con MTN, Justrite y AB InBev siguen activos; las fechas se solapan porque son colaboraciones simultáneas.",
+    context: "MTN y AB InBev son colaboraciones por contrato que siguen activas tras sus renovaciones. Las compagino con mi puesto en Justrite, lo que explica el solapamiento de fechas.",
     present: "Actualidad",
     engagements: {
       contract: "Por contrato",

@@ -106,7 +106,7 @@ export const fr = {
     "intégrations bancaires BNPL chez Justrite",
   ],
   experience: {
-    context: "Mes missions clients sont des contrats, dont certains ont été renouvelés. Les contrats MTN, Justrite et AB InBev sont en cours ; les dates se chevauchent car ces missions sont menées en parallèle.",
+    context: "MTN et AB InBev sont des missions contractuelles en cours, prolongées par renouvellement. Elles sont menées en parallèle de mon poste chez Justrite, ce qui explique le chevauchement des dates.",
     present: "Aujourd’hui",
     engagements: {
       contract: "Mission contractuelle",

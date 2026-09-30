@@ -70,9 +70,11 @@ export default async function ExperienceSection() {
                     <p className="mt-2 text-sm text-muted">
                       {job.period.replace("Present", dict.experience.present)}
                     </p>
-                    <p className="mt-2 text-xs uppercase tracking-widest text-muted">
-                      {dict.experience.engagements[job.engagement]}
-                    </p>
+                    {job.engagement && (
+                      <p className="mt-2 text-xs uppercase tracking-widest text-muted">
+                        {dict.experience.engagements[job.engagement]}
+                      </p>
+                    )}
                   </div>
 
                   <div className="min-w-0">

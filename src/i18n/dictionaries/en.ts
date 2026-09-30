@@ -104,7 +104,7 @@ export const en = {
     "bank BNPL integrations at Justrite",
   ],
   experience: {
-    context: "My client engagements are contract roles, some extended through renewals. MTN, Justrite, and AB InBev are ongoing contracts; the overlapping dates reflect concurrent engagements.",
+    context: "MTN and AB InBev are ongoing contract roles, extended through renewals. These engagements run alongside my role at Justrite, which explains the overlapping dates.",
     present: "Present",
     engagements: {
       contract: "Contract",

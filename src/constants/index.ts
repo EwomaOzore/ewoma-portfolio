@@ -136,7 +136,7 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
-  engagement: "contract" | "internship";
+  engagement?: "contract" | "internship";
   icon?: string;
   href?: string;
   points: string[];
@@ -160,7 +160,6 @@ export const experience: Experience[] = [
     company: "Justrite",
     role: "Lead Mobile Developer",
     period: "May 2025 — Present",
-    engagement: "contract",
     icon: "/assets/justrite.jpeg",
     href: "/work/justrite",
     points: [
@@ -186,7 +185,6 @@ export const experience: Experience[] = [
     company: "SmallClosedWorld",
     role: "Lead Frontend Developer — Web & Mobile",
     period: "Sep 2024 — Apr 2025",
-    engagement: "contract",
     icon: "/assets/smallclosedworld.jpeg",
     points: [
       "Led development of scalable React Native applications across multiple client and product requirements.",
@@ -197,7 +195,6 @@ export const experience: Experience[] = [
     company: "Satori Mental Health",
     role: "Frontend Developer",
     period: "Jul 2023 — Jun 2024",
-    engagement: "contract",
     icon: "/assets/satori.jpeg",
     points: [
       "Built responsive, accessible React applications from Figma designs with Redux and React Hooks.",
@@ -208,7 +205,6 @@ export const experience: Experience[] = [
     company: "Techbeaver",
     role: "React Native Developer",
     period: "Jan 2022 — Oct 2023",
-    engagement: "contract",
     icon: "/assets/techbeaver.jpeg",
     points: [
       "Developed and maintained production React Native applications across multiple client projects, from development through release.",

@@ -124,7 +124,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     summary: [
-      { title: "Ownership", body: "Ongoing contract as Lead Mobile Developer. I lead checkout, bank BNPL integrations, native upgrades, and release quality." },
+      { title: "Ownership", body: "Lead Mobile Developer. I lead checkout, bank BNPL integrations, native upgrades, and release quality." },
       { title: "Key decision", body: "Keep the store, inventory, and payable total consistent across payment methods while upgrading the native stack alongside feature releases." },
       { title: "Outcome", body: "An iOS and Android shopping app with multiple payment gateways and Stanbic IBTC, Wema, and CashConnect BNPL flows." },
     ],
@@ -141,7 +141,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "My role",
         paragraphs: [
-          "Lead Mobile Developer on contract, May 2025 to present. I joined an existing app and lead work on checkout, bank BNPL integrations, catalog performance, interface updates, native upgrades, and release quality.",
+          "Lead Mobile Developer, May 2025 to present. I joined an existing app and lead work on checkout, bank BNPL integrations, catalog performance, interface updates, native upgrades, and release quality.",
           "I work with product managers, designers, backend engineers, and stakeholders on technical decisions, code reviews, debugging, and releases. I also implemented unit and integration tests with Jest.",
         ],
       },

@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Portfolio content
 
-- Experience dates and titles follow the supplied September 2026 résumé, with the owner's confirmation that MTN, Justrite, and AB InBev contracts remain ongoing. Concurrent dates represent contract engagements.
+- Experience dates and titles follow the supplied September 2026 résumé, with the owner's confirmation that MTN, Justrite, and AB InBev roles remain ongoing. Only MTN and AB InBev are contract roles; these run alongside Justrite.
 - The downloadable résumé preserves the supplied document's body, updating contract labels and ongoing dates. The original in Downloads is unchanged.
 - Homepage highlights describe delivery evidence. Restore usage or improvement figures only with the project, measurement period, definition, and individual contribution documented.
 - English is the working language. French, German, and Spanish are site translations; technical case-study bodies and summaries remain English.
