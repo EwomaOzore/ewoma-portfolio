@@ -234,8 +234,6 @@ export const es = {
     },
   },
   contact: {
-    language:
-      "Idioma de trabajo: inglés. Este sitio también está traducido al francés, alemán y español.",
     eyebrow: "04 — Contacto",
     title: "Construyamos algo que la gente quiera usar.",
     body: "Resido en Lagos, Nigeria (WAT, UTC+1). Busco puestos sénior de frontend y mobile en equipos internacionales, en remoto o con apoyo para reubicación. El horario compartido se puede acordar para cada puesto.",

@@ -3,8 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import TrackedLink from "@/components/TrackedLink";
 import { links } from "@/constants";
-import { countryNames } from "@/i18n/config";
-import { getDictionary, getLocale } from "@/i18n/get-dictionary";
+import { getDictionary } from "@/i18n/get-dictionary";
 
 export default async function ContactSection({
   glow = false,
@@ -12,9 +11,6 @@ export default async function ContactSection({
   glow?: boolean;
 }>) {
   const dict = await getDictionary();
-  const locale = await getLocale();
-  const europe = countryNames(locale, "europe");
-  const english = countryNames(locale, "english");
 
   return (
     <section
@@ -39,18 +35,11 @@ export default async function ContactSection({
           <p className="mt-6 max-w-xl text-lg text-muted">
             {dict.contact.body}
           </p>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-            {dict.contact.language}
-          </p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground/80">
-            {europe.join("  ·  ")}
-          </p>
-          <p className="mt-1 max-w-2xl text-sm leading-relaxed text-foreground/80">
-            {english.join("  ·  ")}
-          </p>
 
           <a
-            href={`mailto:${links.email}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(links.email)}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-10 inline-flex items-center gap-3 font-serif text-2xl italic underline decoration-sunset/70 underline-offset-8 transition-colors hover:text-muted md:text-4xl"
           >
             {links.email}

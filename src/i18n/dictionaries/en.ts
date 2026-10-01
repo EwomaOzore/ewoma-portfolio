@@ -232,8 +232,6 @@ export const en = {
     },
   },
   contact: {
-    language:
-      "Working language: English. This site is also translated into French, German, and Spanish.",
     eyebrow: "04 — Contact",
     title: "Let's build something people love to use.",
     body: "Based in Lagos, Nigeria (WAT, UTC+1). Open to senior frontend and mobile roles with international teams, remotely or with relocation support. Working-hour overlap can be agreed for each role.",

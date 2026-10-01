@@ -235,8 +235,6 @@ export const fr = {
     },
   },
   contact: {
-    language:
-      "Langue de travail : anglais. Ce site est aussi traduit en français, allemand et espagnol.",
     eyebrow: "04 — Contact",
     title: "Construisons quelque chose que les gens aiment utiliser.",
     body: "Basé à Lagos, au Nigeria (WAT, UTC+1). Ouvert aux postes senior en frontend et mobile avec des équipes internationales, à distance ou avec une aide à la mobilité. Les plages horaires communes sont à convenir pour chaque poste.",

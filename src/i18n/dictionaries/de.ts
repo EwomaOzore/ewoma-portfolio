@@ -235,8 +235,6 @@ export const de = {
     },
   },
   contact: {
-    language:
-      "Arbeitssprache: Englisch. Diese Website ist auch ins Französische, Deutsche und Spanische übersetzt.",
     eyebrow: "04 — Kontakt",
     title: "Bauen wir etwas, das Menschen gern benutzen.",
     body: "Ansässig in Lagos, Nigeria (WAT, UTC+1). Offen für Senior-Stellen in Frontend und Mobile in internationalen Teams, remote oder mit Unterstützung beim Umzug. Gemeinsame Arbeitszeiten lassen sich je nach Stelle vereinbaren.",

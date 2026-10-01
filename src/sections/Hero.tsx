@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import { links } from "@/constants";
 import { useI18n } from "@/components/I18nProvider";
+import { links } from "@/constants";
 
 const container = {
   hidden: {},
@@ -100,7 +100,9 @@ export default function Hero() {
                 {dict.hero.studies}
               </a>
               <a
-                href={`mailto:${links.email}`}
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(links.email)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full border border-line px-6 py-3 text-sm font-medium transition-colors hover:bg-surface"
               >
                 {dict.hero.contact}
